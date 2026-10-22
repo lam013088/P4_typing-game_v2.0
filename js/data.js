@@ -10042,16 +10042,10 @@ const MODE2_WEEKLY_BANKS = {
       },
       {
         "char": "互",
-        "codes": [
-          "一",
-          "一"
-        ],
-        "keys": [
-          "M",
-          "M"
-        ],
+        "codes": ["一", "一"],
+        "keys": ["M", "M"],
         "full": "一一 (MM)",
-        "cj_full": "一女弓一 (MVNM)",
+        "cj_full": "一女一 (MVM)",
         "secret": "速成首碼【一】(M) ＋ 尾碼【一】(M)"
       },
       {
@@ -14592,14 +14586,8 @@ const MODE2_WEEKLY_BANKS = {
       },
       {
         "char": "總",
-        "codes": [
-          "女",
-          "心"
-        ],
-        "keys": [
-          "V",
-          "P"
-        ],
+        "codes": ["女", "心"],
+        "keys": ["V", "P"],
         "full": "女心 (VP)",
         "cj_full": "女火竹田心 (VFHWP)",
         "secret": "速成首碼【女】(V) ＋ 尾碼【心】(P)"
@@ -17873,21 +17861,15 @@ const MODE2_WEEKLY_BANKS = {
     },
     {
       "char": "總",
-      "codes": [
-        "女",
-        "心"
-      ],
-      "keys": [
-        "V",
-        "P"
-      ],
+      "codes": ["女", "心"],
+      "keys": ["V", "P"],
       "first_code": "女",
       "last_code": "心",
       "first_key": "V",
       "last_key": "P",
       "full": "女心 (VP)",
-      "cj_full": "女竹田心 (VHWP)",
-      "secret": "【總】速成取碼：首碼【女】(V) ＋ 尾碼【心】(P)"
+      "cj_full": "女火竹田心 (VFHWP)",
+      "secret": "速成首碼【女】(V) ＋ 尾碼【心】(P)"
     },
     {
       "char": "禮",
@@ -20775,21 +20757,15 @@ const MODE2_WEEKLY_BANKS = {
     },
     {
       "char": "決",
-      "codes": [
-        "水",
-        "大"
-      ],
-      "keys": [
-        "E",
-        "K"
-      ],
+      "codes": ["水", "大"],
+      "keys": ["E", "K"],
       "first_code": "水",
       "last_code": "大",
       "first_key": "E",
       "last_key": "K",
       "full": "水大 (EK)",
       "cj_full": "水木大 (EDK)",
-      "secret": "【決】速成取碼：首碼【水】(E) ＋ 尾碼【大】(K)"
+      "secret": "速成首碼【水】(E) ＋ 尾碼【大】(K)"
     },
     {
       "char": "興",

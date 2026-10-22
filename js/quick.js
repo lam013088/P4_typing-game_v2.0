@@ -33,7 +33,10 @@ const P4_MASTER_QUICK_OVERRIDES = {
   '插': { char: '插', codes: ['手', '難'], keys: ['Q', 'X'], first_code: '手', last_code: '難', first_key: 'Q', last_key: 'X', full: '手難 (QX)', cj_full: '手竹十難 (QHJX)', secret: '【插】速成取碼：首碼【手】(Q) ＋ 尾碼【難】(X)' },
   '鹿': { char: '鹿', codes: ['戈', '心'], keys: ['I', 'P'], first_code: '戈', last_code: '心', first_key: 'I', last_key: 'P', full: '戈心 (IP)', cj_full: '戈難難心 (IXXP)', secret: '【鹿】速成取碼：首碼【戈】(I) ＋ 尾碼【心】(P)' },
   '跳': { char: '跳', codes: ['口', '人'], keys: ['R', 'O'], first_code: '口', last_code: '人', first_key: 'R', last_key: 'O', full: '口人 (RO)', cj_full: '口一卜人 (RMYMO)', secret: '【跳】速成取碼：首碼【口】(R) ＋ 尾碼【人】(O)' },
-  '條': { char: '條', codes: ['人', '木'], keys: ['O', 'D'], first_code: '人', last_code: '木', first_key: 'O', last_key: 'D', full: '人木 (OD)', cj_full: '人中人木 (OLOD)', secret: '【條】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)' }
+  '條': { char: '條', codes: ['人', '木'], keys: ['O', 'D'], first_code: '人', last_code: '木', first_key: 'O', last_key: 'D', full: '人木 (OD)', cj_full: '人中人木 (OLOD)', secret: '【條】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)' },
+  '互': { char: '互', codes: ['一', '一'], keys: ['M', 'M'], first_code: '一', last_code: '一', first_key: 'M', last_key: 'M', full: '一一 (MM)', cj_full: '一女一 (MVM)', secret: '【互】速成取碼：首碼【一】(M) ＋ 尾碼【一】(M)' },
+  '總': { char: '總', codes: ['女', '心'], keys: ['V', 'P'], first_code: '女', last_code: '心', first_key: 'V', last_key: 'P', full: '女心 (VP)', cj_full: '女火竹田心 (VFHWP)', secret: '【總】速成取碼：首碼【女】(V) ＋ 尾碼【心】(P)' },
+  '決': { char: '決', codes: ['水', '大'], keys: ['E', 'K'], first_code: '水', last_code: '大', first_key: 'E', last_key: 'K', full: '水大 (EK)', cj_full: '水木大 (EDK)', secret: '【決】速成取碼：首碼【水】(E) ＋ 尾碼【大】(K)' }
 };
 
 

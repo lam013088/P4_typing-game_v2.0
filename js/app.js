@@ -921,6 +921,8 @@ const ThunderboltSFX = (function() {
 
     
 
+    var isTeacherMode = false;
+    window.isTeacherMode = false;
     let currentStudent = null;       // { cls, num, name }
     let gameStage = 1;               // 5 關挑戰制：當前關卡 (1..5)
     let sessionScore = 0;            // 當前輪次累積得分
@@ -961,12 +963,23 @@ const ThunderboltSFX = (function() {
       const container = document.querySelector('.mode-tab-bar');
       if (!container || typeof P4Mode === 'undefined') return;
 
-      const isTeacher = (typeof isTeacherMode !== 'undefined' && isTeacherMode);
+      const isTeacher = (typeof isTeacherMode !== 'undefined' && isTeacherMode) || (typeof window !== 'undefined' && window.isTeacherMode);
       const student = currentStudent || null;
       const cls = student ? student.cls : null;
       const num = student ? student.num : null;
       const modes = P4Mode.all();
       const dailyScore = P4Mode.getDailyEarnedScore(cls, num);
+
+      // 🔒 檢查當前活躍模式是否合法：若非測試特權且當前選中模式處於鎖定狀態，安全退回站1 (typo)
+      if (!isTeacher && currentGameMode) {
+        const curUnlock = P4Mode.getUnlockStatus(currentGameMode, cls, num, isTeacher);
+        if (!curUnlock.unlocked) {
+          currentGameMode = 'typo';
+          if (typeof setGameMode === 'function') {
+            setTimeout(() => { setGameMode('typo'); }, 0);
+          }
+        }
+      }
 
       let html = '';
       modes.forEach(m => {
@@ -984,7 +997,7 @@ const ThunderboltSFX = (function() {
         } else {
           circleHtml = `<span class="mode-circle-num">${m.circle || m.order}</span>`;
           if (isLocked) {
-            lockClass = 'locked' + ((typeof isCloudOnline !== 'undefined' && isCloudOnline) ? ' hard-locked' : '');
+            lockClass = 'locked hard-locked';
             badgeHtml = `<span class="mode-badge-pill mode-badge-locked">🔒 差 ${unlock.neededScore} 分</span>`;
           } else {
             badgeHtml = `<span class="mode-badge-pill mode-badge-done">✓ ${m.badge}</span>`;
@@ -1024,6 +1037,24 @@ const ThunderboltSFX = (function() {
     
 
 function setGameMode(mode) {
+      // 🔒 1. 每日階梯式解鎖鏈嚴格安全檢查（未解鎖時堅決阻斷！不可切換、不可進入、不可得分）
+      const isTeacher = (typeof isTeacherMode !== 'undefined' && isTeacherMode) || (typeof window !== 'undefined' && window.isTeacherMode);
+      if (typeof P4Mode !== 'undefined' && !isTeacher) {
+        const student = currentStudent || null;
+        const cls = student ? student.cls : null;
+        const num = student ? student.num : null;
+        const unlock = P4Mode.getUnlockStatus(mode, cls, num, isTeacher);
+        if (!unlock.unlocked) {
+          const needed = unlock.neededScore;
+          const prevStation = unlock.prevStationName || '前置關卡';
+          const tip = `🔒 本關尚未解鎖！今日還差 ${needed} 分（需先完成【${prevStation}】，今日累積滿 ${unlock.threshold} 分開啟）`;
+          if (typeof showPassToast === 'function') {
+            showPassToast(tip);
+          }
+          return false; // 🚫 堅決阻斷！不切換模式、不啟動戰局、不變更 UI！
+        }
+      }
+
       if (autoNextTimer) { clearTimeout(autoNextTimer); autoNextTimer = null; }
       if (speedTimerInterval) clearInterval(speedTimerInterval);
       if (speedHintTimer) clearTimeout(speedHintTimer);
@@ -1056,19 +1087,7 @@ function setGameMode(mode) {
         }
       } catch(e) {}
 
-      // 🔒 每日階梯式解鎖鏈安全檢查
-      if (typeof P4Mode !== 'undefined') {
-        const isTeacher = (typeof isTeacherMode !== 'undefined' && isTeacherMode);
-        const unlock = P4Mode.getUnlockStatus(mode, currentStudent ? currentStudent.cls : null, currentStudent ? currentStudent.num : null, isTeacher);
-        if (!unlock.unlocked) {
-          if (typeof isCloudOnline !== 'undefined' && isCloudOnline) {
-            showPassToast('🔒 本關尚未解鎖！今日還差 ' + unlock.neededScore + ' 分（滿 ' + unlock.threshold + ' 分開啟）');
-            return;
-          } else {
-            showPassToast('⚠️ 離線安全網：今日尚未滿 ' + unlock.threshold + ' 分，但允許進入練習');
-          }
-        }
-      }
+      // (解鎖鏈檢查已前置至函式入口徹底防禦)
 
       renderModeTabs();
 
@@ -1254,6 +1273,14 @@ function initLoginDropdowns() {
     }
 
     function saveStudentStats(cls, num, addScore, addKill, mode, bestTime = null, wordCount = 10, weekKey = 'w7_hw1') {
+      const isTeacherCheck = (typeof isTeacherMode !== 'undefined' && isTeacherMode) || (typeof window !== 'undefined' && window.isTeacherMode);
+      if (typeof P4Mode !== 'undefined' && !isTeacherCheck && mode !== 'speed') {
+        const unlock = P4Mode.getUnlockStatus(mode, cls, num, isTeacherCheck);
+        if (!unlock.unlocked) {
+          console.warn('Blocked score submission for locked mode:', mode);
+          return;
+        }
+      }
       const current = getStudentStats(cls, num);
       const updated = {
         totalScore: current.totalScore + addScore,
@@ -1747,6 +1774,21 @@ function initLoginDropdowns() {
     ];
 
     function launchSiegeMatch() {
+      const isTeacherCheck = (typeof isTeacherMode !== 'undefined' && isTeacherMode) || (typeof window !== 'undefined' && window.isTeacherMode);
+      if (typeof P4Mode !== 'undefined' && !isTeacherCheck) {
+        const student = currentStudent || null;
+        const cls = student ? student.cls : null;
+        const num = student ? student.num : null;
+        const unlock = P4Mode.getUnlockStatus('siege', cls, num, isTeacherCheck);
+        if (!unlock.unlocked) {
+          if (typeof showPassToast === 'function') {
+            showPassToast(`🔒 逃出恐怖屋尚未解鎖！今日還差 ${unlock.neededScore} 分開啟`);
+          }
+          setGameMode('typo');
+          return;
+        }
+      }
+
       if (siegeAnimId) cancelAnimationFrame(siegeAnimId);
       if (siegeTimeInterval) clearInterval(siegeTimeInterval);
       window.removeEventListener('keydown', handleSiegeKeydown, true);
@@ -2375,22 +2417,22 @@ function initLoginDropdowns() {
     function getSiegeSpeedRange(wave) {
       let baseMin, baseMax;
       if (wave <= 1) {
-        baseMin = 0.50; baseMax = 0.65;
+        baseMin = 0.38; baseMax = 0.46;
       } else if (wave <= 2) {
-        baseMin = 0.55; baseMax = 0.72;
+        baseMin = 0.40; baseMax = 0.49;
       } else if (wave <= 4) {
-        baseMin = 0.60; baseMax = 0.78;
+        baseMin = 0.43; baseMax = 0.53;
       } else if (wave <= 6) {
-        baseMin = 0.65; baseMax = 0.85;
+        baseMin = 0.46; baseMax = 0.57;
       } else if (wave <= 8) {
-        baseMin = 0.70; baseMax = 0.92;
+        baseMin = 0.49; baseMax = 0.61;
       } else if (wave <= 11) {
-        baseMin = 0.75; baseMax = 1.00;
+        baseMin = 0.52; baseMax = 0.65;
       } else if (wave <= 15) {
-        baseMin = 0.80; baseMax = 1.08;
+        baseMin = 0.56; baseMax = 0.70;
       } else {
-        baseMin = 0.80 + (wave - 15) * 0.015;
-        baseMax = 1.08 + (wave - 15) * 0.02;
+        baseMin = 0.56 + (wave - 15) * 0.008;
+        baseMax = 0.70 + (wave - 15) * 0.010;
       }
       const effectiveFactor = (typeof siegeSlowFactor !== 'undefined' ? siegeSlowFactor : 1.0) * 
                               (typeof siegeSpeedPenalty !== 'undefined' ? siegeSpeedPenalty : 1.0);
@@ -6353,16 +6395,18 @@ if (typeof global !== 'undefined') {
   global.getSiegeWordPool = getSiegeWordPool;
 }
 
-// ⚡ 測試專屬快捷鍵：Control + Shift + T (同時支援 Mac Command + Shift + T) 解鎖全部遊戲鏈條
+// ⚡ 測試專屬快捷鍵：Control + Shift + P (同時支援 Mac Command + Shift + P) 解鎖全部遊戲鏈條
 window.addEventListener('keydown', function(e) {
-  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'T' || e.key === 't' || e.code === 'KeyT')) {
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'P' || e.key === 'p' || e.code === 'KeyP')) {
     e.preventDefault();
     e.stopPropagation();
-    window.isTeacherMode = !window.isTeacherMode;
+    isTeacherMode = !isTeacherMode;
+    window.isTeacherMode = isTeacherMode;
+    if (typeof global !== 'undefined') global.isTeacherMode = isTeacherMode;
     if (typeof renderModeTabs === 'function') {
       renderModeTabs();
     }
-    const tip = window.isTeacherMode 
+    const tip = isTeacherMode 
       ? '🔓【測試特權已啟動】全部遊戲鏈條已全數解鎖！可自由進入站 1~4 及手速賽' 
       : '🔒【測試特權已關閉】已恢復學生正常每日階梯解鎖鏈條';
     if (typeof showPassToast === 'function') {
