@@ -1449,6 +1449,7 @@ function initLoginDropdowns() {
     let siegeAnimId = null;
     let siegeTargetEnemy = null;
     let siegeCandidateEnemies = [];
+    let siegeLastKey = null;
     // 👑 Boss 戰系統狀態變數 (Wave 5 / Wave 10 雙階霸主機制)
     let currentBoss = null;
     let siegeDodgeActive = false;
@@ -1828,6 +1829,7 @@ function initLoginDropdowns() {
       currentBoss = null;
       hideBossHUD();
       siegeCandidateEnemies = [];
+      siegeLastKey = null;
       siegeEmptyFieldTimer = 0;
 
       // 重置疊加招式效果
@@ -1855,6 +1857,42 @@ function initLoginDropdowns() {
       if (canvas && wrap) {
         canvas.width = wrap.clientWidth || 800;
         canvas.height = wrap.clientHeight || 420;
+
+        // ★ 畫布點擊/觸控精準選怪 (Click/Tap to Focus Target，自由切換鎖定目標)
+        canvas.style.cursor = 'crosshair';
+        canvas.onpointerdown = function(e) {
+          if (!siegeActive || !siegeRunning || siegeIsPaused) return;
+          const rect = canvas.getBoundingClientRect();
+          const scaleX = canvas.width / rect.width;
+          const scaleY = canvas.height / rect.height;
+          const mx = (e.clientX - rect.left) * scaleX;
+          const my = (e.clientY - rect.top) * scaleY;
+
+          let clicked = null;
+          let minDist = Infinity;
+          siegeEnemies.forEach(em => {
+            const d = Math.hypot(mx - em.x, my - em.y);
+            if (d <= em.radius + 18 && d < minDist) {
+              minDist = d;
+              clicked = em;
+            }
+          });
+
+          if (clicked) {
+            if (Array.isArray(siegeCandidateEnemies)) {
+              siegeCandidateEnemies.forEach(em => { if (em !== clicked) em.typedIdx = 0; });
+            }
+            clicked.typedIdx = 0;
+            siegeCandidateEnemies = [clicked];
+            siegeTargetEnemy = clicked;
+            siegeLastKey = null;
+            clicked.shake = 6;
+            if (typeof showPassToast === 'function') {
+              const charName = (clicked.word && clicked.word.char) ? clicked.word.char : '';
+              showPassToast('🎯 已鎖定【' + charName + '】！請敲擊速成字碼！');
+            }
+          }
+        };
       }
 
       window.addEventListener('keydown', handleSiegeKeydown, true);
@@ -1870,6 +1908,7 @@ function initLoginDropdowns() {
       currentBoss = null;
       hideBossHUD();
       siegeCandidateEnemies = [];
+      siegeLastKey = null;
       siegeEmptyFieldTimer = 0;
       spawnSiegeWave();
 
@@ -2935,6 +2974,22 @@ function initLoginDropdowns() {
         return;
       }
 
+      // ★ Backspace 或 Escape 鍵：隨時取消當前目標鎖定，零懲罰無失誤重置
+      if (e.key === 'Backspace' || e.key === 'Escape' || e.code === 'Backspace' || e.code === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        if (Array.isArray(siegeCandidateEnemies)) {
+          siegeCandidateEnemies.forEach(em => { em.typedIdx = 0; });
+        }
+        siegeCandidateEnemies = [];
+        siegeTargetEnemy = null;
+        siegeLastKey = null;
+        if (typeof showPassToast === 'function') {
+          showPassToast('🎯 已重置目標鎖定，可隨時敲擊任一字首碼！');
+        }
+        return;
+      }
+
       let letter = '';
       if (e.code && e.code.startsWith('Key') && e.code.length === 4) {
         letter = e.code.slice(3).toUpperCase();
@@ -2958,7 +3013,7 @@ function initLoginDropdowns() {
       processSiegeKey(letter);
     }
 
-    // 目標靈活切換機制
+    // 目標靈活切換機制 (全維度防止同首碼互相卡住、支援跨字無縫擊破與智慧優先權)
     function processSiegeKey(key) {
       const canvas = document.getElementById('siege-canvas');
       const cw = canvas ? canvas.width : 800;
@@ -2978,7 +3033,7 @@ function initLoginDropdowns() {
       // 輸入第二碼 M 時兩者繼續前進；輸入第三碼 G 時自動鎖定「全」，輸入 R 時鎖定「拿」！
       // ─────────────────────────────────────────────────────────────
       if (siegeCandidateEnemies.length > 0) {
-        // 篩選出當前字碼能匹配 key 的候選怪獸
+        // 1. 篩選出當前字碼能匹配 key 的候選怪獸
         const matching = siegeCandidateEnemies.filter(em => {
           return em.word && Array.isArray(em.word.keys) && em.word.keys[em.typedIdx] === key;
         });
@@ -3009,9 +3064,32 @@ function initLoginDropdowns() {
             siegeCandidateEnemies = siegeCandidateEnemies.filter(em => em !== victim);
             siegeTargetEnemy = (siegeCandidateEnemies.length === 1) ? siegeCandidateEnemies[0] : null;
           }
+          siegeLastKey = key;
           return;
         } else {
-          // 當前候選群無一匹配，檢查玩家是否切換擊打場上「以 key 為首碼」的新怪獸
+          // 2. 當前候選群無一匹配：
+          // ★ 關鍵防護 1：檢查玩家前一鍵 + 當前鍵 (例如先前敲卜 Y，現在敲一 M) 是否正好構成場上某怪獸（例如「上」YM）的完整字碼！
+          if (siegeLastKey) {
+            const pairMatching = siegeEnemies.filter(em => {
+              return em.word && Array.isArray(em.word.keys) && em.word.keys.length === 2 &&
+                     em.word.keys[0] === siegeLastKey && em.word.keys[1] === key;
+            });
+            if (pairMatching.length > 0) {
+              pairMatching.sort((a, b) => Math.hypot(cx - a.x, cy - a.y) - Math.hypot(cx - b.x, cy - b.y));
+              const victim = pairMatching[0];
+              if (!siegeKeepProgressOnMiss) {
+                siegeCandidateEnemies.forEach(em => { em.typedIdx = 0; });
+              }
+              victim.typedIdx = victim.word.keys.length;
+              defeatSiegeEnemy(victim);
+              siegeCandidateEnemies = [];
+              siegeTargetEnemy = null;
+              siegeLastKey = null;
+              return;
+            }
+          }
+
+          // ★ 關鍵防護 2：檢查玩家是否切換擊打場上「以 key 為首碼」的新怪獸
           const newCands = siegeEnemies.filter(em => em.word && Array.isArray(em.word.keys) && em.word.keys[0] === key);
           if (newCands.length > 0) {
             if (!siegeKeepProgressOnMiss) {
@@ -3029,6 +3107,7 @@ function initLoginDropdowns() {
               siegeCandidateEnemies = siegeCandidateEnemies.filter(em => em !== victim);
               siegeTargetEnemy = (siegeCandidateEnemies.length === 1) ? siegeCandidateEnemies[0] : null;
             }
+            siegeLastKey = key;
             return;
           } else {
             // 真正按錯：震動並重置
@@ -3037,6 +3116,7 @@ function initLoginDropdowns() {
             }
             siegeCandidateEnemies = [];
             siegeTargetEnemy = null;
+            siegeLastKey = null;
             siegeMisses++;
             updateSiegeHUD();
             return;
@@ -3047,12 +3127,36 @@ function initLoginDropdowns() {
       // ─────────────────────────────────────────────────────────────
       // 情況 B：當前未鎖定怪獸 (搜尋場上所有首碼符合 key 的怪獸，全部納入候選)
       // ─────────────────────────────────────────────────────────────
+      // ★ 優先檢查：若有前置字碼，前置 + 當前鍵是否構成任何 2 碼字
+      if (siegeLastKey) {
+        const pairMatching = siegeEnemies.filter(em => {
+          return em.word && Array.isArray(em.word.keys) && em.word.keys.length === 2 &&
+                 em.word.keys[0] === siegeLastKey && em.word.keys[1] === key;
+        });
+        if (pairMatching.length > 0) {
+          pairMatching.sort((a, b) => Math.hypot(cx - a.x, cy - a.y) - Math.hypot(cx - b.x, cy - b.y));
+          const victim = pairMatching[0];
+          victim.typedIdx = victim.word.keys.length;
+          defeatSiegeEnemy(victim);
+          siegeCandidateEnemies = [];
+          siegeTargetEnemy = null;
+          siegeLastKey = null;
+          return;
+        }
+      }
+
       const cands = siegeEnemies.filter(em => em.word && Array.isArray(em.word.keys) && em.word.keys[0] === key);
 
       if (cands.length > 0) {
         cands.forEach(em => { em.typedIdx = 1; });
         siegeCandidateEnemies = cands;
-        siegeTargetEnemy = (cands.length === 1) ? cands[0] : null;
+        // 若有多隻怪獸同首碼，瞄準線優先指向離中心最近的一隻
+        if (cands.length === 1) {
+          siegeTargetEnemy = cands[0];
+        } else {
+          const sortedCands = [...cands].sort((a, b) => Math.hypot(cx - a.x, cy - a.y) - Math.hypot(cx - b.x, cy - b.y));
+          siegeTargetEnemy = sortedCands[0];
+        }
 
         const completed = cands.filter(em => em.typedIdx >= em.word.keys.length);
         if (completed.length > 0) {
@@ -3060,9 +3164,11 @@ function initLoginDropdowns() {
           const victim = completed[0];
           defeatSiegeEnemy(victim);
           siegeCandidateEnemies = siegeCandidateEnemies.filter(em => em !== victim);
-          siegeTargetEnemy = (siegeCandidateEnemies.length === 1) ? siegeCandidateEnemies[0] : null;
+          siegeTargetEnemy = (siegeCandidateEnemies.length === 1) ? siegeCandidateEnemies[0] : (siegeCandidateEnemies.length > 1 ? siegeCandidateEnemies[0] : null);
         }
+        siegeLastKey = key;
       } else {
+        siegeLastKey = null;
         siegeMisses++;
         updateSiegeHUD();
       }
