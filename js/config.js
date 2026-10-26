@@ -19,7 +19,7 @@ window.CONFIG.WORD_BANK_URL = 'https://script.google.com/macros/s/AKfycbzwzqjmrX
 window.CONFIG.GITHUB_PRIVACY_MODE = true;
 
 // 🏷️ 系統版本號
-window.CONFIG.VERSION = '2026.10.21-p4-v2.0';
+window.CONFIG.VERSION = '2026.10.26-p4-v3.0';
 
 var CONFIG = window.CONFIG;
 
@@ -58,15 +58,15 @@ window.SKILLS = window.SKILLS || [
 ];
 var SKILLS = window.SKILLS;
 
-// 📅 每周排程時間表 (2026/2027學年上學期)
-window.SPEED_WEEK_SCHEDULES = window.SPEED_WEEK_SCHEDULES || [
-  { week: 'w2',  name: '第 2 周', title: '【第2周】速成首尾二碼特訓 (9/7 - 9/13)', start: new Date('2026-09-07T00:00:00+08:00'), end: new Date('2026-09-13T23:59:59+08:00') },
-  { week: 'w3',  name: '第 3 周', title: '【第 3 周】高頻易錯字速成攻防 (9/14 - 9/20)', start: new Date('2026-09-14T00:00:00+08:00'), end: new Date('2026-09-20T23:59:59+08:00') },
-  { week: 'w4',  name: '第 4 周', title: '【第 4 周】期初實力排位激戰 (9/21 - 10/04，第4/5周合拼)', start: new Date('2026-09-21T00:00:00+08:00'), end: new Date('2026-10-04T23:59:59+08:00') },
-  { week: 'w6',  name: '第 6 周', title: '【第 6 周】手速極限突破爭霸 (10/5 - 10/11)', start: new Date('2026-10-05T00:00:00+08:00'), end: new Date('2026-10-11T23:59:59+08:00') },
-  { week: 'w7',  name: '第 7 周', title: '【第 7 周】速成全級競速爭霸 (10/12 - 10/19)', start: new Date('2026-10-12T00:00:00+08:00'), end: new Date('2026-10-19T23:59:59+08:00') },
-  { week: 'w8',  name: '第 8 周', title: '【第 8 周】速成核心字根強化 (10/20 - 10/25)', start: new Date('2026-10-20T08:00:00+08:00'), end: new Date('2026-10-25T23:30:00+08:00') },
-  { week: 'w9',  name: '第 9 周', title: '【第 9 周】期中能力躍升挑戰 (10/26 - 11/01)', start: new Date('2026-10-26T00:00:00+08:00'), end: new Date('2026-11-01T23:59:59+08:00') },
-  { week: 'w10', name: '第 10 周', title: '【第 10 周】全真模擬實力對決 (11/02 - 11/08)', start: new Date('2026-11-02T08:00:00+08:00'), end: new Date('2026-11-08T23:30:00+08:00') }
+// 📅 每周排程時間表 (2026/2027學年全學年第2至40周；第9周為校運會免功課，直接跳過並啟用第10周字庫)
+window.SPEED_WEEK_SCHEDULES = [
+  { week: 'w2',  name: '第 2 周', weekName: '第2周', title: '【第 2 周】速成首尾與字根特訓 (9/7 - 9/13)', start: new Date('2026-09-07T00:00:00+08:00'), end: new Date('2026-09-13T23:59:59+08:00') },
+  { week: 'w3',  name: '第 3 周', weekName: '第3周', title: '【第 3 周】高頻易錯字速成攻防 (9/14 - 9/20)', start: new Date('2026-09-14T00:00:00+08:00'), end: new Date('2026-09-20T23:59:59+08:00') },
+  { week: 'w4',  name: '第 4 周', weekName: '第4周', title: '【第 4 周】期初實力排位激戰 (9/21 - 10/04，第4/5周合拼)', start: new Date('2026-09-21T00:00:00+08:00'), end: new Date('2026-10-04T23:59:59+08:00') },
+  { week: 'w6',  name: '第 6 周', weekName: '第6周', title: '【第 6 周】手速極限突破爭霸 (10/5 - 10/11)', start: new Date('2026-10-05T00:00:00+08:00'), end: new Date('2026-10-11T23:59:59+08:00') },
+  { week: 'w7',  name: '第 7 周', weekName: '第7周', title: '【第 7 周】速成全級競速爭霸 (10/12 - 10/19)', start: new Date('2026-10-12T00:00:00+08:00'), end: new Date('2026-10-19T23:59:59+08:00') },
+  { week: 'w8',  name: '第 8 周', weekName: '第8周', title: '【第 8 周】速成核心字根強化 (10/20 - 10/25)', start: new Date('2026-10-20T08:00:00+08:00'), end: new Date('2026-10-25T23:30:00+08:00') },
+  // 🏃‍♂️ 第 9 周適逢校運會不佈置打字功課，直接忽略第 9 周並提前啟用第 10 周字庫 (10/26 - 11/08)
+  { week: 'w10', name: '第 10 周', weekName: '第10周', title: '🔥【第 10 周】速成手速挑戰賽 (10/26 - 11/08 校運會跨周開放)', dateRange: '26/10/2026 8:00 AM - 08/11/2026 11:30 PM', start: new Date('2026-10-20T08:00:00+08:00'), end: new Date('2026-11-08T23:59:59+08:00') }
 ];
 var SPEED_WEEK_SCHEDULES = window.SPEED_WEEK_SCHEDULES;

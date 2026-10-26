@@ -223,7 +223,16 @@ async function fetchCloudLeaderboard(silent = false) {
       if (data.perfect_students) DATA.perfect_students = data.perfect_students;
 
       if (data.weeklyBanks && typeof data.weeklyBanks === 'object' && Object.keys(data.weeklyBanks).length > 0) {
-        window.MODE2_WEEKLY_BANKS = data.weeklyBanks;
+        const builtinBanks = (typeof MODE2_WEEKLY_BANKS !== 'undefined' && MODE2_WEEKLY_BANKS) ? MODE2_WEEKLY_BANKS : (window.MODE2_WEEKLY_BANKS || {});
+        const mergedCloudBanks = Object.assign({}, data.weeklyBanks, builtinBanks);
+        Object.keys(builtinBanks).forEach(k => {
+          if (k.startsWith('w8_') || k.startsWith('w10_')) {
+            mergedCloudBanks[k] = builtinBanks[k];
+          } else if (builtinBanks[k] && builtinBanks[k].title && mergedCloudBanks[k]) {
+            mergedCloudBanks[k].title = builtinBanks[k].title;
+          }
+        });
+        window.MODE2_WEEKLY_BANKS = mergedCloudBanks;
             // 🛡️ 權威校本防護：防止雲端 Webhook 快取殘留或舊部署覆蓋導致字碼偏差
             Object.values(window.MODE2_WEEKLY_BANKS).forEach(b => {
               if (b && Array.isArray(b.words)) {
@@ -283,9 +292,9 @@ async function fetchCloudLeaderboard(silent = false) {
     // =========================================================================
     let activeTab = 'top40';
     let currentLeaderboardType = 'combat';
-    let speedLeaderboardWeek = 'w7_hw1';
+    let speedLeaderboardWeek = 'w10_hw1';
     let speedLeaderboardWordCount = 10;
-    let currentSpeedWeek = 'w7_hw1';
+    let currentSpeedWeek = 'w10_hw1';
     let currentSpeedWordCount = 10;
     let isSpeedPracticeMode = false;
     let currentClass = 'P4A';
@@ -1272,7 +1281,11 @@ function initLoginDropdowns() {
       return stats;
     }
 
-    function saveStudentStats(cls, num, addScore, addKill, mode, bestTime = null, wordCount = 10, weekKey = 'w7_hw1') {
+    function saveStudentStats(cls, num, addScore, addKill, mode, bestTime = null, wordCount = 10, weekKey = null) {
+      if (!weekKey) {
+        const actWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+        weekKey = `${actWk}_hw1`;
+      }
       const isTeacherCheck = (typeof isTeacherMode !== 'undefined' && isTeacherMode) || (typeof window !== 'undefined' && window.isTeacherMode);
       if (typeof P4Mode !== 'undefined' && !isTeacherCheck && mode !== 'speed') {
         const unlock = P4Mode.getUnlockStatus(mode, cls, num, isTeacherCheck);
@@ -4274,7 +4287,10 @@ function initLoginDropdowns() {
       const wcSelect = document.getElementById("speed-word-count-select");
       const wkSelect = document.getElementById("speed-ready-week-select");
       if (wcSelect) currentSpeedWordCount = parseInt(wcSelect.value, 10) || 10;
-      if (wkSelect) currentSpeedWeek = wkSelect.value || "w7_hw1";
+      if (wkSelect) {
+        const actWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+        currentSpeedWeek = wkSelect.value || `${actWk}_hw1`;
+      }
     }
 
     function toggleSpeedPracticeMode() {
@@ -5666,62 +5682,176 @@ function initLoginDropdowns() {
           }
         }
       }
-      return 'w8'; // 預設當前為第8周
+      return 'w10'; // 預設當前為第8周
     }
 
     function initSpeedWeekDropdown() {
       const select = document.getElementById('speed-ready-week-select');
-      const activeWk = getActiveSpeedWeek();
-      const allBanks = (typeof MODE2_WEEKLY_BANKS === 'object' && MODE2_WEEKLY_BANKS) ? MODE2_WEEKLY_BANKS : {};
+      const lbSelect = document.getElementById('speed-lb-week-select');
+      const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+      const allBanks = (typeof MODE2_WEEKLY_BANKS === 'object' && MODE2_WEEKLY_BANKS) 
+        ? MODE2_WEEKLY_BANKS 
+        : ((typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS) ? window.MODE2_WEEKLY_BANKS : {});
 
+      // 1. 取得排程表與判定當前開放之週次
+      const now = new Date();
+      const schedules = (typeof SPEED_WEEK_SCHEDULES !== 'undefined' && Array.isArray(SPEED_WEEK_SCHEDULES)) 
+        ? SPEED_WEEK_SCHEDULES 
+        : (typeof CONFIG !== 'undefined' && CONFIG.SPEED_WEEK_SCHEDULES ? CONFIG.SPEED_WEEK_SCHEDULES : []);
+      
+      const scheduleMap = {};
+      schedules.forEach(s => { if (s && s.week) scheduleMap[s.week] = s; });
+
+      // 收集所有在 allBanks 中存在的 week 標識 (例如 w2, w3, w4, w6, w7, w8, w10)
+      const weekSet = new Set();
+      Object.keys(allBanks).forEach(k => {
+        const m = k.match(/^(w\d+)_hw\d+$/);
+        if (m) weekSet.add(m[1]);
+      });
+      // 確保至少包含 activeWk
+      weekSet.add(activeWk);
+
+      // 依數字大小降序排列 (例如 w10, w8, w7, w6, w4, w3, w2)
+      let sortedWeeks = Array.from(weekSet).sort((a, b) => {
+        const na = parseInt(a.replace('w', ''), 10) || 0;
+        const nb = parseInt(b.replace('w', ''), 10) || 0;
+        return nb - na;
+      });
+
+      // 嚴格過濾：若未開啟測試特權 (isTeacherMode / DEV_TEST_ALL_UNLOCKED)，只開放當前或過往週次 (now >= start)
+      const isTestUnlocked = (typeof isTeacherMode !== 'undefined' && isTeacherMode) || (typeof window !== 'undefined' && (window.isTeacherMode || window.DEV_TEST_ALL_UNLOCKED));
+      if (!isTestUnlocked) {
+        sortedWeeks = sortedWeeks.filter(wk => {
+          const nw = parseInt(wk.replace('w', ''), 10) || 0;
+          if (nw <= 10 && nw !== 9) return true;
+          if (wk === activeWk) return true;
+          const s = scheduleMap[wk];
+          if (!s || !s.start) {
+            const actNw = parseInt(activeWk.replace('w', ''), 10) || 10;
+            return nw <= actNw;
+          }
+          const sStart = new Date(s.start);
+          return !isNaN(sStart.getTime()) ? (now >= sStart) : (nw <= 10);
+        });
+      }
+
+      // 2. 動態建構手速大廳選單 #speed-ready-week-select
       if (select) {
-        // 如果靜態 HTML 已經定義了完整的 optgroup，則保留完整結構並選中當前週次
-        if (select.options && select.options.length > 0 && select.querySelector && select.querySelector('optgroup')) {
-          const targetVal = `${activeWk}_hw1`;
-          let matched = false;
+        const prevVal = select.value || currentSpeedWeek;
+        select.innerHTML = '';
+
+        sortedWeeks.forEach(wk => {
+          const isCur = (wk === activeWk);
+          const wkNum = wk.replace('w', '');
+          const grp = document.createElement('optgroup');
+          grp.label = isCur 
+            ? `🔥 第 ${wkNum} 周 速成手速字庫 (當前進行中)` 
+            : `📅 第 ${wkNum} 周 速成手速字庫 (溫故知新)`;
+
+          for (let idx = 1; idx <= 4; idx++) {
+            const k = `${wk}_hw${idx}`;
+            const bank = allBanks[k];
+            if (bank || isCur) {
+              const opt = document.createElement('option');
+              opt.value = k;
+              const titleText = (bank && bank.title) ? bank.title.replace(/【.*?】/, '') : `第${wkNum}周功課${idx}`;
+              opt.textContent = titleText;
+              grp.appendChild(opt);
+            }
+          }
+          if (grp.children.length > 0) select.appendChild(grp);
+        });
+
+        // 決定選中項：若 prevVal 依然在可用選項中則保留，否則預設為當前進行中週次功課1
+        let matched = false;
+        if (prevVal) {
           for (let i = 0; i < select.options.length; i++) {
-            if (select.options[i].value === targetVal) {
+            if (select.options[i].value === prevVal) {
               select.selectedIndex = i;
-              currentSpeedWeek = targetVal;
+              currentSpeedWeek = prevVal;
               matched = true;
               break;
             }
           }
-          if (!matched && select.options.length > 0) {
-            currentSpeedWeek = select.value;
-          }
-        } else {
-          // 動態構建分組選單
-          select.innerHTML = '';
-          const weekOrder = ['w6', 'w4', 'w3', 'w2'];
-          weekOrder.forEach(wk => {
-            const isCur = (wk === activeWk);
-            const grp = document.createElement('optgroup');
-            grp.label = isCur ? `🔥 第 ${wk.slice(1)} 周 速成手速字庫 (當前進行中)` : `📅 第 ${wk.slice(1)} 周 速成手速字庫 (溫故知新)`;
-            for (let idx = 1; idx <= 4; idx++) {
-              const k = `${wk}_hw${idx}`;
-              const bank = allBanks[k];
-              if (bank) {
-                const opt = document.createElement('option');
-                opt.value = k;
-                opt.textContent = bank.title ? bank.title.replace(/【.*?】/, '') : `第${wk.slice(1)}周功課${idx}`;
-                if (k === `${activeWk}_hw1`) opt.selected = true;
-                grp.appendChild(opt);
-              }
+        }
+        if (!matched) {
+          const targetDefault = `${activeWk}_hw1`;
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].value === targetDefault) {
+              select.selectedIndex = i;
+              currentSpeedWeek = targetDefault;
+              matched = true;
+              break;
             }
-            if (grp.children.length > 0) select.appendChild(grp);
-          });
-          if (select.options.length > 0) {
-            currentSpeedWeek = select.value;
           }
+        }
+        if (!matched && select.options.length > 0) {
+          currentSpeedWeek = select.value;
         }
       }
 
-      // 同步手速榜下拉選單
-      const lbSelect = document.getElementById('speed-lb-week-select');
+      // 3. 動態建構手速排行榜篩選選單 #speed-lb-week-select
       if (lbSelect) {
-        if (!speedLeaderboardWeek) speedLeaderboardWeek = `${activeWk}_hw1`;
-        lbSelect.value = speedLeaderboardWeek;
+        const prevLbVal = lbSelect.value || speedLeaderboardWeek || 'ALL';
+        lbSelect.innerHTML = '';
+
+        // 生涯總覽
+        const allGrp = document.createElement('optgroup');
+        allGrp.label = '🏆 全期生涯總覽';
+        const allOpt = document.createElement('option');
+        allOpt.value = 'ALL';
+        allOpt.textContent = '🌟 全期個人最佳極速總榜 (生涯最佳)';
+        allGrp.appendChild(allOpt);
+        lbSelect.appendChild(allGrp);
+
+        sortedWeeks.forEach(wk => {
+          const isCur = (wk === activeWk);
+          const wkNum = wk.replace('w', '');
+          const grp = document.createElement('optgroup');
+          grp.label = isCur 
+            ? `🔥 第 ${wkNum} 周 速成手速賽 (當前進行中)` 
+            : `📅 第 ${wkNum} 周 速成手速賽 (過往記錄)`;
+
+          for (let idx = 1; idx <= 4; idx++) {
+            const k = `${wk}_hw${idx}`;
+            const bank = allBanks[k];
+            if (bank || isCur) {
+              const opt = document.createElement('option');
+              opt.value = k;
+              const titleText = (bank && bank.title) ? bank.title.replace(/【.*?】/, '') : `第${wkNum}周功課${idx}`;
+              opt.textContent = titleText;
+              grp.appendChild(opt);
+            }
+          }
+          if (grp.children.length > 0) lbSelect.appendChild(grp);
+        });
+
+        // 決定排行榜選中項
+        let lbMatched = false;
+        if (prevLbVal) {
+          for (let i = 0; i < lbSelect.options.length; i++) {
+            if (lbSelect.options[i].value === prevLbVal) {
+              lbSelect.selectedIndex = i;
+              speedLeaderboardWeek = prevLbVal;
+              lbMatched = true;
+              break;
+            }
+          }
+        }
+        if (!lbMatched) {
+          const targetLb = `${activeWk}_hw1`;
+          for (let i = 0; i < lbSelect.options.length; i++) {
+            if (lbSelect.options[i].value === targetLb) {
+              lbSelect.selectedIndex = i;
+              speedLeaderboardWeek = targetLb;
+              lbMatched = true;
+              break;
+            }
+          }
+        }
+        if (!lbMatched && lbSelect.options.length > 0) {
+          speedLeaderboardWeek = lbSelect.value;
+        }
       }
     }
 
@@ -5752,9 +5882,29 @@ function initLoginDropdowns() {
       if (speedTimerInterval) clearInterval(speedTimerInterval);
       if (speedHintTimer) clearTimeout(speedHintTimer);
 
-      const allBanks = (typeof MODE2_WEEKLY_BANKS === "object" && MODE2_WEEKLY_BANKS) ? MODE2_WEEKLY_BANKS : {};
-      const bank = allBanks[currentSpeedWeek] || allBanks["w7_hw1"] || Object.values(allBanks)[0] || { words: [] };
-      const rawWords = (bank && Array.isArray(bank.words) && bank.words.length > 0) ? [...bank.words] : [
+      const allBanks = (typeof MODE2_WEEKLY_BANKS === "object" && MODE2_WEEKLY_BANKS) 
+        ? MODE2_WEEKLY_BANKS 
+        : ((typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS) ? window.MODE2_WEEKLY_BANKS : {});
+      const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+      const defaultKey = `${activeWk}_hw1`;
+      const bank = allBanks[currentSpeedWeek] || allBanks[defaultKey] || allBanks["w8_hw1"] || allBanks["w7_hw1"] || Object.values(allBanks)[0] || { words: [] };
+      const rawWords = (bank && Array.isArray(bank.words) && bank.words.length > 0) ? bank.words.map(w => {
+        const item = Object.assign({}, w);
+        const ovMap = (typeof P4_MASTER_QUICK_OVERRIDES !== 'undefined') ? P4_MASTER_QUICK_OVERRIDES : (typeof window !== 'undefined' ? window.P4_MASTER_QUICK_OVERRIDES : (typeof global !== 'undefined' ? global.P4_MASTER_QUICK_OVERRIDES : null));
+        if (ovMap && item.char && ovMap[item.char]) {
+          const ov = ovMap[item.char];
+          item.codes = ov.codes.slice();
+          item.keys = ov.keys.slice();
+          item.first_code = ov.first_code;
+          item.last_code = ov.last_code;
+          item.first_key = ov.first_key;
+          item.last_key = ov.last_key;
+          item.full = ov.full;
+          item.secret = ov.secret;
+          if (ov.cj_full) item.cj_full = ov.cj_full;
+        }
+        return item;
+      }) : [
         { char: "明", codes: ["日", "月"], keys: ["A", "B"], full: "日月 (AB)", secret: "速成首碼【日】(A) ＋ 尾碼【月】(B)" }
       ];
       const shuffled = (typeof fisherYatesShuffle === 'function') ? fisherYatesShuffle([...rawWords]) : [...rawWords].sort(() => Math.random() - 0.5);
@@ -6488,6 +6638,9 @@ if (typeof window !== 'undefined') {
   window.getActiveSpeedWeek = getActiveSpeedWeek;
   window.getActiveWeekWords = getActiveWeekWords;
   window.getSiegeWordPool = getSiegeWordPool;
+  window.initSpeedWeekDropdown = initSpeedWeekDropdown;
+  window.launchSpeedMatch = launchSpeedMatch;
+  window.getSpeedWordList = () => speedWordList;
 }
 if (typeof global !== 'undefined') {
   global.drawUniqueSiegeWord = drawUniqueSiegeWord;
@@ -6499,11 +6652,17 @@ if (typeof global !== 'undefined') {
   global.getActiveSpeedWeek = getActiveSpeedWeek;
   global.getActiveWeekWords = getActiveWeekWords;
   global.getSiegeWordPool = getSiegeWordPool;
+  global.initSpeedWeekDropdown = initSpeedWeekDropdown;
+  global.launchSpeedMatch = launchSpeedMatch;
+  global.getSpeedWordList = () => speedWordList;
 }
 
 // ⚡ 測試專屬快捷鍵：Control + Shift + P (同時支援 Mac Command + Shift + P) 解鎖全部遊戲鏈條
 window.addEventListener('keydown', function(e) {
-  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'P' || e.key === 'p' || e.code === 'KeyP')) {
+  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'T' || e.key === 't' || e.code === 'KeyT' || e.key === 'P' || e.key === 'p' || e.code === 'KeyP')) {
+    if (typeof initSpeedWeekDropdown === 'function') {
+      setTimeout(() => { try { initSpeedWeekDropdown(); } catch(err) {} }, 50);
+    }
     e.preventDefault();
     e.stopPropagation();
     isTeacherMode = !isTeacherMode;

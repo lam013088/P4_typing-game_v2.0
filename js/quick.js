@@ -184,7 +184,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "G",
     "last_key": "C",
     "full": "土金 (GC)",
-    "cj_full": "土中弓金 (GLNC)",
+    "cj_full": "土竹弓金 (GHNC)",
     "secret": "【赤】速成取碼：首碼【土】(G) ＋ 尾碼【金】(C)",
     "quickCode": "GC"
   },
@@ -279,7 +279,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "E",
     "last_key": "E",
     "full": "水水 (EE)",
-    "cj_full": "水竹尸水 (EHSE)",
+    "cj_full": "水弓水 (ENE)",
     "secret": "【沒】速成取碼：首碼【水】(E) ＋ 尾碼【水】(E)",
     "quickCode": "EE"
   },
@@ -1028,20 +1028,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "樣",
     "codes": [
       "木",
-      "水"
+      "人"
     ],
     "keys": [
       "D",
-      "E"
+      "O"
     ],
     "first_code": "木",
-    "last_code": "水",
+    "last_code": "人",
     "first_key": "D",
-    "last_key": "E",
-    "full": "木水 (DE)",
-    "cj_full": "木廿土水 (DTGE)",
-    "secret": "【樣】速成取碼：首碼【木】(D) ＋ 尾碼【水】(E)",
-    "quickCode": "DE"
+    "last_key": "O",
+    "full": "木人 (DO)",
+    "cj_full": "木廿土人 (DTGO)",
+    "secret": "【樣】速成取碼：首碼【木】(D) ＋ 尾碼【人】(O)",
+    "quickCode": "DO"
   },
   "標": {
     "char": "標",
@@ -1427,20 +1427,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "弱",
     "codes": [
       "弓",
-      "竹"
+      "一"
     ],
     "keys": [
       "N",
-      "H"
+      "M"
     ],
     "first_code": "弓",
-    "last_code": "竹",
+    "last_code": "一",
     "first_key": "N",
-    "last_key": "H",
-    "full": "弓竹 (NH)",
-    "cj_full": "弓竹弓竹竹 (NHNHH)",
-    "secret": "【弱】速成取碼：首碼【弓】(N) ＋ 尾碼【竹】(H)",
-    "quickCode": "NH"
+    "last_key": "M",
+    "full": "弓一 (NM)",
+    "cj_full": "弓一弓戈一 (NMNIM)",
+    "secret": "【弱】速成取碼：首碼【弓】(N) ＋ 尾碼【一】(M)",
+    "quickCode": "NM"
   },
   "利": {
     "char": "利",
@@ -1818,7 +1818,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "M",
     "last_key": "N",
     "full": "一弓 (MN)",
-    "cj_full": "一土人戈弓 (MGOIN)",
+    "cj_full": "一土人一弓 (MGOMN)",
     "secret": "【琴】速成取碼：首碼【一】(M) ＋ 尾碼【弓】(N)",
     "quickCode": "MN"
   },
@@ -2217,7 +2217,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "M",
     "last_key": "M",
     "full": "一一 (MM)",
-    "cj_full": "一木卜中一 (MDYLM)",
+    "cj_full": "一竹木一 (MHDM)",
     "secret": "【歷】速成取碼：首碼【一】(M) ＋ 尾碼【一】(M)",
     "quickCode": "MM"
   },
@@ -2463,7 +2463,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "last_key": "M",
     "full": "一 (M)",
     "cj_full": "一 (M)",
-    "secret": "【工】速成取碼：單碼【一】(M)",
+    "secret": "【工】單碼字：直取【一】(M)",
     "quickCode": "M"
   },
   "畫": {
@@ -2557,7 +2557,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "H",
     "last_key": "I",
     "full": "竹戈 (HI)",
-    "cj_full": "竹弓竹中戈 (HNHLI)",
+    "cj_full": "竹弓中戈 (HNLI)",
     "secret": "【風】速成取碼：首碼【竹】(H) ＋ 尾碼【戈】(I)",
     "quickCode": "HI"
   },
@@ -2994,7 +2994,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "B",
     "last_key": "I",
     "full": "月戈 (BI)",
-    "cj_full": "月弓山戈 (BNUI)",
+    "cj_full": "月弓日戈 (BNAI)",
     "secret": "【冤】速成取碼：首碼【月】(B) ＋ 尾碼【戈】(I)",
     "quickCode": "BI"
   },
@@ -3097,20 +3097,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "朮",
     "codes": [
       "戈",
-      "金"
+      "木"
     ],
     "keys": [
       "I",
-      "C"
+      "D"
     ],
     "first_code": "戈",
-    "last_code": "金",
+    "last_code": "木",
     "first_key": "I",
-    "last_key": "C",
-    "full": "戈金 (IC)",
-    "cj_full": "戈十金 (IJC)",
-    "secret": "【朮】速成取碼：首碼【戈】(I) ＋ 尾碼【金】(C)",
-    "quickCode": "IC"
+    "last_key": "D",
+    "full": "戈木 (ID)",
+    "cj_full": "戈木 (ID)",
+    "secret": "【朮】速成取碼：首碼【戈】(I) ＋ 尾碼【木】(D)",
+    "quickCode": "ID"
   },
   "材": {
     "char": "材",
@@ -3868,7 +3868,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "C",
     "last_key": "R",
     "full": "金口 (CR)",
-    "cj_full": "金金口 (CCR)",
+    "cj_full": "金竹弓口 (CHNR)",
     "secret": "【鉛】速成取碼：首碼【金】(C) ＋ 尾碼【口】(R)",
     "quickCode": "CR"
   },
@@ -4153,7 +4153,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "N",
     "last_key": "I",
     "full": "弓戈 (NI)",
-    "cj_full": "弓戈中戈 (NILI)",
+    "cj_full": "弓口戈戈 (NRII)",
     "secret": "【強】速成取碼：首碼【弓】(N) ＋ 尾碼【戈】(I)",
     "quickCode": "NI"
   },
@@ -4217,21 +4217,21 @@ const P4_MASTER_QUICK_OVERRIDES = {
   "麥": {
     "char": "麥",
     "codes": [
-      "木",
-      "水"
+      "十",
+      "戈"
     ],
     "keys": [
-      "D",
-      "E"
+      "J",
+      "I"
     ],
-    "first_code": "木",
-    "last_code": "水",
-    "first_key": "D",
-    "last_key": "E",
-    "full": "木水 (DE)",
-    "cj_full": "木人竹水 (DOHE)",
-    "secret": "【麥】速成取碼：首碼【木】(D) ＋ 尾碼【水】(E)",
-    "quickCode": "DE"
+    "first_code": "十",
+    "last_code": "戈",
+    "first_key": "J",
+    "last_key": "I",
+    "full": "十戈 (JI)",
+    "cj_full": "十人弓戈 (JONI)",
+    "secret": "【麥】速成取碼：首碼【十】(J) ＋ 尾碼【戈】(I)",
+    "quickCode": "JI"
   },
   "數": {
     "char": "數",
@@ -4522,20 +4522,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "窗",
     "codes": [
       "十",
-      "水"
+      "大"
     ],
     "keys": [
       "J",
-      "E"
+      "K"
     ],
     "first_code": "十",
-    "last_code": "水",
+    "last_code": "大",
     "first_key": "J",
-    "last_key": "E",
-    "full": "十水 (JE)",
-    "cj_full": "十金竹田水 (JCHWE)",
-    "secret": "【窗】速成取碼：首碼【十】(J) ＋ 尾碼【水】(E)",
-    "quickCode": "JE"
+    "last_key": "K",
+    "full": "十大 (JK)",
+    "cj_full": "十金竹田大 (JCHWK)",
+    "secret": "【窗】速成取碼：首碼【十】(J) ＋ 尾碼【大】(K)",
+    "quickCode": "JK"
   },
   "較": {
     "char": "較",
@@ -4616,40 +4616,40 @@ const P4_MASTER_QUICK_OVERRIDES = {
   "麵": {
     "char": "麵",
     "codes": [
-      "木",
+      "十",
       "中"
     ],
     "keys": [
-      "D",
+      "J",
       "L"
     ],
-    "first_code": "木",
+    "first_code": "十",
     "last_code": "中",
-    "first_key": "D",
+    "first_key": "J",
     "last_key": "L",
-    "full": "木中 (DL)",
-    "cj_full": "木水一田中 (DEMWL)",
-    "secret": "【麵】速成取碼：首碼【木】(D) ＋ 尾碼【中】(L)",
-    "quickCode": "DL"
+    "full": "十中 (JL)",
+    "cj_full": "十水一田中 (JEMWL)",
+    "secret": "【麵】速成取碼：首碼【十】(J) ＋ 尾碼【中】(L)",
+    "quickCode": "JL"
   },
   "州": {
     "char": "州",
     "codes": [
-      "竹",
+      "戈",
       "中"
     ],
     "keys": [
-      "H",
+      "I",
       "L"
     ],
-    "first_code": "竹",
+    "first_code": "戈",
     "last_code": "中",
-    "first_key": "H",
+    "first_key": "I",
     "last_key": "L",
-    "full": "竹中 (HL)",
-    "cj_full": "竹中戈中 (HLIL)",
-    "secret": "【州】速成取碼：首碼【竹】(H) ＋ 尾碼【中】(L)",
-    "quickCode": "HL"
+    "full": "戈中 (IL)",
+    "cj_full": "戈中戈中 (ILIL)",
+    "secret": "【州】速成取碼：首碼【戈】(I) ＋ 尾碼【中】(L)",
+    "quickCode": "IL"
   },
   "蜜": {
     "char": "蜜",
@@ -4818,7 +4818,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "I",
     "last_key": "I",
     "full": "戈戈 (II)",
-    "cj_full": "戈金女戈 (ICVI)",
+    "cj_full": "戈木女戈 (IDVI)",
     "secret": "【麼】速成取碼：首碼【戈】(I) ＋ 尾碼【戈】(I)",
     "quickCode": "II"
   },
@@ -5084,7 +5084,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "M",
     "last_key": "H",
     "full": "一竹 (MH)",
-    "cj_full": "一十一十竹 (MJMJH)",
+    "cj_full": "一廿竹竹竹 (MTHHH)",
     "secret": "【形】速成取碼：首碼【一】(M) ＋ 尾碼【竹】(H)",
     "quickCode": "MH"
   },
@@ -5263,20 +5263,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "致",
     "codes": [
       "一",
-      "水"
+      "大"
     ],
     "keys": [
       "M",
-      "E"
+      "K"
     ],
     "first_code": "一",
-    "last_code": "水",
+    "last_code": "大",
     "first_key": "M",
-    "last_key": "E",
-    "full": "一水 (ME)",
-    "cj_full": "一土竹水 (MGHE)",
-    "secret": "【致】速成取碼：首碼【一】(M) ＋ 尾碼【水】(E)",
-    "quickCode": "ME"
+    "last_key": "K",
+    "full": "一大 (MK)",
+    "cj_full": "一土人大 (MGOK)",
+    "secret": "【致】速成取碼：首碼【一】(M) ＋ 尾碼【大】(K)",
+    "quickCode": "MK"
   },
   "千": {
     "char": "千",
@@ -5320,20 +5320,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "雨",
     "codes": [
       "一",
-      "月"
+      "卜"
     ],
     "keys": [
       "M",
-      "B"
+      "Y"
     ],
     "first_code": "一",
-    "last_code": "月",
+    "last_code": "卜",
     "first_key": "M",
-    "last_key": "B",
-    "full": "一月 (MB)",
-    "cj_full": "一水月 (MEB)",
-    "secret": "【雨】速成取碼：首碼【一】(M) ＋ 尾碼【月】(B)",
-    "quickCode": "MB"
+    "last_key": "Y",
+    "full": "一卜 (MY)",
+    "cj_full": "一中月卜 (MLBY)",
+    "secret": "【雨】速成取碼：首碼【一】(M) ＋ 尾碼【卜】(Y)",
+    "quickCode": "MY"
   },
   "直": {
     "char": "直",
@@ -5597,7 +5597,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "M",
     "last_key": "M",
     "full": "一一 (MM)",
-    "cj_full": "一女一 (MVM)",
+    "cj_full": "一女弓一 (MVNM)",
     "secret": "【互】速成取碼：首碼【一】(M) ＋ 尾碼【一】(M)",
     "quickCode": "MM"
   },
@@ -5635,7 +5635,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "H",
     "last_key": "C",
     "full": "竹金 (HC)",
-    "cj_full": "竹難卜金 (HXYC)",
+    "cj_full": "竹難月金 (HXBC)",
     "secret": "【與】速成取碼：首碼【竹】(H) ＋ 尾碼【金】(C)",
     "quickCode": "HC"
   },
@@ -6338,7 +6338,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "E",
     "last_key": "U",
     "full": "水山 (EU)",
-    "cj_full": "水大中山 (EKLU)",
+    "cj_full": "水大中田山 (EKLWU)",
     "secret": "【淹】速成取碼：首碼【水】(E) ＋ 尾碼【山】(U)",
     "quickCode": "EU"
   },
@@ -6376,7 +6376,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "L",
     "last_key": "V",
     "full": "中女 (LV)",
-    "cj_full": "中日女 (LAV)",
+    "cj_full": "中中女 (LLV)",
     "secret": "【婁】速成取碼：首碼【中】(L) ＋ 尾碼【女】(V)",
     "quickCode": "LV"
   },
@@ -6395,7 +6395,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "V",
     "last_key": "V",
     "full": "女女 (VV)",
-    "cj_full": "女火中日女 (VFLAV)",
+    "cj_full": "女火中中女 (VFLLV)",
     "secret": "【縷】速成取碼：首碼【女】(V) ＋ 尾碼【女】(V)",
     "quickCode": "VV"
   },
@@ -6421,21 +6421,21 @@ const P4_MASTER_QUICK_OVERRIDES = {
   "師": {
     "char": "師",
     "codes": [
-      "竹",
+      "戈",
       "月"
     ],
     "keys": [
-      "H",
+      "I",
       "B"
     ],
-    "first_code": "竹",
+    "first_code": "戈",
     "last_code": "月",
-    "first_key": "H",
+    "first_key": "I",
     "last_key": "B",
-    "full": "竹月 (HB)",
-    "cj_full": "竹口一中月 (HRMLB)",
-    "secret": "【師】速成取碼：首碼【竹】(H) ＋ 尾碼【月】(B)",
-    "quickCode": "HB"
+    "full": "戈月 (IB)",
+    "cj_full": "戈竹一中月 (IHMLB)",
+    "secret": "【師】速成取碼：首碼【戈】(I) ＋ 尾碼【月】(B)",
+    "quickCode": "IB"
   },
   "永": {
     "char": "永",
@@ -6870,7 +6870,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "J",
     "last_key": "S",
     "full": "十尸 (JS)",
-    "cj_full": "十金竹尸 (JCHS)",
+    "cj_full": "十金人尸 (JCOS)",
     "secret": "【窄】速成取碼：首碼【十】(J) ＋ 尾碼【尸】(S)",
     "quickCode": "JS"
   },
@@ -6897,20 +6897,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "刃",
     "codes": [
       "尸",
-      "竹"
+      "戈"
     ],
     "keys": [
       "S",
-      "H"
+      "I"
     ],
     "first_code": "尸",
-    "last_code": "竹",
+    "last_code": "戈",
     "first_key": "S",
-    "last_key": "H",
-    "full": "尸竹 (SH)",
-    "cj_full": "尸竹竹 (SHH)",
-    "secret": "【刃】速成取碼：首碼【尸】(S) ＋ 尾碼【竹】(H)",
-    "quickCode": "SH"
+    "last_key": "I",
+    "full": "尸戈 (SI)",
+    "cj_full": "尸竹戈 (SHI)",
+    "secret": "【刃】速成取碼：首碼【尸】(S) ＋ 尾碼【戈】(I)",
+    "quickCode": "SI"
   },
   "長": {
     "char": "長",
@@ -7276,21 +7276,21 @@ const P4_MASTER_QUICK_OVERRIDES = {
   "葉": {
     "char": "葉",
     "codes": [
-      "廿",
+      "心",
       "木"
     ],
     "keys": [
-      "T",
+      "P",
       "D"
     ],
-    "first_code": "廿",
+    "first_code": "心",
     "last_code": "木",
-    "first_key": "T",
+    "first_key": "P",
     "last_key": "D",
-    "full": "廿木 (TD)",
-    "cj_full": "廿心廿木 (TPTD)",
-    "secret": "【葉】速成取碼：首碼【廿】(T) ＋ 尾碼【木】(D)",
-    "quickCode": "TD"
+    "full": "心木 (PD)",
+    "cj_full": "心廿木 (PTD)",
+    "secret": "【葉】速成取碼：首碼【心】(P) ＋ 尾碼【木】(D)",
+    "quickCode": "PD"
   },
   "泄": {
     "char": "泄",
@@ -7497,7 +7497,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "F",
     "last_key": "Q",
     "full": "火手 (FQ)",
-    "cj_full": "火手手 (FQQ)",
+    "cj_full": "火人手 (FOQ)",
     "secret": "【拳】速成取碼：首碼【火】(F) ＋ 尾碼【手】(Q)",
     "quickCode": "FQ"
   },
@@ -7744,7 +7744,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "M",
     "last_key": "U",
     "full": "一山 (MU)",
-    "cj_full": "一土月山山 (MGBUU)",
+    "cj_full": "一土一月山 (MGMBU)",
     "secret": "【現】速成取碼：首碼【一】(M) ＋ 尾碼【山】(U)",
     "quickCode": "MU"
   },
@@ -7972,7 +7972,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "V",
     "last_key": "E",
     "full": "女水 (VE)",
-    "cj_full": "女竹難水 (VHXE)",
+    "cj_full": "女竹中水 (VHLE)",
     "secret": "【嫂】速成取碼：首碼【女】(V) ＋ 尾碼【水】(E)",
     "quickCode": "VE"
   },
@@ -8371,7 +8371,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "V",
     "last_key": "C",
     "full": "女金 (VC)",
-    "cj_full": "女竹竹金 (VHHC)",
+    "cj_full": "女廿難金 (VTXC)",
     "secret": "【嫌】速成取碼：首碼【女】(V) ＋ 尾碼【金】(C)",
     "quickCode": "VC"
   },
@@ -8379,20 +8379,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "賺",
     "codes": [
       "月",
-      "金"
+      "口"
     ],
     "keys": [
       "B",
-      "C"
+      "R"
     ],
     "first_code": "月",
-    "last_code": "金",
+    "last_code": "口",
     "first_key": "B",
-    "last_key": "C",
-    "full": "月金 (BC)",
-    "cj_full": "月金金一金 (BCCMC)",
-    "secret": "【賺】速成取碼：首碼【月】(B) ＋ 尾碼【金】(C)",
-    "quickCode": "BC"
+    "last_key": "R",
+    "full": "月口 (BR)",
+    "cj_full": "月金人戈口 (BCOIR)",
+    "secret": "【賺】速成取碼：首碼【月】(B) ＋ 尾碼【口】(R)",
+    "quickCode": "BR"
   },
   "舀": {
     "char": "舀",
@@ -8637,7 +8637,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "H",
     "last_key": "T",
     "full": "竹廿 (HT)",
-    "cj_full": "竹難月廿 (HXBT)",
+    "cj_full": "竹水月廿 (HEBT)",
     "secret": "【盥】速成取碼：首碼【竹】(H) ＋ 尾碼【廿】(T)",
     "quickCode": "HT"
   },
@@ -8694,7 +8694,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "H",
     "last_key": "V",
     "full": "竹女 (HV)",
-    "cj_full": "竹難女卜女 (HXVYV)",
+    "cj_full": "竹難尸一女 (HXSMV)",
     "secret": "【鼠】速成取碼：首碼【竹】(H) ＋ 尾碼【女】(V)",
     "quickCode": "HV"
   },
@@ -8713,7 +8713,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "Y",
     "last_key": "X",
     "full": "卜難 (YX)",
-    "cj_full": "卜口竹尸難 (YRHSX)",
+    "cj_full": "卜口弓竹難 (YRNHX)",
     "secret": "【諂】速成取碼：首碼【卜】(Y) ＋ 尾碼【難】(X)",
     "quickCode": "YX"
   },
@@ -8732,7 +8732,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "F",
     "last_key": "X",
     "full": "火難 (FX)",
-    "cj_full": "火竹尸難 (FHSX)",
+    "cj_full": "火弓竹難 (FNHX)",
     "secret": "【焰】速成取碼：首碼【火】(F) ＋ 尾碼【難】(X)",
     "quickCode": "FX"
   },
@@ -8770,7 +8770,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "H",
     "last_key": "C",
     "full": "竹金 (HC)",
-    "cj_full": "竹難十金 (HXJC)",
+    "cj_full": "竹一金 (HMC)",
     "secret": "【輿】速成取碼：首碼【竹】(H) ＋ 尾碼【金】(C)",
     "quickCode": "HC"
   },
@@ -8960,7 +8960,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "H",
     "last_key": "H",
     "full": "竹竹 (HH)",
-    "cj_full": "竹弓日一竹 (HNAMH)",
+    "cj_full": "竹弓弓日一竹 (HNNAMH)",
     "secret": "【颺】速成取碼：首碼【竹】(H) ＋ 尾碼【竹】(H)",
     "quickCode": "HH"
   },
@@ -8968,20 +8968,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "稿",
     "codes": [
       "竹",
-      "月"
+      "木"
     ],
     "keys": [
       "H",
-      "B"
+      "D"
     ],
     "first_code": "竹",
-    "last_code": "月",
+    "last_code": "木",
     "first_key": "H",
-    "last_key": "B",
-    "full": "竹月 (HB)",
-    "cj_full": "竹木卜口月 (HDYRB)",
-    "secret": "【稿】速成取碼：首碼【竹】(H) ＋ 尾碼【月】(B)",
-    "quickCode": "HB"
+    "last_key": "D",
+    "full": "竹木 (HD)",
+    "cj_full": "竹木口月木 (HDRBD)",
+    "secret": "【稿】速成取碼：首碼【竹】(H) ＋ 尾碼【木】(D)",
+    "quickCode": "HD"
   },
   "醇": {
     "char": "醇",
@@ -9005,21 +9005,21 @@ const P4_MASTER_QUICK_OVERRIDES = {
   "魑": {
     "char": "魑",
     "codes": [
-      "竹",
+      "水",
       "月"
     ],
     "keys": [
-      "H",
+      "E",
       "B"
     ],
-    "first_code": "竹",
+    "first_code": "水",
     "last_code": "月",
-    "first_key": "H",
+    "first_key": "E",
     "last_key": "B",
-    "full": "竹月 (HB)",
-    "cj_full": "竹戈卜山月 (HIYUB)",
-    "secret": "【魑】速成取碼：首碼【竹】(H) ＋ 尾碼【月】(B)",
-    "quickCode": "HB"
+    "full": "水月 (EB)",
+    "cj_full": "水卜山月 (EYUB)",
+    "secret": "【魑】速成取碼：首碼【水】(E) ＋ 尾碼【月】(B)",
+    "quickCode": "EB"
   },
   "裊": {
     "char": "裊",
@@ -9044,20 +9044,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "髮",
     "codes": [
       "尸",
-      "水"
+      "大"
     ],
     "keys": [
       "S",
-      "E"
+      "K"
     ],
     "first_code": "尸",
-    "last_code": "水",
+    "last_code": "大",
     "first_key": "S",
-    "last_key": "E",
-    "full": "尸水 (SE)",
-    "cj_full": "尸竹戈大水 (SHIKE)",
-    "secret": "【髮】速成取碼：首碼【尸】(S) ＋ 尾碼【水】(E)",
-    "quickCode": "SE"
+    "last_key": "K",
+    "full": "尸大 (SK)",
+    "cj_full": "尸竹戈大大 (SHIKK)",
+    "secret": "【髮】速成取碼：首碼【尸】(S) ＋ 尾碼【大】(K)",
+    "quickCode": "SK"
   },
   "輸": {
     "char": "輸",
@@ -9150,7 +9150,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "O",
     "last_key": "D",
     "full": "人木 (OD)",
-    "cj_full": "人中竹木 (OLHD)",
+    "cj_full": "人中人木 (OLOD)",
     "secret": "【條】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)",
     "quickCode": "OD"
   },
@@ -9188,7 +9188,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "O",
     "last_key": "K",
     "full": "人大 (OK)",
-    "cj_full": "人中弓大 (OLNK)",
+    "cj_full": "人弓一大 (ONMK)",
     "secret": "【候】速成取碼：首碼【人】(O) ＋ 尾碼【大】(K)",
     "quickCode": "OK"
   },
@@ -9549,7 +9549,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "M",
     "last_key": "S",
     "full": "一尸 (MS)",
-    "cj_full": "一一女尸 (MMVS)",
+    "cj_full": "一一尸 (MMS)",
     "secret": "【巧】速成取碼：首碼【一】(M) ＋ 尾碼【尸】(S)",
     "quickCode": "MS"
   },
@@ -9644,7 +9644,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "W",
     "last_key": "W",
     "full": "田田 (WW)",
-    "cj_full": "田口十田 (WRJW)",
+    "cj_full": "田口卜田 (WRYW)",
     "secret": "【圖】速成取碼：首碼【田】(W) ＋ 尾碼【田】(W)",
     "quickCode": "WW"
   },
@@ -9690,39 +9690,39 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "喝",
     "codes": [
       "口",
-      "心"
+      "女"
     ],
     "keys": [
       "R",
-      "P"
+      "V"
     ],
     "first_code": "口",
-    "last_code": "心",
+    "last_code": "女",
     "first_key": "R",
-    "last_key": "P",
-    "full": "口心 (RP)",
-    "cj_full": "口日心心 (RAPP)",
-    "secret": "【喝】速成取碼：首碼【口】(R) ＋ 尾碼【心】(P)",
-    "quickCode": "RP"
+    "last_key": "V",
+    "full": "口女 (RV)",
+    "cj_full": "口日心女 (RAPV)",
+    "secret": "【喝】速成取碼：首碼【口】(R) ＋ 尾碼【女】(V)",
+    "quickCode": "RV"
   },
   "夠": {
     "char": "夠",
     "codes": [
-      "弓",
-      "口"
+      "心",
+      "弓"
     ],
     "keys": [
-      "N",
-      "R"
+      "P",
+      "N"
     ],
-    "first_code": "弓",
-    "last_code": "口",
-    "first_key": "N",
-    "last_key": "R",
-    "full": "弓口 (NR)",
-    "cj_full": "弓弓心口 (NNPR)",
-    "secret": "【夠】速成取碼：首碼【弓】(N) ＋ 尾碼【口】(R)",
-    "quickCode": "NR"
+    "first_code": "心",
+    "last_code": "弓",
+    "first_key": "P",
+    "last_key": "N",
+    "full": "心弓 (PN)",
+    "cj_full": "心口弓戈弓 (PRNIN)",
+    "secret": "【夠】速成取碼：首碼【心】(P) ＋ 尾碼【弓】(N)",
+    "quickCode": "PN"
   },
   "齡": {
     "char": "齡",
@@ -10099,7 +10099,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "last_key": "C",
     "full": "金 (C)",
     "cj_full": "金 (C)",
-    "secret": "【金】速成取碼：單碼【金】(C)",
+    "secret": "【金】單碼字：直取【金】(C)",
     "quickCode": "C"
   },
   "喊": {
@@ -10212,7 +10212,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "M",
     "last_key": "G",
     "full": "一土 (MG)",
-    "cj_full": "一口人月土 (MROBG)",
+    "cj_full": "一口弓月土 (MRNBG)",
     "secret": "【確】速成取碼：首碼【一】(M) ＋ 尾碼【土】(G)",
     "quickCode": "MG"
   },
@@ -10250,7 +10250,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "M",
     "last_key": "P",
     "full": "一心 (MP)",
-    "cj_full": "一月月心 (MBBP)",
+    "cj_full": "一一月月心 (MMBBP)",
     "secret": "【麗】速成取碼：首碼【一】(M) ＋ 尾碼【心】(P)",
     "quickCode": "MP"
   },
@@ -10383,7 +10383,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "I",
     "last_key": "G",
     "full": "戈土 (IG)",
-    "cj_full": "戈女弓土 (IVNG)",
+    "cj_full": "戈弓大土 (INKG)",
     "secret": "【庭】速成取碼：首碼【戈】(I) ＋ 尾碼【土】(G)",
     "quickCode": "IG"
   },
@@ -10467,20 +10467,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "氣",
     "codes": [
       "人",
-      "木"
+      "弓"
     ],
     "keys": [
       "O",
-      "D"
+      "N"
     ],
     "first_code": "人",
-    "last_code": "木",
+    "last_code": "弓",
     "first_key": "O",
-    "last_key": "D",
-    "full": "人木 (OD)",
-    "cj_full": "人弓火木 (ONFD)",
-    "secret": "【氣】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)",
-    "quickCode": "OD"
+    "last_key": "N",
+    "full": "人弓 (ON)",
+    "cj_full": "人弓 (ON)",
+    "secret": "【氣】速成取碼：首碼【人】(O) ＋ 尾碼【弓】(N)",
+    "quickCode": "ON"
   },
   "她": {
     "char": "她",
@@ -10725,7 +10725,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "S",
     "last_key": "I",
     "full": "尸戈 (SI)",
-    "cj_full": "尸一一口戈 (SMMRI)",
+    "cj_full": "尸一木戈 (SMDI)",
     "secret": "【尋】速成取碼：首碼【尸】(S) ＋ 尾碼【戈】(I)",
     "quickCode": "SI"
   },
@@ -10801,7 +10801,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "N",
     "last_key": "B",
     "full": "弓月 (NB)",
-    "cj_full": "弓中弓大月 (NLNKB)",
+    "cj_full": "弓中卜大月 (NLYKB)",
     "secret": "【隨】速成取碼：首碼【弓】(N) ＋ 尾碼【月】(B)",
     "quickCode": "NB"
   },
@@ -11151,20 +11151,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "次",
     "codes": [
       "戈",
-      "人"
+      "弓"
     ],
     "keys": [
       "I",
-      "O"
+      "N"
     ],
     "first_code": "戈",
-    "last_code": "人",
+    "last_code": "弓",
     "first_key": "I",
-    "last_key": "O",
-    "full": "戈人 (IO)",
-    "cj_full": "戈一弓人 (IMNO)",
-    "secret": "【次】速成取碼：首碼【戈】(I) ＋ 尾碼【人】(O)",
-    "quickCode": "IO"
+    "last_key": "N",
+    "full": "戈弓 (IN)",
+    "cj_full": "戈人弓 (ION)",
+    "secret": "【次】速成取碼：首碼【戈】(I) ＋ 尾碼【弓】(N)",
+    "quickCode": "IN"
   },
   "水": {
     "char": "水",
@@ -11180,7 +11180,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "last_key": "E",
     "full": "水 (E)",
     "cj_full": "水 (E)",
-    "secret": "【水】速成取碼：單碼【水】(E)",
+    "secret": "【水】單碼字：直取【水】(E)",
     "quickCode": "E"
   },
   "竟": {
@@ -11244,20 +11244,20 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "char": "甚",
     "codes": [
       "廿",
-      "女"
+      "尸"
     ],
     "keys": [
       "T",
-      "V"
+      "S"
     ],
     "first_code": "廿",
-    "last_code": "女",
+    "last_code": "尸",
     "first_key": "T",
-    "last_key": "V",
-    "full": "廿女 (TV)",
-    "cj_full": "廿一一女 (TMMV)",
-    "secret": "【甚】速成取碼：首碼【廿】(T) ＋ 尾碼【女】(V)",
-    "quickCode": "TV"
+    "last_key": "S",
+    "full": "廿尸 (TS)",
+    "cj_full": "廿一一尸 (TMMS)",
+    "secret": "【甚】速成取碼：首碼【廿】(T) ＋ 尾碼【尸】(S)",
+    "quickCode": "TS"
   },
   "亂": {
     "char": "亂",
@@ -11425,7 +11425,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "last_key": "F",
     "full": "火 (F)",
     "cj_full": "火 (F)",
-    "secret": "【火】速成取碼：單碼【火】(F)",
+    "secret": "【火】單碼字：直取【火】(F)",
     "quickCode": "F"
   },
   "適": {
@@ -11766,7 +11766,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "Y",
     "last_key": "K",
     "full": "卜大 (YK)",
-    "cj_full": "卜金一大 (YCMK)",
+    "cj_full": "卜廿大 (YTK)",
     "secret": "【送】速成取碼：首碼【卜】(Y) ＋ 尾碼【大】(K)",
     "quickCode": "YK"
   },
@@ -11861,7 +11861,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "V",
     "last_key": "U",
     "full": "女山 (VU)",
-    "cj_full": "女火口山 (VFRU)",
+    "cj_full": "女火尸山 (VFSU)",
     "secret": "【紀】速成取碼：首碼【女】(V) ＋ 尾碼【山】(U)",
     "quickCode": "VU"
   },
@@ -12013,7 +12013,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "J",
     "last_key": "R",
     "full": "十口 (JR)",
-    "cj_full": "十手十口 (JQJR)",
+    "cj_full": "十手一口 (JQMR)",
     "secret": "【害】速成取碼：首碼【十】(J) ＋ 尾碼【口】(R)",
     "quickCode": "JR"
   },
@@ -12853,141 +12853,213 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【位】速成取碼：首碼【人】(O) ＋ 尾碼【廿】(T)",
     "quickCode": "OT"
   },
-  "搖": {
-    "char": "搖",
+  "中": {
+    "char": "中",
     "codes": [
-      "手",
-      "山"
+      "中"
     ],
     "keys": [
-      "Q",
-      "U"
+      "L"
     ],
-    "first_code": "手",
-    "last_code": "山",
-    "first_key": "Q",
-    "last_key": "U",
-    "full": "手山 (QU)",
-    "cj_full": "手月人山 (QBOU)",
-    "secret": "【搖】速成取碼：首碼【手】(Q) ＋ 尾碼【山】(U)",
-    "quickCode": "QU"
+    "first_code": "中",
+    "last_code": "中",
+    "first_key": "L",
+    "last_key": "L",
+    "full": "中 (L)",
+    "cj_full": "中 (L)",
+    "secret": "【中】單碼字：直取【中】(L)",
+    "quickCode": "L"
   },
-  "夏": {
-    "char": "夏",
-    "codes": [
-      "一",
-      "水"
-    ],
-    "keys": [
-      "M",
-      "E"
-    ],
-    "first_code": "一",
-    "last_code": "水",
-    "first_key": "M",
-    "last_key": "E",
-    "full": "一水 (ME)",
-    "cj_full": "一山竹水 (MUHE)",
-    "secret": "【夏】速成取碼：首碼【一】(M) ＋ 尾碼【水】(E)",
-    "quickCode": "ME"
-  },
-  "該": {
-    "char": "該",
+  "主": {
+    "char": "主",
     "codes": [
       "卜",
+      "土"
+    ],
+    "keys": [
+      "Y",
+      "G"
+    ],
+    "first_code": "卜",
+    "last_code": "土",
+    "first_key": "Y",
+    "last_key": "G",
+    "full": "卜土 (YG)",
+    "cj_full": "卜土 (YG)",
+    "secret": "【主】速成取碼：首碼【卜】(Y) ＋ 尾碼【土】(G)",
+    "quickCode": "YG"
+  },
+  "久": {
+    "char": "久",
+    "codes": [
+      "弓",
       "人"
     ],
     "keys": [
-      "Y",
+      "N",
       "O"
     ],
-    "first_code": "卜",
+    "first_code": "弓",
     "last_code": "人",
-    "first_key": "Y",
+    "first_key": "N",
     "last_key": "O",
-    "full": "卜人 (YO)",
-    "cj_full": "卜口卜女人 (YRYVO)",
-    "secret": "【該】速成取碼：首碼【卜】(Y) ＋ 尾碼【人】(O)",
-    "quickCode": "YO"
+    "full": "弓人 (NO)",
+    "cj_full": "弓人 (NO)",
+    "secret": "【久】速成取碼：首碼【弓】(N) ＋ 尾碼【人】(O)",
+    "quickCode": "NO"
   },
-  "族": {
-    "char": "族",
+  "京": {
+    "char": "京",
     "codes": [
       "卜",
-      "大"
+      "火"
     ],
     "keys": [
       "Y",
-      "K"
+      "F"
     ],
     "first_code": "卜",
-    "last_code": "大",
+    "last_code": "火",
     "first_key": "Y",
-    "last_key": "K",
-    "full": "卜大 (YK)",
-    "cj_full": "卜尸人人大 (YSOOK)",
-    "secret": "【族】速成取碼：首碼【卜】(Y) ＋ 尾碼【大】(K)",
-    "quickCode": "YK"
+    "last_key": "F",
+    "full": "卜火 (YF)",
+    "cj_full": "卜口火 (YRF)",
+    "secret": "【京】速成取碼：首碼【卜】(Y) ＋ 尾碼【火】(F)",
+    "quickCode": "YF"
   },
-  "把": {
-    "char": "把",
+  "亮": {
+    "char": "亮",
     "codes": [
-      "手",
+      "卜",
       "山"
     ],
     "keys": [
-      "Q",
+      "Y",
       "U"
     ],
-    "first_code": "手",
+    "first_code": "卜",
     "last_code": "山",
-    "first_key": "Q",
+    "first_key": "Y",
     "last_key": "U",
-    "full": "手山 (QU)",
-    "cj_full": "手日山 (QAU)",
-    "secret": "【把】速成取碼：首碼【手】(Q) ＋ 尾碼【山】(U)",
-    "quickCode": "QU"
+    "full": "卜山 (YU)",
+    "cj_full": "卜口月山 (YRBU)",
+    "secret": "【亮】速成取碼：首碼【卜】(Y) ＋ 尾碼【山】(U)",
+    "quickCode": "YU"
   },
-  "飯": {
-    "char": "飯",
+  "人": {
+    "char": "人",
+    "codes": [
+      "人"
+    ],
+    "keys": [
+      "O"
+    ],
+    "first_code": "人",
+    "last_code": "人",
+    "first_key": "O",
+    "last_key": "O",
+    "full": "人 (O)",
+    "cj_full": "人 (O)",
+    "secret": "【人】單碼字：直取【人】(O)",
+    "quickCode": "O"
+  },
+  "今": {
+    "char": "今",
     "codes": [
       "人",
-      "水"
+      "弓"
     ],
     "keys": [
       "O",
-      "E"
+      "N"
     ],
     "first_code": "人",
-    "last_code": "水",
+    "last_code": "弓",
     "first_key": "O",
-    "last_key": "E",
-    "full": "人水 (OE)",
-    "cj_full": "人戈竹水 (OIHE)",
-    "secret": "【飯】速成取碼：首碼【人】(O) ＋ 尾碼【水】(E)",
-    "quickCode": "OE"
+    "last_key": "N",
+    "full": "人弓 (ON)",
+    "cj_full": "人戈弓 (OIN)",
+    "secret": "【今】速成取碼：首碼【人】(O) ＋ 尾碼【弓】(N)",
+    "quickCode": "ON"
   },
-  "禮": {
-    "char": "禮",
+  "仍": {
+    "char": "仍",
     "codes": [
-      "戈",
-      "廿"
+      "人",
+      "尸"
     ],
     "keys": [
-      "I",
-      "T"
+      "O",
+      "S"
     ],
-    "first_code": "戈",
-    "last_code": "廿",
-    "first_key": "I",
-    "last_key": "T",
-    "full": "戈廿 (IT)",
-    "cj_full": "戈火廿田廿 (IFTWT)",
-    "secret": "【禮】速成取碼：首碼【戈】(I) ＋ 尾碼【廿】(T)",
-    "quickCode": "IT"
+    "first_code": "人",
+    "last_code": "尸",
+    "first_key": "O",
+    "last_key": "S",
+    "full": "人尸 (OS)",
+    "cj_full": "人弓竹尸 (ONHS)",
+    "secret": "【仍】速成取碼：首碼【人】(O) ＋ 尾碼【尸】(S)",
+    "quickCode": "OS"
   },
-  "年": {
-    "char": "年",
+  "付": {
+    "char": "付",
+    "codes": [
+      "人",
+      "戈"
+    ],
+    "keys": [
+      "O",
+      "I"
+    ],
+    "first_code": "人",
+    "last_code": "戈",
+    "first_key": "O",
+    "last_key": "I",
+    "full": "人戈 (OI)",
+    "cj_full": "人木戈 (ODI)",
+    "secret": "【付】速成取碼：首碼【人】(O) ＋ 尾碼【戈】(I)",
+    "quickCode": "OI"
+  },
+  "任": {
+    "char": "任",
+    "codes": [
+      "人",
+      "土"
+    ],
+    "keys": [
+      "O",
+      "G"
+    ],
+    "first_code": "人",
+    "last_code": "土",
+    "first_key": "O",
+    "last_key": "G",
+    "full": "人土 (OG)",
+    "cj_full": "人竹土 (OHG)",
+    "secret": "【任】速成取碼：首碼【人】(O) ＋ 尾碼【土】(G)",
+    "quickCode": "OG"
+  },
+  "伊": {
+    "char": "伊",
+    "codes": [
+      "人",
+      "大"
+    ],
+    "keys": [
+      "O",
+      "K"
+    ],
+    "first_code": "人",
+    "last_code": "大",
+    "first_key": "O",
+    "last_key": "K",
+    "full": "人大 (OK)",
+    "cj_full": "人尸大 (OSK)",
+    "secret": "【伊】速成取碼：首碼【人】(O) ＋ 尾碼【大】(K)",
+    "quickCode": "OK"
+  },
+  "伴": {
+    "char": "伴",
     "codes": [
       "人",
       "手"
@@ -13001,66 +13073,180 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "O",
     "last_key": "Q",
     "full": "人手 (OQ)",
-    "cj_full": "人手 (OQ)",
-    "secret": "【年】速成取碼：首碼【人】(O) ＋ 尾碼【手】(Q)",
+    "cj_full": "人火手 (OFQ)",
+    "secret": "【伴】速成取碼：首碼【人】(O) ＋ 尾碼【手】(Q)",
     "quickCode": "OQ"
   },
-  "拉": {
-    "char": "拉",
+  "何": {
+    "char": "何",
     "codes": [
-      "手",
-      "廿"
+      "人",
+      "口"
     ],
     "keys": [
-      "Q",
-      "T"
+      "O",
+      "R"
     ],
-    "first_code": "手",
-    "last_code": "廿",
-    "first_key": "Q",
-    "last_key": "T",
-    "full": "手廿 (QT)",
-    "cj_full": "手卜廿 (QYT)",
-    "secret": "【拉】速成取碼：首碼【手】(Q) ＋ 尾碼【廿】(T)",
-    "quickCode": "QT"
+    "first_code": "人",
+    "last_code": "口",
+    "first_key": "O",
+    "last_key": "R",
+    "full": "人口 (OR)",
+    "cj_full": "人一弓口 (OMNR)",
+    "secret": "【何】速成取碼：首碼【人】(O) ＋ 尾碼【口】(R)",
+    "quickCode": "OR"
   },
-  "吃": {
-    "char": "吃",
+  "供": {
+    "char": "供",
     "codes": [
-      "口",
-      "弓"
+      "人",
+      "金"
     ],
     "keys": [
-      "R",
-      "N"
+      "O",
+      "C"
     ],
-    "first_code": "口",
-    "last_code": "弓",
-    "first_key": "R",
-    "last_key": "N",
-    "full": "口弓 (RN)",
-    "cj_full": "口人弓 (RON)",
-    "secret": "【吃】速成取碼：首碼【口】(R) ＋ 尾碼【弓】(N)",
-    "quickCode": "RN"
+    "first_code": "人",
+    "last_code": "金",
+    "first_key": "O",
+    "last_key": "C",
+    "full": "人金 (OC)",
+    "cj_full": "人廿金 (OTC)",
+    "secret": "【供】速成取碼：首碼【人】(O) ＋ 尾碼【金】(C)",
+    "quickCode": "OC"
   },
-  "案": {
-    "char": "案",
+  "保": {
+    "char": "保",
     "codes": [
-      "十",
+      "人",
       "木"
     ],
     "keys": [
-      "J",
+      "O",
       "D"
     ],
-    "first_code": "十",
+    "first_code": "人",
     "last_code": "木",
-    "first_key": "J",
+    "first_key": "O",
     "last_key": "D",
-    "full": "十木 (JD)",
-    "cj_full": "十女木 (JVD)",
-    "secret": "【案】速成取碼：首碼【十】(J) ＋ 尾碼【木】(D)",
-    "quickCode": "JD"
+    "full": "人木 (OD)",
+    "cj_full": "人口木 (ORD)",
+    "secret": "【保】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)",
+    "quickCode": "OD"
+  },
+  "信": {
+    "char": "信",
+    "codes": [
+      "人",
+      "口"
+    ],
+    "keys": [
+      "O",
+      "R"
+    ],
+    "first_code": "人",
+    "last_code": "口",
+    "first_key": "O",
+    "last_key": "R",
+    "full": "人口 (OR)",
+    "cj_full": "人卜一口 (OYMR)",
+    "secret": "【信】速成取碼：首碼【人】(O) ＋ 尾碼【口】(R)",
+    "quickCode": "OR"
+  },
+  "值": {
+    "char": "值",
+    "codes": [
+      "人",
+      "一"
+    ],
+    "keys": [
+      "O",
+      "M"
+    ],
+    "first_code": "人",
+    "last_code": "一",
+    "first_key": "O",
+    "last_key": "M",
+    "full": "人一 (OM)",
+    "cj_full": "人十月一 (OJBM)",
+    "secret": "【值】速成取碼：首碼【人】(O) ＋ 尾碼【一】(M)",
+    "quickCode": "OM"
+  },
+  "光": {
+    "char": "光",
+    "codes": [
+      "火",
+      "山"
+    ],
+    "keys": [
+      "F",
+      "U"
+    ],
+    "first_code": "火",
+    "last_code": "山",
+    "first_key": "F",
+    "last_key": "U",
+    "full": "火山 (FU)",
+    "cj_full": "火一山 (FMU)",
+    "secret": "【光】速成取碼：首碼【火】(F) ＋ 尾碼【山】(U)",
+    "quickCode": "FU"
+  },
+  "內": {
+    "char": "內",
+    "codes": [
+      "人",
+      "月"
+    ],
+    "keys": [
+      "O",
+      "B"
+    ],
+    "first_code": "人",
+    "last_code": "月",
+    "first_key": "O",
+    "last_key": "B",
+    "full": "人月 (OB)",
+    "cj_full": "人月 (OB)",
+    "secret": "【內】速成取碼：首碼【人】(O) ＋ 尾碼【月】(B)",
+    "quickCode": "OB"
+  },
+  "八": {
+    "char": "八",
+    "codes": [
+      "竹",
+      "人"
+    ],
+    "keys": [
+      "H",
+      "O"
+    ],
+    "first_code": "竹",
+    "last_code": "人",
+    "first_key": "H",
+    "last_key": "O",
+    "full": "竹人 (HO)",
+    "cj_full": "竹人 (HO)",
+    "secret": "【八】速成取碼：首碼【竹】(H) ＋ 尾碼【人】(O)",
+    "quickCode": "HO"
+  },
+  "六": {
+    "char": "六",
+    "codes": [
+      "卜",
+      "金"
+    ],
+    "keys": [
+      "Y",
+      "C"
+    ],
+    "first_code": "卜",
+    "last_code": "金",
+    "first_key": "Y",
+    "last_key": "C",
+    "full": "卜金 (YC)",
+    "cj_full": "卜金 (YC)",
+    "secret": "【六】速成取碼：首碼【卜】(Y) ＋ 尾碼【金】(C)",
+    "quickCode": "YC"
   },
   "剛": {
     "char": "剛",
@@ -13081,100 +13267,195 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【剛】速成取碼：首碼【月】(B) ＋ 尾碼【弓】(N)",
     "quickCode": "BN"
   },
-  "餘": {
-    "char": "餘",
+  "加": {
+    "char": "加",
     "codes": [
-      "人",
-      "木"
+      "大",
+      "口"
     ],
     "keys": [
-      "O",
-      "D"
+      "K",
+      "R"
     ],
-    "first_code": "人",
-    "last_code": "木",
-    "first_key": "O",
-    "last_key": "D",
-    "full": "人木 (OD)",
-    "cj_full": "人戈人一木 (OIOMD)",
-    "secret": "【餘】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)",
-    "quickCode": "OD"
+    "first_code": "大",
+    "last_code": "口",
+    "first_key": "K",
+    "last_key": "R",
+    "full": "大口 (KR)",
+    "cj_full": "大尸口 (KSR)",
+    "secret": "【加】速成取碼：首碼【大】(K) ＋ 尾碼【口】(R)",
+    "quickCode": "KR"
   },
-  "筆": {
-    "char": "筆",
+  "動": {
+    "char": "動",
     "codes": [
       "竹",
-      "手"
+      "尸"
     ],
     "keys": [
       "H",
-      "Q"
+      "S"
     ],
     "first_code": "竹",
-    "last_code": "手",
+    "last_code": "尸",
     "first_key": "H",
-    "last_key": "Q",
-    "full": "竹手 (HQ)",
-    "cj_full": "竹中手 (HLQ)",
-    "secret": "【筆】速成取碼：首碼【竹】(H) ＋ 尾碼【手】(Q)",
-    "quickCode": "HQ"
+    "last_key": "S",
+    "full": "竹尸 (HS)",
+    "cj_full": "竹土大尸 (HGKS)",
+    "secret": "【動】速成取碼：首碼【竹】(H) ＋ 尾碼【尸】(S)",
+    "quickCode": "HS"
   },
-  "溫": {
-    "char": "溫",
+  "卡": {
+    "char": "卡",
     "codes": [
-      "水",
-      "廿"
+      "卜",
+      "卜"
     ],
     "keys": [
-      "E",
-      "T"
+      "Y",
+      "Y"
     ],
-    "first_code": "水",
-    "last_code": "廿",
-    "first_key": "E",
-    "last_key": "T",
-    "full": "水廿 (ET)",
-    "cj_full": "水田人廿 (EWOT)",
-    "secret": "【溫】速成取碼：首碼【水】(E) ＋ 尾碼【廿】(T)",
-    "quickCode": "ET"
+    "first_code": "卜",
+    "last_code": "卜",
+    "first_key": "Y",
+    "last_key": "Y",
+    "full": "卜卜 (YY)",
+    "cj_full": "卜一卜 (YMY)",
+    "secret": "【卡】速成取碼：首碼【卜】(Y) ＋ 尾碼【卜】(Y)",
+    "quickCode": "YY"
   },
-  "淚": {
-    "char": "淚",
+  "古": {
+    "char": "古",
     "codes": [
-      "水",
-      "大"
+      "十",
+      "口"
     ],
     "keys": [
-      "E",
-      "K"
+      "J",
+      "R"
     ],
-    "first_code": "水",
-    "last_code": "大",
-    "first_key": "E",
-    "last_key": "K",
-    "full": "水大 (EK)",
-    "cj_full": "水竹尸大 (EHSK)",
-    "secret": "【淚】速成取碼：首碼【水】(E) ＋ 尾碼【大】(K)",
-    "quickCode": "EK"
+    "first_code": "十",
+    "last_code": "口",
+    "first_key": "J",
+    "last_key": "R",
+    "full": "十口 (JR)",
+    "cj_full": "十口 (JR)",
+    "secret": "【古】速成取碼：首碼【十】(J) ＋ 尾碼【口】(R)",
+    "quickCode": "JR"
   },
-  "派": {
-    "char": "派",
+  "另": {
+    "char": "另",
     "codes": [
-      "水",
-      "女"
+      "口",
+      "尸"
     ],
     "keys": [
-      "E",
-      "V"
+      "R",
+      "S"
     ],
-    "first_code": "水",
-    "last_code": "女",
-    "first_key": "E",
-    "last_key": "V",
-    "full": "水女 (EV)",
-    "cj_full": "水竹竹女 (EHHV)",
-    "secret": "【派】速成取碼：首碼【水】(E) ＋ 尾碼【女】(V)",
-    "quickCode": "EV"
+    "first_code": "口",
+    "last_code": "尸",
+    "first_key": "R",
+    "last_key": "S",
+    "full": "口尸 (RS)",
+    "cj_full": "口大尸 (RKS)",
+    "secret": "【另】速成取碼：首碼【口】(R) ＋ 尾碼【尸】(S)",
+    "quickCode": "RS"
+  },
+  "可": {
+    "char": "可",
+    "codes": [
+      "一",
+      "口"
+    ],
+    "keys": [
+      "M",
+      "R"
+    ],
+    "first_code": "一",
+    "last_code": "口",
+    "first_key": "M",
+    "last_key": "R",
+    "full": "一口 (MR)",
+    "cj_full": "一弓口 (MNR)",
+    "secret": "【可】速成取碼：首碼【一】(M) ＋ 尾碼【口】(R)",
+    "quickCode": "MR"
+  },
+  "右": {
+    "char": "右",
+    "codes": [
+      "大",
+      "口"
+    ],
+    "keys": [
+      "K",
+      "R"
+    ],
+    "first_code": "大",
+    "last_code": "口",
+    "first_key": "K",
+    "last_key": "R",
+    "full": "大口 (KR)",
+    "cj_full": "大口 (KR)",
+    "secret": "【右】速成取碼：首碼【大】(K) ＋ 尾碼【口】(R)",
+    "quickCode": "KR"
+  },
+  "司": {
+    "char": "司",
+    "codes": [
+      "尸",
+      "口"
+    ],
+    "keys": [
+      "S",
+      "R"
+    ],
+    "first_code": "尸",
+    "last_code": "口",
+    "first_key": "S",
+    "last_key": "R",
+    "full": "尸口 (SR)",
+    "cj_full": "尸一口 (SMR)",
+    "secret": "【司】速成取碼：首碼【尸】(S) ＋ 尾碼【口】(R)",
+    "quickCode": "SR"
+  },
+  "吃": {
+    "char": "吃",
+    "codes": [
+      "口",
+      "弓"
+    ],
+    "keys": [
+      "R",
+      "N"
+    ],
+    "first_code": "口",
+    "last_code": "弓",
+    "first_key": "R",
+    "last_key": "N",
+    "full": "口弓 (RN)",
+    "cj_full": "口人弓 (RON)",
+    "secret": "【吃】速成取碼：首碼【口】(R) ＋ 尾碼【弓】(N)",
+    "quickCode": "RN"
+  },
+  "吸": {
+    "char": "吸",
+    "codes": [
+      "口",
+      "水"
+    ],
+    "keys": [
+      "R",
+      "E"
+    ],
+    "first_code": "口",
+    "last_code": "水",
+    "first_key": "R",
+    "last_key": "E",
+    "full": "口水 (RE)",
+    "cj_full": "口弓竹水 (RNHE)",
+    "secret": "【吸】速成取碼：首碼【口】(R) ＋ 尾碼【水】(E)",
+    "quickCode": "RE"
   },
   "和": {
     "char": "和",
@@ -13195,6 +13476,861 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【和】速成取碼：首碼【竹】(H) ＋ 尾碼【口】(R)",
     "quickCode": "HR"
   },
+  "哭": {
+    "char": "哭",
+    "codes": [
+      "口",
+      "大"
+    ],
+    "keys": [
+      "R",
+      "K"
+    ],
+    "first_code": "口",
+    "last_code": "大",
+    "first_key": "R",
+    "last_key": "K",
+    "full": "口大 (RK)",
+    "cj_full": "口口戈大 (RRIK)",
+    "secret": "【哭】速成取碼：首碼【口】(R) ＋ 尾碼【大】(K)",
+    "quickCode": "RK"
+  },
+  "喜": {
+    "char": "喜",
+    "codes": [
+      "土",
+      "口"
+    ],
+    "keys": [
+      "G",
+      "R"
+    ],
+    "first_code": "土",
+    "last_code": "口",
+    "first_key": "G",
+    "last_key": "R",
+    "full": "土口 (GR)",
+    "cj_full": "土口廿口 (GRTR)",
+    "secret": "【喜】速成取碼：首碼【土】(G) ＋ 尾碼【口】(R)",
+    "quickCode": "GR"
+  },
+  "四": {
+    "char": "四",
+    "codes": [
+      "田",
+      "金"
+    ],
+    "keys": [
+      "W",
+      "C"
+    ],
+    "first_code": "田",
+    "last_code": "金",
+    "first_key": "W",
+    "last_key": "C",
+    "full": "田金 (WC)",
+    "cj_full": "田金 (WC)",
+    "secret": "【四】速成取碼：首碼【田】(W) ＋ 尾碼【金】(C)",
+    "quickCode": "WC"
+  },
+  "回": {
+    "char": "回",
+    "codes": [
+      "田",
+      "口"
+    ],
+    "keys": [
+      "W",
+      "R"
+    ],
+    "first_code": "田",
+    "last_code": "口",
+    "first_key": "W",
+    "last_key": "R",
+    "full": "田口 (WR)",
+    "cj_full": "田口 (WR)",
+    "secret": "【回】速成取碼：首碼【田】(W) ＋ 尾碼【口】(R)",
+    "quickCode": "WR"
+  },
+  "圍": {
+    "char": "圍",
+    "codes": [
+      "田",
+      "手"
+    ],
+    "keys": [
+      "W",
+      "Q"
+    ],
+    "first_code": "田",
+    "last_code": "手",
+    "first_key": "W",
+    "last_key": "Q",
+    "full": "田手 (WQ)",
+    "cj_full": "田木一手 (WDMQ)",
+    "secret": "【圍】速成取碼：首碼【田】(W) ＋ 尾碼【手】(Q)",
+    "quickCode": "WQ"
+  },
+  "園": {
+    "char": "園",
+    "codes": [
+      "田",
+      "女"
+    ],
+    "keys": [
+      "W",
+      "V"
+    ],
+    "first_code": "田",
+    "last_code": "女",
+    "first_key": "W",
+    "last_key": "V",
+    "full": "田女 (WV)",
+    "cj_full": "田土口女 (WGRV)",
+    "secret": "【園】速成取碼：首碼【田】(W) ＋ 尾碼【女】(V)",
+    "quickCode": "WV"
+  },
+  "坐": {
+    "char": "坐",
+    "codes": [
+      "人",
+      "土"
+    ],
+    "keys": [
+      "O",
+      "G"
+    ],
+    "first_code": "人",
+    "last_code": "土",
+    "first_key": "O",
+    "last_key": "G",
+    "full": "人土 (OG)",
+    "cj_full": "人人土 (OOG)",
+    "secret": "【坐】速成取碼：首碼【人】(O) ＋ 尾碼【土】(G)",
+    "quickCode": "OG"
+  },
+  "型": {
+    "char": "型",
+    "codes": [
+      "一",
+      "土"
+    ],
+    "keys": [
+      "M",
+      "G"
+    ],
+    "first_code": "一",
+    "last_code": "土",
+    "first_key": "M",
+    "last_key": "G",
+    "full": "一土 (MG)",
+    "cj_full": "一弓土 (MNG)",
+    "secret": "【型】速成取碼：首碼【一】(M) ＋ 尾碼【土】(G)",
+    "quickCode": "MG"
+  },
+  "基": {
+    "char": "基",
+    "codes": [
+      "廿",
+      "土"
+    ],
+    "keys": [
+      "T",
+      "G"
+    ],
+    "first_code": "廿",
+    "last_code": "土",
+    "first_key": "T",
+    "last_key": "G",
+    "full": "廿土 (TG)",
+    "cj_full": "廿金土 (TCG)",
+    "secret": "【基】速成取碼：首碼【廿】(T) ＋ 尾碼【土】(G)",
+    "quickCode": "TG"
+  },
+  "場": {
+    "char": "場",
+    "codes": [
+      "土",
+      "竹"
+    ],
+    "keys": [
+      "G",
+      "H"
+    ],
+    "first_code": "土",
+    "last_code": "竹",
+    "first_key": "G",
+    "last_key": "H",
+    "full": "土竹 (GH)",
+    "cj_full": "土日一竹 (GAMH)",
+    "secret": "【場】速成取碼：首碼【土】(G) ＋ 尾碼【竹】(H)",
+    "quickCode": "GH"
+  },
+  "夏": {
+    "char": "夏",
+    "codes": [
+      "一",
+      "水"
+    ],
+    "keys": [
+      "M",
+      "E"
+    ],
+    "first_code": "一",
+    "last_code": "水",
+    "first_key": "M",
+    "last_key": "E",
+    "full": "一水 (ME)",
+    "cj_full": "一山竹水 (MUHE)",
+    "secret": "【夏】速成取碼：首碼【一】(M) ＋ 尾碼【水】(E)",
+    "quickCode": "ME"
+  },
+  "外": {
+    "char": "外",
+    "codes": [
+      "弓",
+      "卜"
+    ],
+    "keys": [
+      "N",
+      "Y"
+    ],
+    "first_code": "弓",
+    "last_code": "卜",
+    "first_key": "N",
+    "last_key": "Y",
+    "full": "弓卜 (NY)",
+    "cj_full": "弓戈卜 (NIY)",
+    "secret": "【外】速成取碼：首碼【弓】(N) ＋ 尾碼【卜】(Y)",
+    "quickCode": "NY"
+  },
+  "夢": {
+    "char": "夢",
+    "codes": [
+      "廿",
+      "弓"
+    ],
+    "keys": [
+      "T",
+      "N"
+    ],
+    "first_code": "廿",
+    "last_code": "弓",
+    "first_key": "T",
+    "last_key": "N",
+    "full": "廿弓 (TN)",
+    "cj_full": "廿田中弓 (TWLN)",
+    "secret": "【夢】速成取碼：首碼【廿】(T) ＋ 尾碼【弓】(N)",
+    "quickCode": "TN"
+  },
+  "失": {
+    "char": "失",
+    "codes": [
+      "竹",
+      "人"
+    ],
+    "keys": [
+      "H",
+      "O"
+    ],
+    "first_code": "竹",
+    "last_code": "人",
+    "first_key": "H",
+    "last_key": "O",
+    "full": "竹人 (HO)",
+    "cj_full": "竹手人 (HQO)",
+    "secret": "【失】速成取碼：首碼【竹】(H) ＋ 尾碼【人】(O)",
+    "quickCode": "HO"
+  },
+  "奇": {
+    "char": "奇",
+    "codes": [
+      "大",
+      "口"
+    ],
+    "keys": [
+      "K",
+      "R"
+    ],
+    "first_code": "大",
+    "last_code": "口",
+    "first_key": "K",
+    "last_key": "R",
+    "full": "大口 (KR)",
+    "cj_full": "大一弓口 (KMNR)",
+    "secret": "【奇】速成取碼：首碼【大】(K) ＋ 尾碼【口】(R)",
+    "quickCode": "KR"
+  },
+  "奧": {
+    "char": "奧",
+    "codes": [
+      "竹",
+      "大"
+    ],
+    "keys": [
+      "H",
+      "K"
+    ],
+    "first_code": "竹",
+    "last_code": "大",
+    "first_key": "H",
+    "last_key": "K",
+    "full": "竹大 (HK)",
+    "cj_full": "竹月大 (HBK)",
+    "secret": "【奧】速成取碼：首碼【竹】(H) ＋ 尾碼【大】(K)",
+    "quickCode": "HK"
+  },
+  "委": {
+    "char": "委",
+    "codes": [
+      "竹",
+      "女"
+    ],
+    "keys": [
+      "H",
+      "V"
+    ],
+    "first_code": "竹",
+    "last_code": "女",
+    "first_key": "H",
+    "last_key": "V",
+    "full": "竹女 (HV)",
+    "cj_full": "竹木女 (HDV)",
+    "secret": "【委】速成取碼：首碼【竹】(H) ＋ 尾碼【女】(V)",
+    "quickCode": "HV"
+  },
+  "娜": {
+    "char": "娜",
+    "codes": [
+      "女",
+      "中"
+    ],
+    "keys": [
+      "V",
+      "L"
+    ],
+    "first_code": "女",
+    "last_code": "中",
+    "first_key": "V",
+    "last_key": "L",
+    "full": "女中 (VL)",
+    "cj_full": "女尸手中 (VSQL)",
+    "secret": "【娜】速成取碼：首碼【女】(V) ＋ 尾碼【中】(L)",
+    "quickCode": "VL"
+  },
+  "媽": {
+    "char": "媽",
+    "codes": [
+      "女",
+      "火"
+    ],
+    "keys": [
+      "V",
+      "F"
+    ],
+    "first_code": "女",
+    "last_code": "火",
+    "first_key": "V",
+    "last_key": "F",
+    "full": "女火 (VF)",
+    "cj_full": "女尸手火 (VSQF)",
+    "secret": "【媽】速成取碼：首碼【女】(V) ＋ 尾碼【火】(F)",
+    "quickCode": "VF"
+  },
+  "存": {
+    "char": "存",
+    "codes": [
+      "大",
+      "木"
+    ],
+    "keys": [
+      "K",
+      "D"
+    ],
+    "first_code": "大",
+    "last_code": "木",
+    "first_key": "K",
+    "last_key": "D",
+    "full": "大木 (KD)",
+    "cj_full": "大中弓木 (KLND)",
+    "secret": "【存】速成取碼：首碼【大】(K) ＋ 尾碼【木】(D)",
+    "quickCode": "KD"
+  },
+  "孤": {
+    "char": "孤",
+    "codes": [
+      "弓",
+      "人"
+    ],
+    "keys": [
+      "N",
+      "O"
+    ],
+    "first_code": "弓",
+    "last_code": "人",
+    "first_key": "N",
+    "last_key": "O",
+    "full": "弓人 (NO)",
+    "cj_full": "弓木竹女人 (NDHVO)",
+    "secret": "【孤】速成取碼：首碼【弓】(N) ＋ 尾碼【人】(O)",
+    "quickCode": "NO"
+  },
+  "完": {
+    "char": "完",
+    "codes": [
+      "十",
+      "山"
+    ],
+    "keys": [
+      "J",
+      "U"
+    ],
+    "first_code": "十",
+    "last_code": "山",
+    "first_key": "J",
+    "last_key": "U",
+    "full": "十山 (JU)",
+    "cj_full": "十一一山 (JMMU)",
+    "secret": "【完】速成取碼：首碼【十】(J) ＋ 尾碼【山】(U)",
+    "quickCode": "JU"
+  },
+  "宣": {
+    "char": "宣",
+    "codes": [
+      "十",
+      "一"
+    ],
+    "keys": [
+      "J",
+      "M"
+    ],
+    "first_code": "十",
+    "last_code": "一",
+    "first_key": "J",
+    "last_key": "M",
+    "full": "十一 (JM)",
+    "cj_full": "十一日一 (JMAM)",
+    "secret": "【宣】速成取碼：首碼【十】(J) ＋ 尾碼【一】(M)",
+    "quickCode": "JM"
+  },
+  "宮": {
+    "char": "宮",
+    "codes": [
+      "十",
+      "口"
+    ],
+    "keys": [
+      "J",
+      "R"
+    ],
+    "first_code": "十",
+    "last_code": "口",
+    "first_key": "J",
+    "last_key": "R",
+    "full": "十口 (JR)",
+    "cj_full": "十口竹口 (JRHR)",
+    "secret": "【宮】速成取碼：首碼【十】(J) ＋ 尾碼【口】(R)",
+    "quickCode": "JR"
+  },
+  "家": {
+    "char": "家",
+    "codes": [
+      "十",
+      "人"
+    ],
+    "keys": [
+      "J",
+      "O"
+    ],
+    "first_code": "十",
+    "last_code": "人",
+    "first_key": "J",
+    "last_key": "O",
+    "full": "十人 (JO)",
+    "cj_full": "十一尸人 (JMSO)",
+    "secret": "【家】速成取碼：首碼【十】(J) ＋ 尾碼【人】(O)",
+    "quickCode": "JO"
+  },
+  "察": {
+    "char": "察",
+    "codes": [
+      "十",
+      "火"
+    ],
+    "keys": [
+      "J",
+      "F"
+    ],
+    "first_code": "十",
+    "last_code": "火",
+    "first_key": "J",
+    "last_key": "F",
+    "full": "十火 (JF)",
+    "cj_full": "十月人火 (JBOF)",
+    "secret": "【察】速成取碼：首碼【十】(J) ＋ 尾碼【火】(F)",
+    "quickCode": "JF"
+  },
+  "導": {
+    "char": "導",
+    "codes": [
+      "卜",
+      "戈"
+    ],
+    "keys": [
+      "Y",
+      "I"
+    ],
+    "first_code": "卜",
+    "last_code": "戈",
+    "first_key": "Y",
+    "last_key": "I",
+    "full": "卜戈 (YI)",
+    "cj_full": "卜山木戈 (YUDI)",
+    "secret": "【導】速成取碼：首碼【卜】(Y) ＋ 尾碼【戈】(I)",
+    "quickCode": "YI"
+  },
+  "屋": {
+    "char": "屋",
+    "codes": [
+      "尸",
+      "土"
+    ],
+    "keys": [
+      "S",
+      "G"
+    ],
+    "first_code": "尸",
+    "last_code": "土",
+    "first_key": "S",
+    "last_key": "G",
+    "full": "尸土 (SG)",
+    "cj_full": "尸一戈土 (SMIG)",
+    "secret": "【屋】速成取碼：首碼【尸】(S) ＋ 尾碼【土】(G)",
+    "quickCode": "SG"
+  },
+  "屬": {
+    "char": "屬",
+    "codes": [
+      "尸",
+      "戈"
+    ],
+    "keys": [
+      "S",
+      "I"
+    ],
+    "first_code": "尸",
+    "last_code": "戈",
+    "first_key": "S",
+    "last_key": "I",
+    "full": "尸戈 (SI)",
+    "cj_full": "尸卜卜戈 (SYYI)",
+    "secret": "【屬】速成取碼：首碼【尸】(S) ＋ 尾碼【戈】(I)",
+    "quickCode": "SI"
+  },
+  "布": {
+    "char": "布",
+    "codes": [
+      "大",
+      "月"
+    ],
+    "keys": [
+      "K",
+      "B"
+    ],
+    "first_code": "大",
+    "last_code": "月",
+    "first_key": "K",
+    "last_key": "B",
+    "full": "大月 (KB)",
+    "cj_full": "大中月 (KLB)",
+    "secret": "【布】速成取碼：首碼【大】(K) ＋ 尾碼【月】(B)",
+    "quickCode": "KB"
+  },
+  "希": {
+    "char": "希",
+    "codes": [
+      "大",
+      "月"
+    ],
+    "keys": [
+      "K",
+      "B"
+    ],
+    "first_code": "大",
+    "last_code": "月",
+    "first_key": "K",
+    "last_key": "B",
+    "full": "大月 (KB)",
+    "cj_full": "大大中月 (KKLB)",
+    "secret": "【希】速成取碼：首碼【大】(K) ＋ 尾碼【月】(B)",
+    "quickCode": "KB"
+  },
+  "帝": {
+    "char": "帝",
+    "codes": [
+      "卜",
+      "月"
+    ],
+    "keys": [
+      "Y",
+      "B"
+    ],
+    "first_code": "卜",
+    "last_code": "月",
+    "first_key": "Y",
+    "last_key": "B",
+    "full": "卜月 (YB)",
+    "cj_full": "卜月中月 (YBLB)",
+    "secret": "【帝】速成取碼：首碼【卜】(Y) ＋ 尾碼【月】(B)",
+    "quickCode": "YB"
+  },
+  "帶": {
+    "char": "帶",
+    "codes": [
+      "大",
+      "月"
+    ],
+    "keys": [
+      "K",
+      "B"
+    ],
+    "first_code": "大",
+    "last_code": "月",
+    "first_key": "K",
+    "last_key": "B",
+    "full": "大月 (KB)",
+    "cj_full": "大心月中月 (KPBLB)",
+    "secret": "【帶】速成取碼：首碼【大】(K) ＋ 尾碼【月】(B)",
+    "quickCode": "KB"
+  },
+  "年": {
+    "char": "年",
+    "codes": [
+      "人",
+      "手"
+    ],
+    "keys": [
+      "O",
+      "Q"
+    ],
+    "first_code": "人",
+    "last_code": "手",
+    "first_key": "O",
+    "last_key": "Q",
+    "full": "人手 (OQ)",
+    "cj_full": "人手 (OQ)",
+    "secret": "【年】速成取碼：首碼【人】(O) ＋ 尾碼【手】(Q)",
+    "quickCode": "OQ"
+  },
+  "店": {
+    "char": "店",
+    "codes": [
+      "戈",
+      "口"
+    ],
+    "keys": [
+      "I",
+      "R"
+    ],
+    "first_code": "戈",
+    "last_code": "口",
+    "first_key": "I",
+    "last_key": "R",
+    "full": "戈口 (IR)",
+    "cj_full": "戈卜口 (IYR)",
+    "secret": "【店】速成取碼：首碼【戈】(I) ＋ 尾碼【口】(R)",
+    "quickCode": "IR"
+  },
+  "康": {
+    "char": "康",
+    "codes": [
+      "戈",
+      "水"
+    ],
+    "keys": [
+      "I",
+      "E"
+    ],
+    "first_code": "戈",
+    "last_code": "水",
+    "first_key": "I",
+    "last_key": "E",
+    "full": "戈水 (IE)",
+    "cj_full": "戈中水 (ILE)",
+    "secret": "【康】速成取碼：首碼【戈】(I) ＋ 尾碼【水】(E)",
+    "quickCode": "IE"
+  },
+  "弄": {
+    "char": "弄",
+    "codes": [
+      "一",
+      "廿"
+    ],
+    "keys": [
+      "M",
+      "T"
+    ],
+    "first_code": "一",
+    "last_code": "廿",
+    "first_key": "M",
+    "last_key": "T",
+    "full": "一廿 (MT)",
+    "cj_full": "一土廿 (MGT)",
+    "secret": "【弄】速成取碼：首碼【一】(M) ＋ 尾碼【廿】(T)",
+    "quickCode": "MT"
+  },
+  "張": {
+    "char": "張",
+    "codes": [
+      "弓",
+      "女"
+    ],
+    "keys": [
+      "N",
+      "V"
+    ],
+    "first_code": "弓",
+    "last_code": "女",
+    "first_key": "N",
+    "last_key": "V",
+    "full": "弓女 (NV)",
+    "cj_full": "弓尸一女 (NSMV)",
+    "secret": "【張】速成取碼：首碼【弓】(N) ＋ 尾碼【女】(V)",
+    "quickCode": "NV"
+  },
+  "征": {
+    "char": "征",
+    "codes": [
+      "竹",
+      "一"
+    ],
+    "keys": [
+      "H",
+      "M"
+    ],
+    "first_code": "竹",
+    "last_code": "一",
+    "first_key": "H",
+    "last_key": "M",
+    "full": "竹一 (HM)",
+    "cj_full": "竹人一卜一 (HOMYM)",
+    "secret": "【征】速成取碼：首碼【竹】(H) ＋ 尾碼【一】(M)",
+    "quickCode": "HM"
+  },
+  "從": {
+    "char": "從",
+    "codes": [
+      "竹",
+      "人"
+    ],
+    "keys": [
+      "H",
+      "O"
+    ],
+    "first_code": "竹",
+    "last_code": "人",
+    "first_key": "H",
+    "last_key": "O",
+    "full": "竹人 (HO)",
+    "cj_full": "竹人人人 (HOOO)",
+    "secret": "【從】速成取碼：首碼【竹】(H) ＋ 尾碼【人】(O)",
+    "quickCode": "HO"
+  },
+  "德": {
+    "char": "德",
+    "codes": [
+      "竹",
+      "心"
+    ],
+    "keys": [
+      "H",
+      "P"
+    ],
+    "first_code": "竹",
+    "last_code": "心",
+    "first_key": "H",
+    "last_key": "P",
+    "full": "竹心 (HP)",
+    "cj_full": "竹人十田心 (HOJWP)",
+    "secret": "【德】速成取碼：首碼【竹】(H) ＋ 尾碼【心】(P)",
+    "quickCode": "HP"
+  },
+  "忍": {
+    "char": "忍",
+    "codes": [
+      "尸",
+      "心"
+    ],
+    "keys": [
+      "S",
+      "P"
+    ],
+    "first_code": "尸",
+    "last_code": "心",
+    "first_key": "S",
+    "last_key": "P",
+    "full": "尸心 (SP)",
+    "cj_full": "尸戈心 (SIP)",
+    "secret": "【忍】速成取碼：首碼【尸】(S) ＋ 尾碼【心】(P)",
+    "quickCode": "SP"
+  },
+  "忘": {
+    "char": "忘",
+    "codes": [
+      "卜",
+      "心"
+    ],
+    "keys": [
+      "Y",
+      "P"
+    ],
+    "first_code": "卜",
+    "last_code": "心",
+    "first_key": "Y",
+    "last_key": "P",
+    "full": "卜心 (YP)",
+    "cj_full": "卜女心 (YVP)",
+    "secret": "【忘】速成取碼：首碼【卜】(Y) ＋ 尾碼【心】(P)",
+    "quickCode": "YP"
+  },
+  "念": {
+    "char": "念",
+    "codes": [
+      "人",
+      "心"
+    ],
+    "keys": [
+      "O",
+      "P"
+    ],
+    "first_code": "人",
+    "last_code": "心",
+    "first_key": "O",
+    "last_key": "P",
+    "full": "人心 (OP)",
+    "cj_full": "人戈弓心 (OINP)",
+    "secret": "【念】速成取碼：首碼【人】(O) ＋ 尾碼【心】(P)",
+    "quickCode": "OP"
+  },
+  "怕": {
+    "char": "怕",
+    "codes": [
+      "心",
+      "日"
+    ],
+    "keys": [
+      "P",
+      "A"
+    ],
+    "first_code": "心",
+    "last_code": "日",
+    "first_key": "P",
+    "last_key": "A",
+    "full": "心日 (PA)",
+    "cj_full": "心竹日 (PHA)",
+    "secret": "【怕】速成取碼：首碼【心】(P) ＋ 尾碼【日】(A)",
+    "quickCode": "PA"
+  },
   "急": {
     "char": "急",
     "codes": [
@@ -13213,6 +14349,633 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "cj_full": "弓一心 (NMP)",
     "secret": "【急】速成取碼：首碼【弓】(N) ＋ 尾碼【心】(P)",
     "quickCode": "NP"
+  },
+  "惡": {
+    "char": "惡",
+    "codes": [
+      "一",
+      "心"
+    ],
+    "keys": [
+      "M",
+      "P"
+    ],
+    "first_code": "一",
+    "last_code": "心",
+    "first_key": "M",
+    "last_key": "P",
+    "full": "一心 (MP)",
+    "cj_full": "一一心 (MMP)",
+    "secret": "【惡】速成取碼：首碼【一】(M) ＋ 尾碼【心】(P)",
+    "quickCode": "MP"
+  },
+  "意": {
+    "char": "意",
+    "codes": [
+      "卜",
+      "心"
+    ],
+    "keys": [
+      "Y",
+      "P"
+    ],
+    "first_code": "卜",
+    "last_code": "心",
+    "first_key": "Y",
+    "last_key": "P",
+    "full": "卜心 (YP)",
+    "cj_full": "卜廿日心 (YTAP)",
+    "secret": "【意】速成取碼：首碼【卜】(Y) ＋ 尾碼【心】(P)",
+    "quickCode": "YP"
+  },
+  "感": {
+    "char": "感",
+    "codes": [
+      "戈",
+      "心"
+    ],
+    "keys": [
+      "I",
+      "P"
+    ],
+    "first_code": "戈",
+    "last_code": "心",
+    "first_key": "I",
+    "last_key": "P",
+    "full": "戈心 (IP)",
+    "cj_full": "戈口心 (IRP)",
+    "secret": "【感】速成取碼：首碼【戈】(I) ＋ 尾碼【心】(P)",
+    "quickCode": "IP"
+  },
+  "慢": {
+    "char": "慢",
+    "codes": [
+      "心",
+      "水"
+    ],
+    "keys": [
+      "P",
+      "E"
+    ],
+    "first_code": "心",
+    "last_code": "水",
+    "first_key": "P",
+    "last_key": "E",
+    "full": "心水 (PE)",
+    "cj_full": "心日田水 (PAWE)",
+    "secret": "【慢】速成取碼：首碼【心】(P) ＋ 尾碼【水】(E)",
+    "quickCode": "PE"
+  },
+  "懷": {
+    "char": "懷",
+    "codes": [
+      "心",
+      "女"
+    ],
+    "keys": [
+      "P",
+      "V"
+    ],
+    "first_code": "心",
+    "last_code": "女",
+    "first_key": "P",
+    "last_key": "V",
+    "full": "心女 (PV)",
+    "cj_full": "心卜田女 (PYWV)",
+    "secret": "【懷】速成取碼：首碼【心】(P) ＋ 尾碼【女】(V)",
+    "quickCode": "PV"
+  },
+  "打": {
+    "char": "打",
+    "codes": [
+      "手",
+      "弓"
+    ],
+    "keys": [
+      "Q",
+      "N"
+    ],
+    "first_code": "手",
+    "last_code": "弓",
+    "first_key": "Q",
+    "last_key": "N",
+    "full": "手弓 (QN)",
+    "cj_full": "手一弓 (QMN)",
+    "secret": "【打】速成取碼：首碼【手】(Q) ＋ 尾碼【弓】(N)",
+    "quickCode": "QN"
+  },
+  "找": {
+    "char": "找",
+    "codes": [
+      "手",
+      "戈"
+    ],
+    "keys": [
+      "Q",
+      "I"
+    ],
+    "first_code": "手",
+    "last_code": "戈",
+    "first_key": "Q",
+    "last_key": "I",
+    "full": "手戈 (QI)",
+    "cj_full": "手戈 (QI)",
+    "secret": "【找】速成取碼：首碼【手】(Q) ＋ 尾碼【戈】(I)",
+    "quickCode": "QI"
+  },
+  "承": {
+    "char": "承",
+    "codes": [
+      "弓",
+      "人"
+    ],
+    "keys": [
+      "N",
+      "O"
+    ],
+    "first_code": "弓",
+    "last_code": "人",
+    "first_key": "N",
+    "last_key": "O",
+    "full": "弓人 (NO)",
+    "cj_full": "弓弓手人 (NNQO)",
+    "secret": "【承】速成取碼：首碼【弓】(N) ＋ 尾碼【人】(O)",
+    "quickCode": "NO"
+  },
+  "把": {
+    "char": "把",
+    "codes": [
+      "手",
+      "山"
+    ],
+    "keys": [
+      "Q",
+      "U"
+    ],
+    "first_code": "手",
+    "last_code": "山",
+    "first_key": "Q",
+    "last_key": "U",
+    "full": "手山 (QU)",
+    "cj_full": "手日山 (QAU)",
+    "secret": "【把】速成取碼：首碼【手】(Q) ＋ 尾碼【山】(U)",
+    "quickCode": "QU"
+  },
+  "投": {
+    "char": "投",
+    "codes": [
+      "手",
+      "水"
+    ],
+    "keys": [
+      "Q",
+      "E"
+    ],
+    "first_code": "手",
+    "last_code": "水",
+    "first_key": "Q",
+    "last_key": "E",
+    "full": "手水 (QE)",
+    "cj_full": "手竹弓水 (QHNE)",
+    "secret": "【投】速成取碼：首碼【手】(Q) ＋ 尾碼【水】(E)",
+    "quickCode": "QE"
+  },
+  "拉": {
+    "char": "拉",
+    "codes": [
+      "手",
+      "廿"
+    ],
+    "keys": [
+      "Q",
+      "T"
+    ],
+    "first_code": "手",
+    "last_code": "廿",
+    "first_key": "Q",
+    "last_key": "T",
+    "full": "手廿 (QT)",
+    "cj_full": "手卜廿 (QYT)",
+    "secret": "【拉】速成取碼：首碼【手】(Q) ＋ 尾碼【廿】(T)",
+    "quickCode": "QT"
+  },
+  "授": {
+    "char": "授",
+    "codes": [
+      "手",
+      "水"
+    ],
+    "keys": [
+      "Q",
+      "E"
+    ],
+    "first_code": "手",
+    "last_code": "水",
+    "first_key": "Q",
+    "last_key": "E",
+    "full": "手水 (QE)",
+    "cj_full": "手月月水 (QBBE)",
+    "secret": "【授】速成取碼：首碼【手】(Q) ＋ 尾碼【水】(E)",
+    "quickCode": "QE"
+  },
+  "排": {
+    "char": "排",
+    "codes": [
+      "手",
+      "卜"
+    ],
+    "keys": [
+      "Q",
+      "Y"
+    ],
+    "first_code": "手",
+    "last_code": "卜",
+    "first_key": "Q",
+    "last_key": "Y",
+    "full": "手卜 (QY)",
+    "cj_full": "手中一卜 (QLMY)",
+    "secret": "【排】速成取碼：首碼【手】(Q) ＋ 尾碼【卜】(Y)",
+    "quickCode": "QY"
+  },
+  "接": {
+    "char": "接",
+    "codes": [
+      "手",
+      "女"
+    ],
+    "keys": [
+      "Q",
+      "V"
+    ],
+    "first_code": "手",
+    "last_code": "女",
+    "first_key": "Q",
+    "last_key": "V",
+    "full": "手女 (QV)",
+    "cj_full": "手卜廿女 (QYTV)",
+    "secret": "【接】速成取碼：首碼【手】(Q) ＋ 尾碼【女】(V)",
+    "quickCode": "QV"
+  },
+  "推": {
+    "char": "推",
+    "codes": [
+      "手",
+      "土"
+    ],
+    "keys": [
+      "Q",
+      "G"
+    ],
+    "first_code": "手",
+    "last_code": "土",
+    "first_key": "Q",
+    "last_key": "G",
+    "full": "手土 (QG)",
+    "cj_full": "手人土 (QOG)",
+    "secret": "【推】速成取碼：首碼【手】(Q) ＋ 尾碼【土】(G)",
+    "quickCode": "QG"
+  },
+  "搖": {
+    "char": "搖",
+    "codes": [
+      "手",
+      "山"
+    ],
+    "keys": [
+      "Q",
+      "U"
+    ],
+    "first_code": "手",
+    "last_code": "山",
+    "first_key": "Q",
+    "last_key": "U",
+    "full": "手山 (QU)",
+    "cj_full": "手月人山 (QBOU)",
+    "secret": "【搖】速成取碼：首碼【手】(Q) ＋ 尾碼【山】(U)",
+    "quickCode": "QU"
+  },
+  "擁": {
+    "char": "擁",
+    "codes": [
+      "手",
+      "土"
+    ],
+    "keys": [
+      "Q",
+      "G"
+    ],
+    "first_code": "手",
+    "last_code": "土",
+    "first_key": "Q",
+    "last_key": "G",
+    "full": "手土 (QG)",
+    "cj_full": "手卜女土 (QYVG)",
+    "secret": "【擁】速成取碼：首碼【手】(Q) ＋ 尾碼【土】(G)",
+    "quickCode": "QG"
+  },
+  "擔": {
+    "char": "擔",
+    "codes": [
+      "手",
+      "口"
+    ],
+    "keys": [
+      "Q",
+      "R"
+    ],
+    "first_code": "手",
+    "last_code": "口",
+    "first_key": "Q",
+    "last_key": "R",
+    "full": "手口 (QR)",
+    "cj_full": "手弓金口 (QNCR)",
+    "secret": "【擔】速成取碼：首碼【手】(Q) ＋ 尾碼【口】(R)",
+    "quickCode": "QR"
+  },
+  "放": {
+    "char": "放",
+    "codes": [
+      "卜",
+      "大"
+    ],
+    "keys": [
+      "Y",
+      "K"
+    ],
+    "first_code": "卜",
+    "last_code": "大",
+    "first_key": "Y",
+    "last_key": "K",
+    "full": "卜大 (YK)",
+    "cj_full": "卜尸人大 (YSOK)",
+    "secret": "【放】速成取碼：首碼【卜】(Y) ＋ 尾碼【大】(K)",
+    "quickCode": "YK"
+  },
+  "新": {
+    "char": "新",
+    "codes": [
+      "卜",
+      "中"
+    ],
+    "keys": [
+      "Y",
+      "L"
+    ],
+    "first_code": "卜",
+    "last_code": "中",
+    "first_key": "Y",
+    "last_key": "L",
+    "full": "卜中 (YL)",
+    "cj_full": "卜木竹一中 (YDHML)",
+    "secret": "【新】速成取碼：首碼【卜】(Y) ＋ 尾碼【中】(L)",
+    "quickCode": "YL"
+  },
+  "斷": {
+    "char": "斷",
+    "codes": [
+      "女",
+      "中"
+    ],
+    "keys": [
+      "V",
+      "L"
+    ],
+    "first_code": "女",
+    "last_code": "中",
+    "first_key": "V",
+    "last_key": "L",
+    "full": "女中 (VL)",
+    "cj_full": "女戈竹一中 (VIHML)",
+    "secret": "【斷】速成取碼：首碼【女】(V) ＋ 尾碼【中】(L)",
+    "quickCode": "VL"
+  },
+  "族": {
+    "char": "族",
+    "codes": [
+      "卜",
+      "大"
+    ],
+    "keys": [
+      "Y",
+      "K"
+    ],
+    "first_code": "卜",
+    "last_code": "大",
+    "first_key": "Y",
+    "last_key": "K",
+    "full": "卜大 (YK)",
+    "cj_full": "卜尸卜人大 (YSYOK)",
+    "secret": "【族】速成取碼：首碼【卜】(Y) ＋ 尾碼【大】(K)",
+    "quickCode": "YK"
+  },
+  "既": {
+    "char": "既",
+    "codes": [
+      "日",
+      "山"
+    ],
+    "keys": [
+      "A",
+      "U"
+    ],
+    "first_code": "日",
+    "last_code": "山",
+    "first_key": "A",
+    "last_key": "U",
+    "full": "日山 (AU)",
+    "cj_full": "日戈一女山 (AIMVU)",
+    "secret": "【既】速成取碼：首碼【日】(A) ＋ 尾碼【山】(U)",
+    "quickCode": "AU"
+  },
+  "早": {
+    "char": "早",
+    "codes": [
+      "日",
+      "十"
+    ],
+    "keys": [
+      "A",
+      "J"
+    ],
+    "first_code": "日",
+    "last_code": "十",
+    "first_key": "A",
+    "last_key": "J",
+    "full": "日十 (AJ)",
+    "cj_full": "日十 (AJ)",
+    "secret": "【早】速成取碼：首碼【日】(A) ＋ 尾碼【十】(J)",
+    "quickCode": "AJ"
+  },
+  "易": {
+    "char": "易",
+    "codes": [
+      "日",
+      "竹"
+    ],
+    "keys": [
+      "A",
+      "H"
+    ],
+    "first_code": "日",
+    "last_code": "竹",
+    "first_key": "A",
+    "last_key": "H",
+    "full": "日竹 (AH)",
+    "cj_full": "日心竹竹 (APHH)",
+    "secret": "【易】速成取碼：首碼【日】(A) ＋ 尾碼【竹】(H)",
+    "quickCode": "AH"
+  },
+  "星": {
+    "char": "星",
+    "codes": [
+      "日",
+      "一"
+    ],
+    "keys": [
+      "A",
+      "M"
+    ],
+    "first_code": "日",
+    "last_code": "一",
+    "first_key": "A",
+    "last_key": "M",
+    "full": "日一 (AM)",
+    "cj_full": "日竹手一 (AHQM)",
+    "secret": "【星】速成取碼：首碼【日】(A) ＋ 尾碼【一】(M)",
+    "quickCode": "AM"
+  },
+  "普": {
+    "char": "普",
+    "codes": [
+      "廿",
+      "日"
+    ],
+    "keys": [
+      "T",
+      "A"
+    ],
+    "first_code": "廿",
+    "last_code": "日",
+    "first_key": "T",
+    "last_key": "A",
+    "full": "廿日 (TA)",
+    "cj_full": "廿金日 (TCA)",
+    "secret": "【普】速成取碼：首碼【廿】(T) ＋ 尾碼【日】(A)",
+    "quickCode": "TA"
+  },
+  "本": {
+    "char": "本",
+    "codes": [
+      "木",
+      "一"
+    ],
+    "keys": [
+      "D",
+      "M"
+    ],
+    "first_code": "木",
+    "last_code": "一",
+    "first_key": "D",
+    "last_key": "M",
+    "full": "木一 (DM)",
+    "cj_full": "木一 (DM)",
+    "secret": "【本】速成取碼：首碼【木】(D) ＋ 尾碼【一】(M)",
+    "quickCode": "DM"
+  },
+  "根": {
+    "char": "根",
+    "codes": [
+      "木",
+      "女"
+    ],
+    "keys": [
+      "D",
+      "V"
+    ],
+    "first_code": "木",
+    "last_code": "女",
+    "first_key": "D",
+    "last_key": "V",
+    "full": "木女 (DV)",
+    "cj_full": "木日女 (DAV)",
+    "secret": "【根】速成取碼：首碼【木】(D) ＋ 尾碼【女】(V)",
+    "quickCode": "DV"
+  },
+  "案": {
+    "char": "案",
+    "codes": [
+      "十",
+      "木"
+    ],
+    "keys": [
+      "J",
+      "D"
+    ],
+    "first_code": "十",
+    "last_code": "木",
+    "first_key": "J",
+    "last_key": "D",
+    "full": "十木 (JD)",
+    "cj_full": "十女木 (JVD)",
+    "secret": "【案】速成取碼：首碼【十】(J) ＋ 尾碼【木】(D)",
+    "quickCode": "JD"
+  },
+  "模": {
+    "char": "模",
+    "codes": [
+      "木",
+      "大"
+    ],
+    "keys": [
+      "D",
+      "K"
+    ],
+    "first_code": "木",
+    "last_code": "大",
+    "first_key": "D",
+    "last_key": "K",
+    "full": "木大 (DK)",
+    "cj_full": "木廿日大 (DTAK)",
+    "secret": "【模】速成取碼：首碼【木】(D) ＋ 尾碼【大】(K)",
+    "quickCode": "DK"
+  },
+  "歐": {
+    "char": "歐",
+    "codes": [
+      "尸",
+      "人"
+    ],
+    "keys": [
+      "S",
+      "O"
+    ],
+    "first_code": "尸",
+    "last_code": "人",
+    "first_key": "S",
+    "last_key": "O",
+    "full": "尸人 (SO)",
+    "cj_full": "尸口弓人 (SRNO)",
+    "secret": "【歐】速成取碼：首碼【尸】(S) ＋ 尾碼【人】(O)",
+    "quickCode": "SO"
+  },
+  "歲": {
+    "char": "歲",
+    "codes": [
+      "卜",
+      "竹"
+    ],
+    "keys": [
+      "Y",
+      "H"
+    ],
+    "first_code": "卜",
+    "last_code": "竹",
+    "first_key": "Y",
+    "last_key": "H",
+    "full": "卜竹 (YH)",
+    "cj_full": "卜一戈竹竹 (YMIHH)",
+    "secret": "【歲】速成取碼：首碼【卜】(Y) ＋ 尾碼【竹】(H)",
+    "quickCode": "YH"
   },
   "每": {
     "char": "每",
@@ -13233,6 +14996,728 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【每】速成取碼：首碼【人】(O) ＋ 尾碼【戈】(I)",
     "quickCode": "OI"
   },
+  "決": {
+    "char": "決",
+    "codes": [
+      "水",
+      "大"
+    ],
+    "keys": [
+      "E",
+      "K"
+    ],
+    "first_code": "水",
+    "last_code": "大",
+    "first_key": "E",
+    "last_key": "K",
+    "full": "水大 (EK)",
+    "cj_full": "水木大 (EDK)",
+    "secret": "【決】速成取碼：首碼【水】(E) ＋ 尾碼【大】(K)",
+    "quickCode": "EK"
+  },
+  "況": {
+    "char": "況",
+    "codes": [
+      "水",
+      "山"
+    ],
+    "keys": [
+      "E",
+      "U"
+    ],
+    "first_code": "水",
+    "last_code": "山",
+    "first_key": "E",
+    "last_key": "U",
+    "full": "水山 (EU)",
+    "cj_full": "水口竹山 (ERHU)",
+    "secret": "【況】速成取碼：首碼【水】(E) ＋ 尾碼【山】(U)",
+    "quickCode": "EU"
+  },
+  "洲": {
+    "char": "洲",
+    "codes": [
+      "水",
+      "中"
+    ],
+    "keys": [
+      "E",
+      "L"
+    ],
+    "first_code": "水",
+    "last_code": "中",
+    "first_key": "E",
+    "last_key": "L",
+    "full": "水中 (EL)",
+    "cj_full": "水戈中中 (EILL)",
+    "secret": "【洲】速成取碼：首碼【水】(E) ＋ 尾碼【中】(L)",
+    "quickCode": "EL"
+  },
+  "派": {
+    "char": "派",
+    "codes": [
+      "水",
+      "女"
+    ],
+    "keys": [
+      "E",
+      "V"
+    ],
+    "first_code": "水",
+    "last_code": "女",
+    "first_key": "E",
+    "last_key": "V",
+    "full": "水女 (EV)",
+    "cj_full": "水竹竹女 (EHHV)",
+    "secret": "【派】速成取碼：首碼【水】(E) ＋ 尾碼【女】(V)",
+    "quickCode": "EV"
+  },
+  "流": {
+    "char": "流",
+    "codes": [
+      "水",
+      "山"
+    ],
+    "keys": [
+      "E",
+      "U"
+    ],
+    "first_code": "水",
+    "last_code": "山",
+    "first_key": "E",
+    "last_key": "U",
+    "full": "水山 (EU)",
+    "cj_full": "水卜戈山 (EYIU)",
+    "secret": "【流】速成取碼：首碼【水】(E) ＋ 尾碼【山】(U)",
+    "quickCode": "EU"
+  },
+  "海": {
+    "char": "海",
+    "codes": [
+      "水",
+      "卜"
+    ],
+    "keys": [
+      "E",
+      "Y"
+    ],
+    "first_code": "水",
+    "last_code": "卜",
+    "first_key": "E",
+    "last_key": "Y",
+    "full": "水卜 (EY)",
+    "cj_full": "水人田卜 (EOWY)",
+    "secret": "【海】速成取碼：首碼【水】(E) ＋ 尾碼【卜】(Y)",
+    "quickCode": "EY"
+  },
+  "淚": {
+    "char": "淚",
+    "codes": [
+      "水",
+      "大"
+    ],
+    "keys": [
+      "E",
+      "K"
+    ],
+    "first_code": "水",
+    "last_code": "大",
+    "first_key": "E",
+    "last_key": "K",
+    "full": "水大 (EK)",
+    "cj_full": "水竹尸大 (EHSK)",
+    "secret": "【淚】速成取碼：首碼【水】(E) ＋ 尾碼【大】(K)",
+    "quickCode": "EK"
+  },
+  "溫": {
+    "char": "溫",
+    "codes": [
+      "水",
+      "廿"
+    ],
+    "keys": [
+      "E",
+      "T"
+    ],
+    "first_code": "水",
+    "last_code": "廿",
+    "first_key": "E",
+    "last_key": "T",
+    "full": "水廿 (ET)",
+    "cj_full": "水田人廿 (EWOT)",
+    "secret": "【溫】速成取碼：首碼【水】(E) ＋ 尾碼【廿】(T)",
+    "quickCode": "ET"
+  },
+  "滿": {
+    "char": "滿",
+    "codes": [
+      "水",
+      "月"
+    ],
+    "keys": [
+      "E",
+      "B"
+    ],
+    "first_code": "水",
+    "last_code": "月",
+    "first_key": "E",
+    "last_key": "B",
+    "full": "水月 (EB)",
+    "cj_full": "水廿中月 (ETLB)",
+    "secret": "【滿】速成取碼：首碼【水】(E) ＋ 尾碼【月】(B)",
+    "quickCode": "EB"
+  },
+  "漢": {
+    "char": "漢",
+    "codes": [
+      "水",
+      "人"
+    ],
+    "keys": [
+      "E",
+      "O"
+    ],
+    "first_code": "水",
+    "last_code": "人",
+    "first_key": "E",
+    "last_key": "O",
+    "full": "水人 (EO)",
+    "cj_full": "水廿中人 (ETLO)",
+    "secret": "【漢】速成取碼：首碼【水】(E) ＋ 尾碼【人】(O)",
+    "quickCode": "EO"
+  },
+  "熟": {
+    "char": "熟",
+    "codes": [
+      "卜",
+      "火"
+    ],
+    "keys": [
+      "Y",
+      "F"
+    ],
+    "first_code": "卜",
+    "last_code": "火",
+    "first_key": "Y",
+    "last_key": "F",
+    "full": "卜火 (YF)",
+    "cj_full": "卜戈火 (YIF)",
+    "secret": "【熟】速成取碼：首碼【卜】(Y) ＋ 尾碼【火】(F)",
+    "quickCode": "YF"
+  },
+  "玩": {
+    "char": "玩",
+    "codes": [
+      "一",
+      "山"
+    ],
+    "keys": [
+      "M",
+      "U"
+    ],
+    "first_code": "一",
+    "last_code": "山",
+    "first_key": "M",
+    "last_key": "U",
+    "full": "一山 (MU)",
+    "cj_full": "一土一一山 (MGMMU)",
+    "secret": "【玩】速成取碼：首碼【一】(M) ＋ 尾碼【山】(U)",
+    "quickCode": "MU"
+  },
+  "理": {
+    "char": "理",
+    "codes": [
+      "一",
+      "土"
+    ],
+    "keys": [
+      "M",
+      "G"
+    ],
+    "first_code": "一",
+    "last_code": "土",
+    "first_key": "M",
+    "last_key": "G",
+    "full": "一土 (MG)",
+    "cj_full": "一土田土 (MGWG)",
+    "secret": "【理】速成取碼：首碼【一】(M) ＋ 尾碼【土】(G)",
+    "quickCode": "MG"
+  },
+  "瑪": {
+    "char": "瑪",
+    "codes": [
+      "一",
+      "火"
+    ],
+    "keys": [
+      "M",
+      "F"
+    ],
+    "first_code": "一",
+    "last_code": "火",
+    "first_key": "M",
+    "last_key": "F",
+    "full": "一火 (MF)",
+    "cj_full": "一土尸手火 (MGSQF)",
+    "secret": "【瑪】速成取碼：首碼【一】(M) ＋ 尾碼【火】(F)",
+    "quickCode": "MF"
+  },
+  "留": {
+    "char": "留",
+    "codes": [
+      "竹",
+      "田"
+    ],
+    "keys": [
+      "H",
+      "W"
+    ],
+    "first_code": "竹",
+    "last_code": "田",
+    "first_key": "H",
+    "last_key": "W",
+    "full": "竹田 (HW)",
+    "cj_full": "竹竹田 (HHW)",
+    "secret": "【留】速成取碼：首碼【竹】(H) ＋ 尾碼【田】(W)",
+    "quickCode": "HW"
+  },
+  "疑": {
+    "char": "疑",
+    "codes": [
+      "心",
+      "人"
+    ],
+    "keys": [
+      "P",
+      "O"
+    ],
+    "first_code": "心",
+    "last_code": "人",
+    "first_key": "P",
+    "last_key": "O",
+    "full": "心人 (PO)",
+    "cj_full": "心大弓戈人 (PKNIO)",
+    "secret": "【疑】速成取碼：首碼【心】(P) ＋ 尾碼【人】(O)",
+    "quickCode": "PO"
+  },
+  "盛": {
+    "char": "盛",
+    "codes": [
+      "戈",
+      "廿"
+    ],
+    "keys": [
+      "I",
+      "T"
+    ],
+    "first_code": "戈",
+    "last_code": "廿",
+    "first_key": "I",
+    "last_key": "T",
+    "full": "戈廿 (IT)",
+    "cj_full": "戈尸月廿 (ISBT)",
+    "secret": "【盛】速成取碼：首碼【戈】(I) ＋ 尾碼【廿】(T)",
+    "quickCode": "IT"
+  },
+  "禮": {
+    "char": "禮",
+    "codes": [
+      "戈",
+      "田"
+    ],
+    "keys": [
+      "I",
+      "W"
+    ],
+    "first_code": "戈",
+    "last_code": "田",
+    "first_key": "I",
+    "last_key": "W",
+    "full": "戈田 (IW)",
+    "cj_full": "戈火廿田 (IFTW)",
+    "secret": "【禮】速成取碼：首碼【戈】(I) ＋ 尾碼【田】(W)",
+    "quickCode": "IW"
+  },
+  "程": {
+    "char": "程",
+    "codes": [
+      "竹",
+      "土"
+    ],
+    "keys": [
+      "H",
+      "G"
+    ],
+    "first_code": "竹",
+    "last_code": "土",
+    "first_key": "H",
+    "last_key": "G",
+    "full": "竹土 (HG)",
+    "cj_full": "竹木口竹土 (HDRHG)",
+    "secret": "【程】速成取碼：首碼【竹】(H) ＋ 尾碼【土】(G)",
+    "quickCode": "HG"
+  },
+  "稱": {
+    "char": "稱",
+    "codes": [
+      "竹",
+      "月"
+    ],
+    "keys": [
+      "H",
+      "B"
+    ],
+    "first_code": "竹",
+    "last_code": "月",
+    "first_key": "H",
+    "last_key": "B",
+    "full": "竹月 (HB)",
+    "cj_full": "竹木月土月 (HDBGB)",
+    "secret": "【稱】速成取碼：首碼【竹】(H) ＋ 尾碼【月】(B)",
+    "quickCode": "HB"
+  },
+  "立": {
+    "char": "立",
+    "codes": [
+      "卜",
+      "廿"
+    ],
+    "keys": [
+      "Y",
+      "T"
+    ],
+    "first_code": "卜",
+    "last_code": "廿",
+    "first_key": "Y",
+    "last_key": "T",
+    "full": "卜廿 (YT)",
+    "cj_full": "卜廿 (YT)",
+    "secret": "【立】速成取碼：首碼【卜】(Y) ＋ 尾碼【廿】(T)",
+    "quickCode": "YT"
+  },
+  "端": {
+    "char": "端",
+    "codes": [
+      "卜",
+      "月"
+    ],
+    "keys": [
+      "Y",
+      "B"
+    ],
+    "first_code": "卜",
+    "last_code": "月",
+    "first_key": "Y",
+    "last_key": "B",
+    "full": "卜月 (YB)",
+    "cj_full": "卜廿山一月 (YTUMB)",
+    "secret": "【端】速成取碼：首碼【卜】(Y) ＋ 尾碼【月】(B)",
+    "quickCode": "YB"
+  },
+  "筆": {
+    "char": "筆",
+    "codes": [
+      "竹",
+      "手"
+    ],
+    "keys": [
+      "H",
+      "Q"
+    ],
+    "first_code": "竹",
+    "last_code": "手",
+    "first_key": "H",
+    "last_key": "Q",
+    "full": "竹手 (HQ)",
+    "cj_full": "竹中手 (HLQ)",
+    "secret": "【筆】速成取碼：首碼【竹】(H) ＋ 尾碼【手】(Q)",
+    "quickCode": "HQ"
+  },
+  "答": {
+    "char": "答",
+    "codes": [
+      "竹",
+      "口"
+    ],
+    "keys": [
+      "H",
+      "R"
+    ],
+    "first_code": "竹",
+    "last_code": "口",
+    "first_key": "H",
+    "last_key": "R",
+    "full": "竹口 (HR)",
+    "cj_full": "竹人一口 (HOMR)",
+    "secret": "【答】速成取碼：首碼【竹】(H) ＋ 尾碼【口】(R)",
+    "quickCode": "HR"
+  },
+  "算": {
+    "char": "算",
+    "codes": [
+      "竹",
+      "廿"
+    ],
+    "keys": [
+      "H",
+      "T"
+    ],
+    "first_code": "竹",
+    "last_code": "廿",
+    "first_key": "H",
+    "last_key": "T",
+    "full": "竹廿 (HT)",
+    "cj_full": "竹月山廿 (HBUT)",
+    "secret": "【算】速成取碼：首碼【竹】(H) ＋ 尾碼【廿】(T)",
+    "quickCode": "HT"
+  },
+  "範": {
+    "char": "範",
+    "codes": [
+      "竹",
+      "山"
+    ],
+    "keys": [
+      "H",
+      "U"
+    ],
+    "first_code": "竹",
+    "last_code": "山",
+    "first_key": "H",
+    "last_key": "U",
+    "full": "竹山 (HU)",
+    "cj_full": "竹十十山 (HJJU)",
+    "secret": "【範】速成取碼：首碼【竹】(H) ＋ 尾碼【山】(U)",
+    "quickCode": "HU"
+  },
+  "系": {
+    "char": "系",
+    "codes": [
+      "竹",
+      "火"
+    ],
+    "keys": [
+      "H",
+      "F"
+    ],
+    "first_code": "竹",
+    "last_code": "火",
+    "first_key": "H",
+    "last_key": "F",
+    "full": "竹火 (HF)",
+    "cj_full": "竹女戈火 (HVIF)",
+    "secret": "【系】速成取碼：首碼【竹】(H) ＋ 尾碼【火】(F)",
+    "quickCode": "HF"
+  },
+  "緊": {
+    "char": "緊",
+    "codes": [
+      "尸",
+      "火"
+    ],
+    "keys": [
+      "S",
+      "F"
+    ],
+    "first_code": "尸",
+    "last_code": "火",
+    "first_key": "S",
+    "last_key": "F",
+    "full": "尸火 (SF)",
+    "cj_full": "尸水女戈火 (SEVIF)",
+    "secret": "【緊】速成取碼：首碼【尸】(S) ＋ 尾碼【火】(F)",
+    "quickCode": "SF"
+  },
+  "線": {
+    "char": "線",
+    "codes": [
+      "女",
+      "水"
+    ],
+    "keys": [
+      "V",
+      "E"
+    ],
+    "first_code": "女",
+    "last_code": "水",
+    "first_key": "V",
+    "last_key": "E",
+    "full": "女水 (VE)",
+    "cj_full": "女火竹日水 (VFHAE)",
+    "secret": "【線】速成取碼：首碼【女】(V) ＋ 尾碼【水】(E)",
+    "quickCode": "VE"
+  },
+  "練": {
+    "char": "練",
+    "codes": [
+      "女",
+      "火"
+    ],
+    "keys": [
+      "V",
+      "F"
+    ],
+    "first_code": "女",
+    "last_code": "火",
+    "first_key": "V",
+    "last_key": "F",
+    "full": "女火 (VF)",
+    "cj_full": "女火木田火 (VFDWF)",
+    "secret": "【練】速成取碼：首碼【女】(V) ＋ 尾碼【火】(F)",
+    "quickCode": "VF"
+  },
+  "繼": {
+    "char": "繼",
+    "codes": [
+      "女",
+      "戈"
+    ],
+    "keys": [
+      "V",
+      "I"
+    ],
+    "first_code": "女",
+    "last_code": "戈",
+    "first_key": "V",
+    "last_key": "I",
+    "full": "女戈 (VI)",
+    "cj_full": "女火女女戈 (VFVVI)",
+    "secret": "【繼】速成取碼：首碼【女】(V) ＋ 尾碼【戈】(I)",
+    "quickCode": "VI"
+  },
+  "羅": {
+    "char": "羅",
+    "codes": [
+      "田",
+      "土"
+    ],
+    "keys": [
+      "W",
+      "G"
+    ],
+    "first_code": "田",
+    "last_code": "土",
+    "first_key": "W",
+    "last_key": "G",
+    "full": "田土 (WG)",
+    "cj_full": "田中女火土 (WLVFG)",
+    "secret": "【羅】速成取碼：首碼【田】(W) ＋ 尾碼【土】(G)",
+    "quickCode": "WG"
+  },
+  "義": {
+    "char": "義",
+    "codes": [
+      "廿",
+      "戈"
+    ],
+    "keys": [
+      "T",
+      "I"
+    ],
+    "first_code": "廿",
+    "last_code": "戈",
+    "first_key": "T",
+    "last_key": "I",
+    "full": "廿戈 (TI)",
+    "cj_full": "廿土竹手戈 (TGHQI)",
+    "secret": "【義】速成取碼：首碼【廿】(T) ＋ 尾碼【戈】(I)",
+    "quickCode": "TI"
+  },
+  "習": {
+    "char": "習",
+    "codes": [
+      "尸",
+      "日"
+    ],
+    "keys": [
+      "S",
+      "A"
+    ],
+    "first_code": "尸",
+    "last_code": "日",
+    "first_key": "S",
+    "last_key": "A",
+    "full": "尸日 (SA)",
+    "cj_full": "尸一竹日 (SMHA)",
+    "secret": "【習】速成取碼：首碼【尸】(S) ＋ 尾碼【日】(A)",
+    "quickCode": "SA"
+  },
+  "聯": {
+    "char": "聯",
+    "codes": [
+      "尸",
+      "廿"
+    ],
+    "keys": [
+      "S",
+      "T"
+    ],
+    "first_code": "尸",
+    "last_code": "廿",
+    "first_key": "S",
+    "last_key": "T",
+    "full": "尸廿 (ST)",
+    "cj_full": "尸十女戈廿 (SJVIT)",
+    "secret": "【聯】速成取碼：首碼【尸】(S) ＋ 尾碼【廿】(T)",
+    "quickCode": "ST"
+  },
+  "聲": {
+    "char": "聲",
+    "codes": [
+      "土",
+      "十"
+    ],
+    "keys": [
+      "G",
+      "J"
+    ],
+    "first_code": "土",
+    "last_code": "十",
+    "first_key": "G",
+    "last_key": "J",
+    "full": "土十 (GJ)",
+    "cj_full": "土水尸十 (GESJ)",
+    "secret": "【聲】速成取碼：首碼【土】(G) ＋ 尾碼【十】(J)",
+    "quickCode": "GJ"
+  },
+  "聽": {
+    "char": "聽",
+    "codes": [
+      "尸",
+      "心"
+    ],
+    "keys": [
+      "S",
+      "P"
+    ],
+    "first_code": "尸",
+    "last_code": "心",
+    "first_key": "S",
+    "last_key": "P",
+    "full": "尸心 (SP)",
+    "cj_full": "尸土十田心 (SGJWP)",
+    "secret": "【聽】速成取碼：首碼【尸】(S) ＋ 尾碼【心】(P)",
+    "quickCode": "SP"
+  },
+  "臨": {
+    "char": "臨",
+    "codes": [
+      "尸",
+      "口"
+    ],
+    "keys": [
+      "S",
+      "R"
+    ],
+    "first_code": "尸",
+    "last_code": "口",
+    "first_key": "S",
+    "last_key": "R",
+    "full": "尸口 (SR)",
+    "cj_full": "尸中人口口 (SLORR)",
+    "secret": "【臨】速成取碼：首碼【尸】(S) ＋ 尾碼【口】(R)",
+    "quickCode": "SR"
+  },
   "舞": {
     "char": "舞",
     "codes": [
@@ -13252,8 +15737,331 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【舞】速成取碼：首碼【人】(O) ＋ 尾碼【手】(Q)",
     "quickCode": "OQ"
   },
-  "熟": {
-    "char": "熟",
+  "草": {
+    "char": "草",
+    "codes": [
+      "廿",
+      "十"
+    ],
+    "keys": [
+      "T",
+      "J"
+    ],
+    "first_code": "廿",
+    "last_code": "十",
+    "first_key": "T",
+    "last_key": "J",
+    "full": "廿十 (TJ)",
+    "cj_full": "廿日十 (TAJ)",
+    "secret": "【草】速成取碼：首碼【廿】(T) ＋ 尾碼【十】(J)",
+    "quickCode": "TJ"
+  },
+  "著": {
+    "char": "著",
+    "codes": [
+      "廿",
+      "日"
+    ],
+    "keys": [
+      "T",
+      "A"
+    ],
+    "first_code": "廿",
+    "last_code": "日",
+    "first_key": "T",
+    "last_key": "A",
+    "full": "廿日 (TA)",
+    "cj_full": "廿十大日 (TJKA)",
+    "secret": "【著】速成取碼：首碼【廿】(T) ＋ 尾碼【日】(A)",
+    "quickCode": "TA"
+  },
+  "藏": {
+    "char": "藏",
+    "codes": [
+      "廿",
+      "尸"
+    ],
+    "keys": [
+      "T",
+      "S"
+    ],
+    "first_code": "廿",
+    "last_code": "尸",
+    "first_key": "T",
+    "last_key": "S",
+    "full": "廿尸 (TS)",
+    "cj_full": "廿戈一尸 (TIMS)",
+    "secret": "【藏】速成取碼：首碼【廿】(T) ＋ 尾碼【尸】(S)",
+    "quickCode": "TS"
+  },
+  "藝": {
+    "char": "藝",
+    "codes": [
+      "廿",
+      "戈"
+    ],
+    "keys": [
+      "T",
+      "I"
+    ],
+    "first_code": "廿",
+    "last_code": "戈",
+    "first_key": "T",
+    "last_key": "I",
+    "full": "廿戈 (TI)",
+    "cj_full": "廿土大戈 (TGKI)",
+    "secret": "【藝】速成取碼：首碼【廿】(T) ＋ 尾碼【戈】(I)",
+    "quickCode": "TI"
+  },
+  "藥": {
+    "char": "藥",
+    "codes": [
+      "廿",
+      "木"
+    ],
+    "keys": [
+      "T",
+      "D"
+    ],
+    "first_code": "廿",
+    "last_code": "木",
+    "first_key": "T",
+    "last_key": "D",
+    "full": "廿木 (TD)",
+    "cj_full": "廿女戈木 (TVID)",
+    "secret": "【藥】速成取碼：首碼【廿】(T) ＋ 尾碼【木】(D)",
+    "quickCode": "TD"
+  },
+  "衛": {
+    "char": "衛",
+    "codes": [
+      "竹",
+      "弓"
+    ],
+    "keys": [
+      "H",
+      "N"
+    ],
+    "first_code": "竹",
+    "last_code": "弓",
+    "first_key": "H",
+    "last_key": "N",
+    "full": "竹弓 (HN)",
+    "cj_full": "竹人木手弓 (HODQN)",
+    "secret": "【衛】速成取碼：首碼【竹】(H) ＋ 尾碼【弓】(N)",
+    "quickCode": "HN"
+  },
+  "表": {
+    "char": "表",
+    "codes": [
+      "手",
+      "女"
+    ],
+    "keys": [
+      "Q",
+      "V"
+    ],
+    "first_code": "手",
+    "last_code": "女",
+    "first_key": "Q",
+    "last_key": "V",
+    "full": "手女 (QV)",
+    "cj_full": "手一女 (QMV)",
+    "secret": "【表】速成取碼：首碼【手】(Q) ＋ 尾碼【女】(V)",
+    "quickCode": "QV"
+  },
+  "袋": {
+    "char": "袋",
+    "codes": [
+      "人",
+      "女"
+    ],
+    "keys": [
+      "O",
+      "V"
+    ],
+    "first_code": "人",
+    "last_code": "女",
+    "first_key": "O",
+    "last_key": "V",
+    "full": "人女 (OV)",
+    "cj_full": "人心卜竹女 (OPYHV)",
+    "secret": "【袋】速成取碼：首碼【人】(O) ＋ 尾碼【女】(V)",
+    "quickCode": "OV"
+  },
+  "西": {
+    "char": "西",
+    "codes": [
+      "一",
+      "田"
+    ],
+    "keys": [
+      "M",
+      "W"
+    ],
+    "first_code": "一",
+    "last_code": "田",
+    "first_key": "M",
+    "last_key": "W",
+    "full": "一田 (MW)",
+    "cj_full": "一金田 (MCW)",
+    "secret": "【西】速成取碼：首碼【一】(M) ＋ 尾碼【田】(W)",
+    "quickCode": "MW"
+  },
+  "要": {
+    "char": "要",
+    "codes": [
+      "一",
+      "女"
+    ],
+    "keys": [
+      "M",
+      "V"
+    ],
+    "first_code": "一",
+    "last_code": "女",
+    "first_key": "M",
+    "last_key": "V",
+    "full": "一女 (MV)",
+    "cj_full": "一田女 (MWV)",
+    "secret": "【要】速成取碼：首碼【一】(M) ＋ 尾碼【女】(V)",
+    "quickCode": "MV"
+  },
+  "言": {
+    "char": "言",
+    "codes": [
+      "卜",
+      "口"
+    ],
+    "keys": [
+      "Y",
+      "R"
+    ],
+    "first_code": "卜",
+    "last_code": "口",
+    "first_key": "Y",
+    "last_key": "R",
+    "full": "卜口 (YR)",
+    "cj_full": "卜一一口 (YMMR)",
+    "secret": "【言】速成取碼：首碼【卜】(Y) ＋ 尾碼【口】(R)",
+    "quickCode": "YR"
+  },
+  "計": {
+    "char": "計",
+    "codes": [
+      "卜",
+      "十"
+    ],
+    "keys": [
+      "Y",
+      "J"
+    ],
+    "first_code": "卜",
+    "last_code": "十",
+    "first_key": "Y",
+    "last_key": "J",
+    "full": "卜十 (YJ)",
+    "cj_full": "卜口十 (YRJ)",
+    "secret": "【計】速成取碼：首碼【卜】(Y) ＋ 尾碼【十】(J)",
+    "quickCode": "YJ"
+  },
+  "記": {
+    "char": "記",
+    "codes": [
+      "卜",
+      "山"
+    ],
+    "keys": [
+      "Y",
+      "U"
+    ],
+    "first_code": "卜",
+    "last_code": "山",
+    "first_key": "Y",
+    "last_key": "U",
+    "full": "卜山 (YU)",
+    "cj_full": "卜口尸山 (YRSU)",
+    "secret": "【記】速成取碼：首碼【卜】(Y) ＋ 尾碼【山】(U)",
+    "quickCode": "YU"
+  },
+  "設": {
+    "char": "設",
+    "codes": [
+      "卜",
+      "水"
+    ],
+    "keys": [
+      "Y",
+      "E"
+    ],
+    "first_code": "卜",
+    "last_code": "水",
+    "first_key": "Y",
+    "last_key": "E",
+    "full": "卜水 (YE)",
+    "cj_full": "卜口竹弓水 (YRHNE)",
+    "secret": "【設】速成取碼：首碼【卜】(Y) ＋ 尾碼【水】(E)",
+    "quickCode": "YE"
+  },
+  "話": {
+    "char": "話",
+    "codes": [
+      "卜",
+      "口"
+    ],
+    "keys": [
+      "Y",
+      "R"
+    ],
+    "first_code": "卜",
+    "last_code": "口",
+    "first_key": "Y",
+    "last_key": "R",
+    "full": "卜口 (YR)",
+    "cj_full": "卜口竹十口 (YRHJR)",
+    "secret": "【話】速成取碼：首碼【卜】(Y) ＋ 尾碼【口】(R)",
+    "quickCode": "YR"
+  },
+  "該": {
+    "char": "該",
+    "codes": [
+      "卜",
+      "人"
+    ],
+    "keys": [
+      "Y",
+      "O"
+    ],
+    "first_code": "卜",
+    "last_code": "人",
+    "first_key": "Y",
+    "last_key": "O",
+    "full": "卜人 (YO)",
+    "cj_full": "卜口卜女人 (YRYVO)",
+    "secret": "【該】速成取碼：首碼【卜】(Y) ＋ 尾碼【人】(O)",
+    "quickCode": "YO"
+  },
+  "課": {
+    "char": "課",
+    "codes": [
+      "卜",
+      "木"
+    ],
+    "keys": [
+      "Y",
+      "D"
+    ],
+    "first_code": "卜",
+    "last_code": "木",
+    "first_key": "Y",
+    "last_key": "D",
+    "full": "卜木 (YD)",
+    "cj_full": "卜口田木 (YRWD)",
+    "secret": "【課】速成取碼：首碼【卜】(Y) ＋ 尾碼【木】(D)",
+    "quickCode": "YD"
+  },
+  "談": {
+    "char": "談",
     "codes": [
       "卜",
       "火"
@@ -13267,8 +16075,8 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "Y",
     "last_key": "F",
     "full": "卜火 (YF)",
-    "cj_full": "卜戈火 (YIF)",
-    "secret": "【熟】速成取碼：首碼【卜】(Y) ＋ 尾碼【火】(F)",
+    "cj_full": "卜口火火 (YRFF)",
+    "secret": "【談】速成取碼：首碼【卜】(Y) ＋ 尾碼【火】(F)",
     "quickCode": "YF"
   },
   "論": {
@@ -13290,897 +16098,6 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【論】速成取碼：首碼【卜】(Y) ＋ 尾碼【月】(B)",
     "quickCode": "YB"
   },
-  "早": {
-    "char": "早",
-    "codes": [
-      "日",
-      "十"
-    ],
-    "keys": [
-      "A",
-      "J"
-    ],
-    "first_code": "日",
-    "last_code": "十",
-    "first_key": "A",
-    "last_key": "J",
-    "full": "日十 (AJ)",
-    "cj_full": "日十 (AJ)",
-    "secret": "【早】速成取碼：首碼【日】(A) ＋ 尾碼【十】(J)",
-    "quickCode": "AJ"
-  },
-  "鮮": {
-    "char": "鮮",
-    "codes": [
-      "弓",
-      "手"
-    ],
-    "keys": [
-      "N",
-      "Q"
-    ],
-    "first_code": "弓",
-    "last_code": "手",
-    "first_key": "N",
-    "last_key": "Q",
-    "full": "弓手 (NQ)",
-    "cj_full": "弓火廿手 (NFTQ)",
-    "secret": "【鮮】速成取碼：首碼【弓】(N) ＋ 尾碼【手】(Q)",
-    "quickCode": "NQ"
-  },
-  "人": {
-    "char": "人",
-    "codes": [
-      "人"
-    ],
-    "keys": [
-      "O"
-    ],
-    "first_code": "人",
-    "last_code": "人",
-    "first_key": "O",
-    "last_key": "O",
-    "full": "人 (O)",
-    "cj_full": "人 (O)",
-    "secret": "【人】速成取碼：單碼【人】(O)",
-    "quickCode": "O"
-  },
-  "程": {
-    "char": "程",
-    "codes": [
-      "竹",
-      "土"
-    ],
-    "keys": [
-      "H",
-      "G"
-    ],
-    "first_code": "竹",
-    "last_code": "土",
-    "first_key": "H",
-    "last_key": "G",
-    "full": "竹土 (HG)",
-    "cj_full": "竹木口竹土 (HDRHG)",
-    "secret": "【程】速成取碼：首碼【竹】(H) ＋ 尾碼【土】(G)",
-    "quickCode": "HG"
-  },
-  "星": {
-    "char": "星",
-    "codes": [
-      "日",
-      "一"
-    ],
-    "keys": [
-      "A",
-      "M"
-    ],
-    "first_code": "日",
-    "last_code": "一",
-    "first_key": "A",
-    "last_key": "M",
-    "full": "日一 (AM)",
-    "cj_full": "日竹手一 (AHQM)",
-    "secret": "【星】速成取碼：首碼【日】(A) ＋ 尾碼【一】(M)",
-    "quickCode": "AM"
-  },
-  "言": {
-    "char": "言",
-    "codes": [
-      "卜",
-      "口"
-    ],
-    "keys": [
-      "Y",
-      "R"
-    ],
-    "first_code": "卜",
-    "last_code": "口",
-    "first_key": "Y",
-    "last_key": "R",
-    "full": "卜口 (YR)",
-    "cj_full": "卜一一口 (YMMR)",
-    "secret": "【言】速成取碼：首碼【卜】(Y) ＋ 尾碼【口】(R)",
-    "quickCode": "YR"
-  },
-  "弄": {
-    "char": "弄",
-    "codes": [
-      "一",
-      "廿"
-    ],
-    "keys": [
-      "M",
-      "T"
-    ],
-    "first_code": "一",
-    "last_code": "廿",
-    "first_key": "M",
-    "last_key": "T",
-    "full": "一廿 (MT)",
-    "cj_full": "一土廿 (MGT)",
-    "secret": "【弄】速成取碼：首碼【一】(M) ＋ 尾碼【廿】(T)",
-    "quickCode": "MT"
-  },
-  "光": {
-    "char": "光",
-    "codes": [
-      "火",
-      "山"
-    ],
-    "keys": [
-      "F",
-      "U"
-    ],
-    "first_code": "火",
-    "last_code": "山",
-    "first_key": "F",
-    "last_key": "U",
-    "full": "火山 (FU)",
-    "cj_full": "火一山 (FMU)",
-    "secret": "【光】速成取碼：首碼【火】(F) ＋ 尾碼【山】(U)",
-    "quickCode": "FU"
-  },
-  "外": {
-    "char": "外",
-    "codes": [
-      "弓",
-      "卜"
-    ],
-    "keys": [
-      "N",
-      "Y"
-    ],
-    "first_code": "弓",
-    "last_code": "卜",
-    "first_key": "N",
-    "last_key": "Y",
-    "full": "弓卜 (NY)",
-    "cj_full": "弓戈卜 (NIY)",
-    "secret": "【外】速成取碼：首碼【弓】(N) ＋ 尾碼【卜】(Y)",
-    "quickCode": "NY"
-  },
-  "鞋": {
-    "char": "鞋",
-    "codes": [
-      "廿",
-      "土"
-    ],
-    "keys": [
-      "T",
-      "G"
-    ],
-    "first_code": "廿",
-    "last_code": "土",
-    "first_key": "T",
-    "last_key": "G",
-    "full": "廿土 (TG)",
-    "cj_full": "廿十土土 (TJGG)",
-    "secret": "【鞋】速成取碼：首碼【廿】(T) ＋ 尾碼【土】(G)",
-    "quickCode": "TG"
-  },
-  "存": {
-    "char": "存",
-    "codes": [
-      "大",
-      "木"
-    ],
-    "keys": [
-      "K",
-      "D"
-    ],
-    "first_code": "大",
-    "last_code": "木",
-    "first_key": "K",
-    "last_key": "D",
-    "full": "大木 (KD)",
-    "cj_full": "大中弓木 (KLND)",
-    "secret": "【存】速成取碼：首碼【大】(K) ＋ 尾碼【木】(D)",
-    "quickCode": "KD"
-  },
-  "理": {
-    "char": "理",
-    "codes": [
-      "一",
-      "土"
-    ],
-    "keys": [
-      "M",
-      "G"
-    ],
-    "first_code": "一",
-    "last_code": "土",
-    "first_key": "M",
-    "last_key": "G",
-    "full": "一土 (MG)",
-    "cj_full": "一土田土 (MGWG)",
-    "secret": "【理】速成取碼：首碼【一】(M) ＋ 尾碼【土】(G)",
-    "quickCode": "MG"
-  },
-  "錢": {
-    "char": "錢",
-    "codes": [
-      "金",
-      "戈"
-    ],
-    "keys": [
-      "C",
-      "I"
-    ],
-    "first_code": "金",
-    "last_code": "戈",
-    "first_key": "C",
-    "last_key": "I",
-    "full": "金戈 (CI)",
-    "cj_full": "金戈戈 (CII)",
-    "secret": "【錢】速成取碼：首碼【金】(C) ＋ 尾碼【戈】(I)",
-    "quickCode": "CI"
-  },
-  "投": {
-    "char": "投",
-    "codes": [
-      "手",
-      "水"
-    ],
-    "keys": [
-      "Q",
-      "E"
-    ],
-    "first_code": "手",
-    "last_code": "水",
-    "first_key": "Q",
-    "last_key": "E",
-    "full": "手水 (QE)",
-    "cj_full": "手竹弓水 (QHNE)",
-    "secret": "【投】速成取碼：首碼【手】(Q) ＋ 尾碼【水】(E)",
-    "quickCode": "QE"
-  },
-  "屋": {
-    "char": "屋",
-    "codes": [
-      "尸",
-      "土"
-    ],
-    "keys": [
-      "S",
-      "G"
-    ],
-    "first_code": "尸",
-    "last_code": "土",
-    "first_key": "S",
-    "last_key": "G",
-    "full": "尸土 (SG)",
-    "cj_full": "尸一戈土 (SMIG)",
-    "secret": "【屋】速成取碼：首碼【尸】(S) ＋ 尾碼【土】(G)",
-    "quickCode": "SG"
-  },
-  "臨": {
-    "char": "臨",
-    "codes": [
-      "尸",
-      "口"
-    ],
-    "keys": [
-      "S",
-      "R"
-    ],
-    "first_code": "尸",
-    "last_code": "口",
-    "first_key": "S",
-    "last_key": "R",
-    "full": "尸口 (SR)",
-    "cj_full": "尸中人口口 (SLORR)",
-    "secret": "【臨】速成取碼：首碼【尸】(S) ＋ 尾碼【口】(R)",
-    "quickCode": "SR"
-  },
-  "系": {
-    "char": "系",
-    "codes": [
-      "竹",
-      "火"
-    ],
-    "keys": [
-      "H",
-      "F"
-    ],
-    "first_code": "竹",
-    "last_code": "火",
-    "first_key": "H",
-    "last_key": "F",
-    "full": "竹火 (HF)",
-    "cj_full": "竹女戈火 (HVIF)",
-    "secret": "【系】速成取碼：首碼【竹】(H) ＋ 尾碼【火】(F)",
-    "quickCode": "HF"
-  },
-  "店": {
-    "char": "店",
-    "codes": [
-      "戈",
-      "口"
-    ],
-    "keys": [
-      "I",
-      "R"
-    ],
-    "first_code": "戈",
-    "last_code": "口",
-    "first_key": "I",
-    "last_key": "R",
-    "full": "戈口 (IR)",
-    "cj_full": "戈卜口 (IYR)",
-    "secret": "【店】速成取碼：首碼【戈】(I) ＋ 尾碼【口】(R)",
-    "quickCode": "IR"
-  },
-  "值": {
-    "char": "值",
-    "codes": [
-      "人",
-      "一"
-    ],
-    "keys": [
-      "O",
-      "M"
-    ],
-    "first_code": "人",
-    "last_code": "一",
-    "first_key": "O",
-    "last_key": "M",
-    "full": "人一 (OM)",
-    "cj_full": "人十月一 (OJBM)",
-    "secret": "【值】速成取碼：首碼【人】(O) ＋ 尾碼【一】(M)",
-    "quickCode": "OM"
-  },
-  "加": {
-    "char": "加",
-    "codes": [
-      "大",
-      "口"
-    ],
-    "keys": [
-      "K",
-      "R"
-    ],
-    "first_code": "大",
-    "last_code": "口",
-    "first_key": "K",
-    "last_key": "R",
-    "full": "大口 (KR)",
-    "cj_full": "大尸口 (KSR)",
-    "secret": "【加】速成取碼：首碼【大】(K) ＋ 尾碼【口】(R)",
-    "quickCode": "KR"
-  },
-  "怕": {
-    "char": "怕",
-    "codes": [
-      "心",
-      "日"
-    ],
-    "keys": [
-      "P",
-      "A"
-    ],
-    "first_code": "心",
-    "last_code": "日",
-    "first_key": "P",
-    "last_key": "A",
-    "full": "心日 (PA)",
-    "cj_full": "心竹日 (PHA)",
-    "secret": "【怕】速成取碼：首碼【心】(P) ＋ 尾碼【日】(A)",
-    "quickCode": "PA"
-  },
-  "點": {
-    "char": "點",
-    "codes": [
-      "田",
-      "口"
-    ],
-    "keys": [
-      "W",
-      "R"
-    ],
-    "first_code": "田",
-    "last_code": "口",
-    "first_key": "W",
-    "last_key": "R",
-    "full": "田口 (WR)",
-    "cj_full": "田火卜口 (WFYR)",
-    "secret": "【點】速成取碼：首碼【田】(W) ＋ 尾碼【口】(R)",
-    "quickCode": "WR"
-  },
-  "館": {
-    "char": "館",
-    "codes": [
-      "人",
-      "口"
-    ],
-    "keys": [
-      "O",
-      "R"
-    ],
-    "first_code": "人",
-    "last_code": "口",
-    "first_key": "O",
-    "last_key": "R",
-    "full": "人口 (OR)",
-    "cj_full": "人戈十口口 (OIJRR)",
-    "secret": "【館】速成取碼：首碼【人】(O) ＋ 尾碼【口】(R)",
-    "quickCode": "OR"
-  },
-  "記": {
-    "char": "記",
-    "codes": [
-      "卜",
-      "山"
-    ],
-    "keys": [
-      "Y",
-      "U"
-    ],
-    "first_code": "卜",
-    "last_code": "山",
-    "first_key": "Y",
-    "last_key": "U",
-    "full": "卜山 (YU)",
-    "cj_full": "卜口尸山 (YRSU)",
-    "secret": "【記】速成取碼：首碼【卜】(Y) ＋ 尾碼【山】(U)",
-    "quickCode": "YU"
-  },
-  "伊": {
-    "char": "伊",
-    "codes": [
-      "人",
-      "大"
-    ],
-    "keys": [
-      "O",
-      "K"
-    ],
-    "first_code": "人",
-    "last_code": "大",
-    "first_key": "O",
-    "last_key": "K",
-    "full": "人大 (OK)",
-    "cj_full": "人尸大 (OSK)",
-    "secret": "【伊】速成取碼：首碼【人】(O) ＋ 尾碼【大】(K)",
-    "quickCode": "OK"
-  },
-  "委": {
-    "char": "委",
-    "codes": [
-      "竹",
-      "女"
-    ],
-    "keys": [
-      "H",
-      "V"
-    ],
-    "first_code": "竹",
-    "last_code": "女",
-    "first_key": "H",
-    "last_key": "V",
-    "full": "竹女 (HV)",
-    "cj_full": "竹木女 (HDV)",
-    "secret": "【委】速成取碼：首碼【竹】(H) ＋ 尾碼【女】(V)",
-    "quickCode": "HV"
-  },
-  "歐": {
-    "char": "歐",
-    "codes": [
-      "尸",
-      "人"
-    ],
-    "keys": [
-      "S",
-      "O"
-    ],
-    "first_code": "尸",
-    "last_code": "人",
-    "first_key": "S",
-    "last_key": "O",
-    "full": "尸人 (SO)",
-    "cj_full": "尸口弓人 (SRNO)",
-    "secret": "【歐】速成取碼：首碼【尸】(S) ＋ 尾碼【人】(O)",
-    "quickCode": "SO"
-  },
-  "阿": {
-    "char": "阿",
-    "codes": [
-      "弓",
-      "口"
-    ],
-    "keys": [
-      "N",
-      "R"
-    ],
-    "first_code": "弓",
-    "last_code": "口",
-    "first_key": "N",
-    "last_key": "R",
-    "full": "弓口 (NR)",
-    "cj_full": "弓中一弓口 (NLMNR)",
-    "secret": "【阿】速成取碼：首碼【弓】(N) ＋ 尾碼【口】(R)",
-    "quickCode": "NR"
-  },
-  "範": {
-    "char": "範",
-    "codes": [
-      "竹",
-      "山"
-    ],
-    "keys": [
-      "H",
-      "U"
-    ],
-    "first_code": "竹",
-    "last_code": "山",
-    "first_key": "H",
-    "last_key": "U",
-    "full": "竹山 (HU)",
-    "cj_full": "竹十十山 (HJJU)",
-    "secret": "【範】速成取碼：首碼【竹】(H) ＋ 尾碼【山】(U)",
-    "quickCode": "HU"
-  },
-  "洲": {
-    "char": "洲",
-    "codes": [
-      "水",
-      "中"
-    ],
-    "keys": [
-      "E",
-      "L"
-    ],
-    "first_code": "水",
-    "last_code": "中",
-    "first_key": "E",
-    "last_key": "L",
-    "full": "水中 (EL)",
-    "cj_full": "水竹中中 (EHLL)",
-    "secret": "【洲】速成取碼：首碼【水】(E) ＋ 尾碼【中】(L)",
-    "quickCode": "EL"
-  },
-  "況": {
-    "char": "況",
-    "codes": [
-      "水",
-      "山"
-    ],
-    "keys": [
-      "E",
-      "U"
-    ],
-    "first_code": "水",
-    "last_code": "山",
-    "first_key": "E",
-    "last_key": "U",
-    "full": "水山 (EU)",
-    "cj_full": "水口竹山 (ERHU)",
-    "secret": "【況】速成取碼：首碼【水】(E) ＋ 尾碼【山】(U)",
-    "quickCode": "EU"
-  },
-  "從": {
-    "char": "從",
-    "codes": [
-      "竹",
-      "人"
-    ],
-    "keys": [
-      "H",
-      "O"
-    ],
-    "first_code": "竹",
-    "last_code": "人",
-    "first_key": "H",
-    "last_key": "O",
-    "full": "竹人 (HO)",
-    "cj_full": "竹人人人人 (HOOOO)",
-    "secret": "【從】速成取碼：首碼【竹】(H) ＋ 尾碼【人】(O)",
-    "quickCode": "HO"
-  },
-  "野": {
-    "char": "野",
-    "codes": [
-      "田",
-      "弓"
-    ],
-    "keys": [
-      "W",
-      "N"
-    ],
-    "first_code": "田",
-    "last_code": "弓",
-    "first_key": "W",
-    "last_key": "N",
-    "full": "田弓 (WN)",
-    "cj_full": "田土弓戈弓 (WGNIN)",
-    "secret": "【野】速成取碼：首碼【田】(W) ＋ 尾碼【弓】(N)",
-    "quickCode": "WN"
-  },
-  "奧": {
-    "char": "奧",
-    "codes": [
-      "竹",
-      "大"
-    ],
-    "keys": [
-      "H",
-      "K"
-    ],
-    "first_code": "竹",
-    "last_code": "大",
-    "first_key": "H",
-    "last_key": "K",
-    "full": "竹大 (HK)",
-    "cj_full": "竹月大 (HBK)",
-    "secret": "【奧】速成取碼：首碼【竹】(H) ＋ 尾碼【大】(K)",
-    "quickCode": "HK"
-  },
-  "習": {
-    "char": "習",
-    "codes": [
-      "尸",
-      "日"
-    ],
-    "keys": [
-      "S",
-      "A"
-    ],
-    "first_code": "尸",
-    "last_code": "日",
-    "first_key": "S",
-    "last_key": "A",
-    "full": "尸日 (SA)",
-    "cj_full": "尸一竹日 (SMHA)",
-    "secret": "【習】速成取碼：首碼【尸】(S) ＋ 尾碼【日】(A)",
-    "quickCode": "SA"
-  },
-  "康": {
-    "char": "康",
-    "codes": [
-      "戈",
-      "水"
-    ],
-    "keys": [
-      "I",
-      "E"
-    ],
-    "first_code": "戈",
-    "last_code": "水",
-    "first_key": "I",
-    "last_key": "E",
-    "full": "戈水 (IE)",
-    "cj_full": "戈中水 (ILE)",
-    "secret": "【康】速成取碼：首碼【戈】(I) ＋ 尾碼【水】(E)",
-    "quickCode": "IE"
-  },
-  "圍": {
-    "char": "圍",
-    "codes": [
-      "田",
-      "手"
-    ],
-    "keys": [
-      "W",
-      "Q"
-    ],
-    "first_code": "田",
-    "last_code": "手",
-    "first_key": "W",
-    "last_key": "Q",
-    "full": "田手 (WQ)",
-    "cj_full": "田木一手 (WDMQ)",
-    "secret": "【圍】速成取碼：首碼【田】(W) ＋ 尾碼【手】(Q)",
-    "quickCode": "WQ"
-  },
-  "完": {
-    "char": "完",
-    "codes": [
-      "十",
-      "山"
-    ],
-    "keys": [
-      "J",
-      "U"
-    ],
-    "first_code": "十",
-    "last_code": "山",
-    "first_key": "J",
-    "last_key": "U",
-    "full": "十山 (JU)",
-    "cj_full": "十一一山 (JMMU)",
-    "secret": "【完】速成取碼：首碼【十】(J) ＋ 尾碼【山】(U)",
-    "quickCode": "JU"
-  },
-  "草": {
-    "char": "草",
-    "codes": [
-      "廿",
-      "十"
-    ],
-    "keys": [
-      "T",
-      "J"
-    ],
-    "first_code": "廿",
-    "last_code": "十",
-    "first_key": "T",
-    "last_key": "J",
-    "full": "廿十 (TJ)",
-    "cj_full": "廿日十 (TAJ)",
-    "secret": "【草】速成取碼：首碼【廿】(T) ＋ 尾碼【十】(J)",
-    "quickCode": "TJ"
-  },
-  "京": {
-    "char": "京",
-    "codes": [
-      "卜",
-      "火"
-    ],
-    "keys": [
-      "Y",
-      "F"
-    ],
-    "first_code": "卜",
-    "last_code": "火",
-    "first_key": "Y",
-    "last_key": "F",
-    "full": "卜火 (YF)",
-    "cj_full": "卜口火 (YRF)",
-    "secret": "【京】速成取碼：首碼【卜】(Y) ＋ 尾碼【火】(F)",
-    "quickCode": "YF"
-  },
-  "新": {
-    "char": "新",
-    "codes": [
-      "卜",
-      "中"
-    ],
-    "keys": [
-      "Y",
-      "L"
-    ],
-    "first_code": "卜",
-    "last_code": "中",
-    "first_key": "Y",
-    "last_key": "L",
-    "full": "卜中 (YL)",
-    "cj_full": "卜木竹一中 (YDHML)",
-    "secret": "【新】速成取碼：首碼【卜】(Y) ＋ 尾碼【中】(L)",
-    "quickCode": "YL"
-  },
-  "聽": {
-    "char": "聽",
-    "codes": [
-      "尸",
-      "心"
-    ],
-    "keys": [
-      "S",
-      "P"
-    ],
-    "first_code": "尸",
-    "last_code": "心",
-    "first_key": "S",
-    "last_key": "P",
-    "full": "尸心 (SP)",
-    "cj_full": "尸土十田心 (SGJWP)",
-    "secret": "【聽】速成取碼：首碼【尸】(S) ＋ 尾碼【心】(P)",
-    "quickCode": "SP"
-  },
-  "願": {
-    "char": "願",
-    "codes": [
-      "一",
-      "金"
-    ],
-    "keys": [
-      "M",
-      "C"
-    ],
-    "first_code": "一",
-    "last_code": "金",
-    "first_key": "M",
-    "last_key": "C",
-    "full": "一金 (MC)",
-    "cj_full": "一火一月金 (MFMBC)",
-    "secret": "【願】速成取碼：首碼【一】(M) ＋ 尾碼【金】(C)",
-    "quickCode": "MC"
-  },
-  "付": {
-    "char": "付",
-    "codes": [
-      "人",
-      "戈"
-    ],
-    "keys": [
-      "O",
-      "I"
-    ],
-    "first_code": "人",
-    "last_code": "戈",
-    "first_key": "O",
-    "last_key": "I",
-    "full": "人戈 (OI)",
-    "cj_full": "人木戈 (ODI)",
-    "secret": "【付】速成取碼：首碼【人】(O) ＋ 尾碼【戈】(I)",
-    "quickCode": "OI"
-  },
-  "授": {
-    "char": "授",
-    "codes": [
-      "手",
-      "水"
-    ],
-    "keys": [
-      "Q",
-      "E"
-    ],
-    "first_code": "手",
-    "last_code": "水",
-    "first_key": "Q",
-    "last_key": "E",
-    "full": "手水 (QE)",
-    "cj_full": "手月月水 (QBBE)",
-    "secret": "【授】速成取碼：首碼【手】(Q) ＋ 尾碼【水】(E)",
-    "quickCode": "QE"
-  },
-  "斷": {
-    "char": "斷",
-    "codes": [
-      "女",
-      "中"
-    ],
-    "keys": [
-      "V",
-      "L"
-    ],
-    "first_code": "女",
-    "last_code": "中",
-    "first_key": "V",
-    "last_key": "L",
-    "full": "女中 (VL)",
-    "cj_full": "女戈竹一中 (VIHML)",
-    "secret": "【斷】速成取碼：首碼【女】(V) ＋ 尾碼【中】(L)",
-    "quickCode": "VL"
-  },
-  "喜": {
-    "char": "喜",
-    "codes": [
-      "土",
-      "口"
-    ],
-    "keys": [
-      "G",
-      "R"
-    ],
-    "first_code": "土",
-    "last_code": "口",
-    "first_key": "G",
-    "last_key": "R",
-    "full": "土口 (GR)",
-    "cj_full": "土口廿口 (GRTR)",
-    "secret": "【喜】速成取碼：首碼【土】(G) ＋ 尾碼【口】(R)",
-    "quickCode": "GR"
-  },
   "警": {
     "char": "警",
     "codes": [
@@ -14200,119 +16117,100 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【警】速成取碼：首碼【廿】(T) ＋ 尾碼【口】(R)",
     "quickCode": "TR"
   },
-  "內": {
-    "char": "內",
+  "負": {
+    "char": "負",
     "codes": [
-      "人",
-      "月"
+      "弓",
+      "金"
     ],
     "keys": [
-      "O",
-      "B"
+      "N",
+      "C"
     ],
-    "first_code": "人",
-    "last_code": "月",
-    "first_key": "O",
-    "last_key": "B",
-    "full": "人月 (OB)",
-    "cj_full": "人月 (OB)",
-    "secret": "【內】速成取碼：首碼【人】(O) ＋ 尾碼【月】(B)",
-    "quickCode": "OB"
+    "first_code": "弓",
+    "last_code": "金",
+    "first_key": "N",
+    "last_key": "C",
+    "full": "弓金 (NC)",
+    "cj_full": "弓月山金 (NBUC)",
+    "secret": "【負】速成取碼：首碼【弓】(N) ＋ 尾碼【金】(C)",
+    "quickCode": "NC"
   },
-  "雷": {
-    "char": "雷",
-    "codes": [
-      "一",
-      "田"
-    ],
-    "keys": [
-      "M",
-      "W"
-    ],
-    "first_code": "一",
-    "last_code": "田",
-    "first_key": "M",
-    "last_key": "W",
-    "full": "一田 (MW)",
-    "cj_full": "一月田 (MBW)",
-    "secret": "【雷】速成取碼：首碼【一】(M) ＋ 尾碼【田】(W)",
-    "quickCode": "MW"
-  },
-  "達": {
-    "char": "達",
-    "codes": [
-      "卜",
-      "手"
-    ],
-    "keys": [
-      "Y",
-      "Q"
-    ],
-    "first_code": "卜",
-    "last_code": "手",
-    "first_key": "Y",
-    "last_key": "Q",
-    "full": "卜手 (YQ)",
-    "cj_full": "卜土廿手 (YGTQ)",
-    "secret": "【達】速成取碼：首碼【卜】(Y) ＋ 尾碼【手】(Q)",
-    "quickCode": "YQ"
-  },
-  "話": {
-    "char": "話",
-    "codes": [
-      "卜",
-      "口"
-    ],
-    "keys": [
-      "Y",
-      "R"
-    ],
-    "first_code": "卜",
-    "last_code": "口",
-    "first_key": "Y",
-    "last_key": "R",
-    "full": "卜口 (YR)",
-    "cj_full": "卜口竹十口 (YRHJR)",
-    "secret": "【話】速成取碼：首碼【卜】(Y) ＋ 尾碼【口】(R)",
-    "quickCode": "YR"
-  },
-  "推": {
-    "char": "推",
+  "責": {
+    "char": "責",
     "codes": [
       "手",
-      "土"
+      "金"
     ],
     "keys": [
       "Q",
-      "G"
+      "C"
     ],
     "first_code": "手",
-    "last_code": "土",
+    "last_code": "金",
     "first_key": "Q",
-    "last_key": "G",
-    "full": "手土 (QG)",
-    "cj_full": "手人土 (QOG)",
-    "secret": "【推】速成取碼：首碼【手】(Q) ＋ 尾碼【土】(G)",
-    "quickCode": "QG"
+    "last_key": "C",
+    "full": "手金 (QC)",
+    "cj_full": "手一月山金 (QMBUC)",
+    "secret": "【責】速成取碼：首碼【手】(Q) ＋ 尾碼【金】(C)",
+    "quickCode": "QC"
   },
-  "信": {
-    "char": "信",
+  "資": {
+    "char": "資",
     "codes": [
-      "人",
-      "口"
+      "戈",
+      "金"
     ],
     "keys": [
-      "O",
-      "R"
+      "I",
+      "C"
     ],
-    "first_code": "人",
-    "last_code": "口",
-    "first_key": "O",
-    "last_key": "R",
-    "full": "人口 (OR)",
-    "cj_full": "人卜一口 (OYMR)",
-    "secret": "【信】速成取碼：首碼【人】(O) ＋ 尾碼【口】(R)",
-    "quickCode": "OR"
+    "first_code": "戈",
+    "last_code": "金",
+    "first_key": "I",
+    "last_key": "C",
+    "full": "戈金 (IC)",
+    "cj_full": "戈人月山金 (IOBUC)",
+    "secret": "【資】速成取碼：首碼【戈】(I) ＋ 尾碼【金】(C)",
+    "quickCode": "IC"
+  },
+  "走": {
+    "char": "走",
+    "codes": [
+      "土",
+      "人"
+    ],
+    "keys": [
+      "G",
+      "O"
+    ],
+    "first_code": "土",
+    "last_code": "人",
+    "first_key": "G",
+    "last_key": "O",
+    "full": "土人 (GO)",
+    "cj_full": "土卜人 (GYO)",
+    "secret": "【走】速成取碼：首碼【土】(G) ＋ 尾碼【人】(O)",
+    "quickCode": "GO"
+  },
+  "起": {
+    "char": "起",
+    "codes": [
+      "土",
+      "山"
+    ],
+    "keys": [
+      "G",
+      "U"
+    ],
+    "first_code": "土",
+    "last_code": "山",
+    "first_key": "G",
+    "last_key": "U",
+    "full": "土山 (GU)",
+    "cj_full": "土人尸山 (GOSU)",
+    "secret": "【起】速成取碼：首碼【土】(G) ＋ 尾碼【山】(U)",
+    "quickCode": "GU"
   },
   "超": {
     "char": "超",
@@ -14352,1107 +16250,24 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【越】速成取碼：首碼【土】(G) ＋ 尾碼【女】(V)",
     "quickCode": "GV"
   },
-  "征": {
-    "char": "征",
-    "codes": [
-      "竹",
-      "一"
-    ],
-    "keys": [
-      "H",
-      "M"
-    ],
-    "first_code": "竹",
-    "last_code": "一",
-    "first_key": "H",
-    "last_key": "M",
-    "full": "竹一 (HM)",
-    "cj_full": "竹人一卜一 (HOMYM)",
-    "secret": "【征】速成取碼：首碼【竹】(H) ＋ 尾碼【一】(M)",
-    "quickCode": "HM"
-  },
-  "屬": {
-    "char": "屬",
-    "codes": [
-      "尸",
-      "戈"
-    ],
-    "keys": [
-      "S",
-      "I"
-    ],
-    "first_code": "尸",
-    "last_code": "戈",
-    "first_key": "S",
-    "last_key": "I",
-    "full": "尸戈 (SI)",
-    "cj_full": "尸水田戈 (SEWI)",
-    "secret": "【屬】速成取碼：首碼【尸】(S) ＋ 尾碼【戈】(I)",
-    "quickCode": "SI"
-  },
-  "察": {
-    "char": "察",
-    "codes": [
-      "十",
-      "火"
-    ],
-    "keys": [
-      "J",
-      "F"
-    ],
-    "first_code": "十",
-    "last_code": "火",
-    "first_key": "J",
-    "last_key": "F",
-    "full": "十火 (JF)",
-    "cj_full": "十月人火 (JBOF)",
-    "secret": "【察】速成取碼：首碼【十】(J) ＋ 尾碼【火】(F)",
-    "quickCode": "JF"
-  },
-  "路": {
-    "char": "路",
-    "codes": [
-      "口",
-      "口"
-    ],
-    "keys": [
-      "R",
-      "R"
-    ],
-    "first_code": "口",
-    "last_code": "口",
-    "first_key": "R",
-    "last_key": "R",
-    "full": "口口 (RR)",
-    "cj_full": "口一竹水口 (RMHER)",
-    "secret": "【路】速成取碼：首碼【口】(R) ＋ 尾碼【口】(R)",
-    "quickCode": "RR"
-  },
-  "普": {
-    "char": "普",
-    "codes": [
-      "廿",
-      "日"
-    ],
-    "keys": [
-      "T",
-      "A"
-    ],
-    "first_code": "廿",
-    "last_code": "日",
-    "first_key": "T",
-    "last_key": "A",
-    "full": "廿日 (TA)",
-    "cj_full": "廿金日 (TCA)",
-    "secret": "【普】速成取碼：首碼【廿】(T) ＋ 尾碼【日】(A)",
-    "quickCode": "TA"
-  },
-  "帶": {
-    "char": "帶",
-    "codes": [
-      "大",
-      "月"
-    ],
-    "keys": [
-      "K",
-      "B"
-    ],
-    "first_code": "大",
-    "last_code": "月",
-    "first_key": "K",
-    "last_key": "B",
-    "full": "大月 (KB)",
-    "cj_full": "大心月中月 (KPBLB)",
-    "secret": "【帶】速成取碼：首碼【大】(K) ＋ 尾碼【月】(B)",
-    "quickCode": "KB"
-  },
-  "孤": {
-    "char": "孤",
-    "codes": [
-      "弓",
-      "人"
-    ],
-    "keys": [
-      "N",
-      "O"
-    ],
-    "first_code": "弓",
-    "last_code": "人",
-    "first_key": "N",
-    "last_key": "O",
-    "full": "弓人 (NO)",
-    "cj_full": "弓木竹女人 (NDHVO)",
-    "secret": "【孤】速成取碼：首碼【弓】(N) ＋ 尾碼【人】(O)",
-    "quickCode": "NO"
-  },
-  "藏": {
-    "char": "藏",
-    "codes": [
-      "廿",
-      "尸"
-    ],
-    "keys": [
-      "T",
-      "S"
-    ],
-    "first_code": "廿",
-    "last_code": "尸",
-    "first_key": "T",
-    "last_key": "S",
-    "full": "廿尸 (TS)",
-    "cj_full": "廿戈一尸 (TIMS)",
-    "secret": "【藏】速成取碼：首碼【廿】(T) ＋ 尾碼【尸】(S)",
-    "quickCode": "TS"
-  },
-  "供": {
-    "char": "供",
-    "codes": [
-      "人",
-      "金"
-    ],
-    "keys": [
-      "O",
-      "C"
-    ],
-    "first_code": "人",
-    "last_code": "金",
-    "first_key": "O",
-    "last_key": "C",
-    "full": "人金 (OC)",
-    "cj_full": "人廿金 (OTC)",
-    "secret": "【供】速成取碼：首碼【人】(O) ＋ 尾碼【金】(C)",
-    "quickCode": "OC"
-  },
-  "主": {
-    "char": "主",
-    "codes": [
-      "卜",
-      "土"
-    ],
-    "keys": [
-      "Y",
-      "G"
-    ],
-    "first_code": "卜",
-    "last_code": "土",
-    "first_key": "Y",
-    "last_key": "G",
-    "full": "卜土 (YG)",
-    "cj_full": "卜土 (YG)",
-    "secret": "【主】速成取碼：首碼【卜】(Y) ＋ 尾碼【土】(G)",
-    "quickCode": "YG"
-  },
-  "意": {
-    "char": "意",
-    "codes": [
-      "卜",
-      "心"
-    ],
-    "keys": [
-      "Y",
-      "P"
-    ],
-    "first_code": "卜",
-    "last_code": "心",
-    "first_key": "Y",
-    "last_key": "P",
-    "full": "卜心 (YP)",
-    "cj_full": "卜廿日心 (YTAP)",
-    "secret": "【意】速成取碼：首碼【卜】(Y) ＋ 尾碼【心】(P)",
-    "quickCode": "YP"
-  },
-  "離": {
-    "char": "離",
-    "codes": [
-      "卜",
-      "土"
-    ],
-    "keys": [
-      "Y",
-      "G"
-    ],
-    "first_code": "卜",
-    "last_code": "土",
-    "first_key": "Y",
-    "last_key": "G",
-    "full": "卜土 (YG)",
-    "cj_full": "卜月人土 (YBOG)",
-    "secret": "【離】速成取碼：首碼【卜】(Y) ＋ 尾碼【土】(G)",
-    "quickCode": "YG"
-  },
-  "還": {
-    "char": "還",
-    "codes": [
-      "卜",
-      "女"
-    ],
-    "keys": [
-      "Y",
-      "V"
-    ],
-    "first_code": "卜",
-    "last_code": "女",
-    "first_key": "Y",
-    "last_key": "V",
-    "full": "卜女 (YV)",
-    "cj_full": "卜田中女 (YWLV)",
-    "secret": "【還】速成取碼：首碼【卜】(Y) ＋ 尾碼【女】(V)",
-    "quickCode": "YV"
-  },
-  "打": {
-    "char": "打",
-    "codes": [
-      "手",
-      "弓"
-    ],
-    "keys": [
-      "Q",
-      "N"
-    ],
-    "first_code": "手",
-    "last_code": "弓",
-    "first_key": "Q",
-    "last_key": "N",
-    "full": "手弓 (QN)",
-    "cj_full": "手一弓 (QMN)",
-    "secret": "【打】速成取碼：首碼【手】(Q) ＋ 尾碼【弓】(N)",
-    "quickCode": "QN"
-  },
-  "義": {
-    "char": "義",
-    "codes": [
-      "廿",
-      "戈"
-    ],
-    "keys": [
-      "T",
-      "I"
-    ],
-    "first_code": "廿",
-    "last_code": "戈",
-    "first_key": "T",
-    "last_key": "I",
-    "full": "廿戈 (TI)",
-    "cj_full": "廿土竹手戈 (TGHQI)",
-    "secret": "【義】速成取碼：首碼【廿】(T) ＋ 尾碼【戈】(I)",
-    "quickCode": "TI"
-  },
-  "奇": {
-    "char": "奇",
-    "codes": [
-      "大",
-      "口"
-    ],
-    "keys": [
-      "K",
-      "R"
-    ],
-    "first_code": "大",
-    "last_code": "口",
-    "first_key": "K",
-    "last_key": "R",
-    "full": "大口 (KR)",
-    "cj_full": "大一弓口 (KMNR)",
-    "secret": "【奇】速成取碼：首碼【大】(K) ＋ 尾碼【口】(R)",
-    "quickCode": "KR"
-  },
-  "念": {
-    "char": "念",
-    "codes": [
-      "人",
-      "心"
-    ],
-    "keys": [
-      "O",
-      "P"
-    ],
-    "first_code": "人",
-    "last_code": "心",
-    "first_key": "O",
-    "last_key": "P",
-    "full": "人心 (OP)",
-    "cj_full": "人戈弓心 (OINP)",
-    "secret": "【念】速成取碼：首碼【人】(O) ＋ 尾碼【心】(P)",
-    "quickCode": "OP"
-  },
-  "衛": {
-    "char": "衛",
-    "codes": [
-      "竹",
-      "弓"
-    ],
-    "keys": [
-      "H",
-      "N"
-    ],
-    "first_code": "竹",
-    "last_code": "弓",
-    "first_key": "H",
-    "last_key": "N",
-    "full": "竹弓 (HN)",
-    "cj_full": "竹人木手弓 (HODQN)",
-    "secret": "【衛】速成取碼：首碼【竹】(H) ＋ 尾碼【弓】(N)",
-    "quickCode": "HN"
-  },
-  "接": {
-    "char": "接",
-    "codes": [
-      "手",
-      "女"
-    ],
-    "keys": [
-      "Q",
-      "V"
-    ],
-    "first_code": "手",
-    "last_code": "女",
-    "first_key": "Q",
-    "last_key": "V",
-    "full": "手女 (QV)",
-    "cj_full": "手卜廿女 (QYTV)",
-    "secret": "【接】速成取碼：首碼【手】(Q) ＋ 尾碼【女】(V)",
-    "quickCode": "QV"
-  },
-  "卡": {
-    "char": "卡",
-    "codes": [
-      "卜",
-      "卜"
-    ],
-    "keys": [
-      "Y",
-      "Y"
-    ],
-    "first_code": "卜",
-    "last_code": "卜",
-    "first_key": "Y",
-    "last_key": "Y",
-    "full": "卜卜 (YY)",
-    "cj_full": "卜一卜 (YMY)",
-    "secret": "【卡】速成取碼：首碼【卜】(Y) ＋ 尾碼【卜】(Y)",
-    "quickCode": "YY"
-  },
-  "宮": {
-    "char": "宮",
-    "codes": [
-      "十",
-      "口"
-    ],
-    "keys": [
-      "J",
-      "R"
-    ],
-    "first_code": "十",
-    "last_code": "口",
-    "first_key": "J",
-    "last_key": "R",
-    "full": "十口 (JR)",
-    "cj_full": "十口竹口 (JRHR)",
-    "secret": "【宮】速成取碼：首碼【十】(J) ＋ 尾碼【口】(R)",
-    "quickCode": "JR"
-  },
-  "立": {
-    "char": "立",
-    "codes": [
-      "卜",
-      "廿"
-    ],
-    "keys": [
-      "Y",
-      "T"
-    ],
-    "first_code": "卜",
-    "last_code": "廿",
-    "first_key": "Y",
-    "last_key": "T",
-    "full": "卜廿 (YT)",
-    "cj_full": "卜廿 (YT)",
-    "secret": "【立】速成取碼：首碼【卜】(Y) ＋ 尾碼【廿】(T)",
-    "quickCode": "YT"
-  },
-  "吸": {
-    "char": "吸",
-    "codes": [
-      "口",
-      "水"
-    ],
-    "keys": [
-      "R",
-      "E"
-    ],
-    "first_code": "口",
-    "last_code": "水",
-    "first_key": "R",
-    "last_key": "E",
-    "full": "口水 (RE)",
-    "cj_full": "口弓竹水 (RNHE)",
-    "secret": "【吸】速成取碼：首碼【口】(R) ＋ 尾碼【水】(E)",
-    "quickCode": "RE"
-  },
-  "決": {
-    "char": "決",
-    "codes": [
-      "水",
-      "大"
-    ],
-    "keys": [
-      "E",
-      "K"
-    ],
-    "first_code": "水",
-    "last_code": "大",
-    "first_key": "E",
-    "last_key": "K",
-    "full": "水大 (EK)",
-    "cj_full": "水木大 (EDK)",
-    "secret": "【決】速成取碼：首碼【水】(E) ＋ 尾碼【大】(K)",
-    "quickCode": "EK"
-  },
-  "著": {
-    "char": "著",
-    "codes": [
-      "廿",
-      "日"
-    ],
-    "keys": [
-      "T",
-      "A"
-    ],
-    "first_code": "廿",
-    "last_code": "日",
-    "first_key": "T",
-    "last_key": "A",
-    "full": "廿日 (TA)",
-    "cj_full": "廿十大日 (TJKA)",
-    "secret": "【著】速成取碼：首碼【廿】(T) ＋ 尾碼【日】(A)",
-    "quickCode": "TA"
-  },
-  "音": {
-    "char": "音",
-    "codes": [
-      "卜",
-      "日"
-    ],
-    "keys": [
-      "Y",
-      "A"
-    ],
-    "first_code": "卜",
-    "last_code": "日",
-    "first_key": "Y",
-    "last_key": "A",
-    "full": "卜日 (YA)",
-    "cj_full": "卜廿日 (YTA)",
-    "secret": "【音】速成取碼：首碼【卜】(Y) ＋ 尾碼【日】(A)",
-    "quickCode": "YA"
-  },
-  "線": {
-    "char": "線",
-    "codes": [
-      "女",
-      "水"
-    ],
-    "keys": [
-      "V",
-      "E"
-    ],
-    "first_code": "女",
-    "last_code": "水",
-    "first_key": "V",
-    "last_key": "E",
-    "full": "女水 (VE)",
-    "cj_full": "女火竹日水 (VFHAE)",
-    "secret": "【線】速成取碼：首碼【女】(V) ＋ 尾碼【水】(E)",
-    "quickCode": "VE"
-  },
-  "練": {
-    "char": "練",
-    "codes": [
-      "女",
-      "田"
-    ],
-    "keys": [
-      "V",
-      "W"
-    ],
-    "first_code": "女",
-    "last_code": "田",
-    "first_key": "V",
-    "last_key": "W",
-    "full": "女田 (VW)",
-    "cj_full": "女火木田 (VFDW)",
-    "secret": "【練】速成取碼：首碼【女】(V) ＋ 尾碼【田】(W)",
-    "quickCode": "VW"
-  },
-  "計": {
-    "char": "計",
-    "codes": [
-      "卜",
-      "十"
-    ],
-    "keys": [
-      "Y",
-      "J"
-    ],
-    "first_code": "卜",
-    "last_code": "十",
-    "first_key": "Y",
-    "last_key": "J",
-    "full": "卜十 (YJ)",
-    "cj_full": "卜口十 (YRJ)",
-    "secret": "【計】速成取碼：首碼【卜】(Y) ＋ 尾碼【十】(J)",
-    "quickCode": "YJ"
-  },
-  "伴": {
-    "char": "伴",
-    "codes": [
-      "人",
-      "手"
-    ],
-    "keys": [
-      "O",
-      "Q"
-    ],
-    "first_code": "人",
-    "last_code": "手",
-    "first_key": "O",
-    "last_key": "Q",
-    "full": "人手 (OQ)",
-    "cj_full": "人火手 (OFQ)",
-    "secret": "【伴】速成取碼：首碼【人】(O) ＋ 尾碼【手】(Q)",
-    "quickCode": "OQ"
-  },
-  "既": {
-    "char": "既",
-    "codes": [
-      "日",
-      "山"
-    ],
-    "keys": [
-      "A",
-      "U"
-    ],
-    "first_code": "日",
-    "last_code": "山",
-    "first_key": "A",
-    "last_key": "U",
-    "full": "日山 (AU)",
-    "cj_full": "日戈一中山 (AIMLU)",
-    "secret": "【既】速成取碼：首碼【日】(A) ＋ 尾碼【山】(U)",
-    "quickCode": "AU"
-  },
-  "端": {
-    "char": "端",
-    "codes": [
-      "卜",
-      "月"
-    ],
-    "keys": [
-      "Y",
-      "B"
-    ],
-    "first_code": "卜",
-    "last_code": "月",
-    "first_key": "Y",
-    "last_key": "B",
-    "full": "卜月 (YB)",
-    "cj_full": "卜廿山一月 (YTUMB)",
-    "secret": "【端】速成取碼：首碼【卜】(Y) ＋ 尾碼【月】(B)",
-    "quickCode": "YB"
-  },
-  "西": {
-    "char": "西",
-    "codes": [
-      "一",
-      "田"
-    ],
-    "keys": [
-      "M",
-      "W"
-    ],
-    "first_code": "一",
-    "last_code": "田",
-    "first_key": "M",
-    "last_key": "W",
-    "full": "一田 (MW)",
-    "cj_full": "一金田 (MCW)",
-    "secret": "【西】速成取碼：首碼【一】(M) ＋ 尾碼【田】(W)",
-    "quickCode": "MW"
-  },
-  "惡": {
-    "char": "惡",
-    "codes": [
-      "一",
-      "心"
-    ],
-    "keys": [
-      "M",
-      "P"
-    ],
-    "first_code": "一",
-    "last_code": "心",
-    "first_key": "M",
-    "last_key": "P",
-    "full": "一心 (MP)",
-    "cj_full": "一一心 (MMP)",
-    "secret": "【惡】速成取碼：首碼【一】(M) ＋ 尾碼【心】(P)",
-    "quickCode": "MP"
-  },
-  "仍": {
-    "char": "仍",
-    "codes": [
-      "人",
-      "尸"
-    ],
-    "keys": [
-      "O",
-      "S"
-    ],
-    "first_code": "人",
-    "last_code": "尸",
-    "first_key": "O",
-    "last_key": "S",
-    "full": "人尸 (OS)",
-    "cj_full": "人弓竹尸 (ONHS)",
-    "secret": "【仍】速成取碼：首碼【人】(O) ＋ 尾碼【尸】(S)",
-    "quickCode": "OS"
-  },
-  "根": {
-    "char": "根",
-    "codes": [
-      "木",
-      "女"
-    ],
-    "keys": [
-      "D",
-      "V"
-    ],
-    "first_code": "木",
-    "last_code": "女",
-    "first_key": "D",
-    "last_key": "V",
-    "full": "木女 (DV)",
-    "cj_full": "木日女 (DAV)",
-    "secret": "【根】速成取碼：首碼【木】(D) ＋ 尾碼【女】(V)",
-    "quickCode": "DV"
-  },
-  "鐵": {
-    "char": "鐵",
-    "codes": [
-      "金",
-      "土"
-    ],
-    "keys": [
-      "C",
-      "G"
-    ],
-    "first_code": "金",
-    "last_code": "土",
-    "first_key": "C",
-    "last_key": "G",
-    "full": "金土 (CG)",
-    "cj_full": "金十戈土 (CJIG)",
-    "secret": "【鐵】速成取碼：首碼【金】(C) ＋ 尾碼【土】(G)",
-    "quickCode": "CG"
-  },
-  "司": {
-    "char": "司",
-    "codes": [
-      "尸",
-      "口"
-    ],
-    "keys": [
-      "S",
-      "R"
-    ],
-    "first_code": "尸",
-    "last_code": "口",
-    "first_key": "S",
-    "last_key": "R",
-    "full": "尸口 (SR)",
-    "cj_full": "尸一口 (SMR)",
-    "secret": "【司】速成取碼：首碼【尸】(S) ＋ 尾碼【口】(R)",
-    "quickCode": "SR"
-  },
-  "擁": {
-    "char": "擁",
-    "codes": [
-      "手",
-      "土"
-    ],
-    "keys": [
-      "Q",
-      "G"
-    ],
-    "first_code": "手",
-    "last_code": "土",
-    "first_key": "Q",
-    "last_key": "G",
-    "full": "手土 (QG)",
-    "cj_full": "手卜女土 (QYVG)",
-    "secret": "【擁】速成取碼：首碼【手】(Q) ＋ 尾碼【土】(G)",
-    "quickCode": "QG"
-  },
-  "瑪": {
-    "char": "瑪",
-    "codes": [
-      "一",
-      "火"
-    ],
-    "keys": [
-      "M",
-      "F"
-    ],
-    "first_code": "一",
-    "last_code": "火",
-    "first_key": "M",
-    "last_key": "F",
-    "full": "一火 (MF)",
-    "cj_full": "一土尸手火 (MGSQF)",
-    "secret": "【瑪】速成取碼：首碼【一】(M) ＋ 尾碼【火】(F)",
-    "quickCode": "MF"
-  },
-  "門": {
-    "char": "門",
-    "codes": [
-      "日",
-      "弓"
-    ],
-    "keys": [
-      "A",
-      "N"
-    ],
-    "first_code": "日",
-    "last_code": "弓",
-    "first_key": "A",
-    "last_key": "N",
-    "full": "日弓 (AN)",
-    "cj_full": "日弓 (AN)",
-    "secret": "【門】速成取碼：首碼【日】(A) ＋ 尾碼【弓】(N)",
-    "quickCode": "AN"
-  },
-  "哭": {
-    "char": "哭",
-    "codes": [
-      "口",
-      "大"
-    ],
-    "keys": [
-      "R",
-      "K"
-    ],
-    "first_code": "口",
-    "last_code": "大",
-    "first_key": "R",
-    "last_key": "K",
-    "full": "口大 (RK)",
-    "cj_full": "口口戈大 (RRIK)",
-    "secret": "【哭】速成取碼：首碼【口】(R) ＋ 尾碼【大】(K)",
-    "quickCode": "RK"
-  },
-  "任": {
-    "char": "任",
-    "codes": [
-      "人",
-      "土"
-    ],
-    "keys": [
-      "O",
-      "G"
-    ],
-    "first_code": "人",
-    "last_code": "土",
-    "first_key": "O",
-    "last_key": "G",
-    "full": "人土 (OG)",
-    "cj_full": "人竹土 (OHG)",
-    "secret": "【任】速成取碼：首碼【人】(O) ＋ 尾碼【土】(G)",
-    "quickCode": "OG"
-  },
-  "另": {
-    "char": "另",
-    "codes": [
-      "口",
-      "尸"
-    ],
-    "keys": [
-      "R",
-      "S"
-    ],
-    "first_code": "口",
-    "last_code": "尸",
-    "first_key": "R",
-    "last_key": "S",
-    "full": "口尸 (RS)",
-    "cj_full": "口大尸 (RKS)",
-    "secret": "【另】速成取碼：首碼【口】(R) ＋ 尾碼【尸】(S)",
-    "quickCode": "RS"
-  },
-  "體": {
-    "char": "體",
-    "codes": [
-      "月",
-      "廿"
-    ],
-    "keys": [
-      "B",
-      "T"
-    ],
-    "first_code": "月",
-    "last_code": "廿",
-    "first_key": "B",
-    "last_key": "T",
-    "full": "月廿 (BT)",
-    "cj_full": "月月廿田廿 (BBTWT)",
-    "secret": "【體】速成取碼：首碼【月】(B) ＋ 尾碼【廿】(T)",
-    "quickCode": "BT"
-  },
-  "滿": {
-    "char": "滿",
-    "codes": [
-      "水",
-      "月"
-    ],
-    "keys": [
-      "E",
-      "B"
-    ],
-    "first_code": "水",
-    "last_code": "月",
-    "first_key": "E",
-    "last_key": "B",
-    "full": "水月 (EB)",
-    "cj_full": "水廿中月 (ETLB)",
-    "secret": "【滿】速成取碼：首碼【水】(E) ＋ 尾碼【月】(B)",
-    "quickCode": "EB"
-  },
-  "集": {
-    "char": "集",
-    "codes": [
-      "人",
-      "木"
-    ],
-    "keys": [
-      "O",
-      "D"
-    ],
-    "first_code": "人",
-    "last_code": "木",
-    "first_key": "O",
-    "last_key": "D",
-    "full": "人木 (OD)",
-    "cj_full": "人土木 (OGD)",
-    "secret": "【集】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)",
-    "quickCode": "OD"
-  },
-  "導": {
-    "char": "導",
-    "codes": [
-      "卜",
-      "戈"
-    ],
-    "keys": [
-      "Y",
-      "I"
-    ],
-    "first_code": "卜",
-    "last_code": "戈",
-    "first_key": "Y",
-    "last_key": "I",
-    "full": "卜戈 (YI)",
-    "cj_full": "卜山木戈 (YUDI)",
-    "secret": "【導】速成取碼：首碼【卜】(Y) ＋ 尾碼【戈】(I)",
-    "quickCode": "YI"
-  },
-  "起": {
-    "char": "起",
+  "趕": {
+    "char": "趕",
     "codes": [
       "土",
-      "山"
+      "十"
     ],
     "keys": [
       "G",
-      "U"
-    ],
-    "first_code": "土",
-    "last_code": "山",
-    "first_key": "G",
-    "last_key": "U",
-    "full": "土山 (GU)",
-    "cj_full": "土人口山 (GORU)",
-    "secret": "【起】速成取碼：首碼【土】(G) ＋ 尾碼【山】(U)",
-    "quickCode": "GU"
-  },
-  "忍": {
-    "char": "忍",
-    "codes": [
-      "尸",
-      "心"
-    ],
-    "keys": [
-      "S",
-      "P"
-    ],
-    "first_code": "尸",
-    "last_code": "心",
-    "first_key": "S",
-    "last_key": "P",
-    "full": "尸心 (SP)",
-    "cj_full": "尸竹心 (SHP)",
-    "secret": "【忍】速成取碼：首碼【尸】(S) ＋ 尾碼【心】(P)",
-    "quickCode": "SP"
-  },
-  "高": {
-    "char": "高",
-    "codes": [
-      "卜",
-      "口"
-    ],
-    "keys": [
-      "Y",
-      "R"
-    ],
-    "first_code": "卜",
-    "last_code": "口",
-    "first_key": "Y",
-    "last_key": "R",
-    "full": "卜口 (YR)",
-    "cj_full": "卜口月口 (YRBR)",
-    "secret": "【高】速成取碼：首碼【卜】(Y) ＋ 尾碼【口】(R)",
-    "quickCode": "YR"
-  },
-  "懷": {
-    "char": "懷",
-    "codes": [
-      "心",
-      "女"
-    ],
-    "keys": [
-      "P",
-      "V"
-    ],
-    "first_code": "心",
-    "last_code": "女",
-    "first_key": "P",
-    "last_key": "V",
-    "full": "心女 (PV)",
-    "cj_full": "心卜田女 (PYWV)",
-    "secret": "【懷】速成取碼：首碼【心】(P) ＋ 尾碼【女】(V)",
-    "quickCode": "PV"
-  },
-  "羅": {
-    "char": "羅",
-    "codes": [
-      "田",
-      "土"
-    ],
-    "keys": [
-      "W",
-      "G"
-    ],
-    "first_code": "田",
-    "last_code": "土",
-    "first_key": "W",
-    "last_key": "G",
-    "full": "田土 (WG)",
-    "cj_full": "田中女火土 (WLVFG)",
-    "secret": "【羅】速成取碼：首碼【田】(W) ＋ 尾碼【土】(G)",
-    "quickCode": "WG"
-  },
-  "漢": {
-    "char": "漢",
-    "codes": [
-      "水",
-      "人"
-    ],
-    "keys": [
-      "E",
-      "O"
-    ],
-    "first_code": "水",
-    "last_code": "人",
-    "first_key": "E",
-    "last_key": "O",
-    "full": "水人 (EO)",
-    "cj_full": "水廿中人 (ETLO)",
-    "secret": "【漢】速成取碼：首碼【水】(E) ＋ 尾碼【人】(O)",
-    "quickCode": "EO"
-  },
-  "排": {
-    "char": "排",
-    "codes": [
-      "手",
-      "卜"
-    ],
-    "keys": [
-      "Q",
-      "Y"
-    ],
-    "first_code": "手",
-    "last_code": "卜",
-    "first_key": "Q",
-    "last_key": "Y",
-    "full": "手卜 (QY)",
-    "cj_full": "手中一卜 (QLMY)",
-    "secret": "【排】速成取碼：首碼【手】(Q) ＋ 尾碼【卜】(Y)",
-    "quickCode": "QY"
-  },
-  "責": {
-    "char": "責",
-    "codes": [
-      "手",
-      "金"
-    ],
-    "keys": [
-      "Q",
-      "C"
-    ],
-    "first_code": "手",
-    "last_code": "金",
-    "first_key": "Q",
-    "last_key": "C",
-    "full": "手金 (QC)",
-    "cj_full": "手一月山金 (QMBUC)",
-    "secret": "【責】速成取碼：首碼【手】(Q) ＋ 尾碼【金】(C)",
-    "quickCode": "QC"
-  },
-  "海": {
-    "char": "海",
-    "codes": [
-      "水",
-      "十"
-    ],
-    "keys": [
-      "E",
       "J"
     ],
-    "first_code": "水",
+    "first_code": "土",
     "last_code": "十",
-    "first_key": "E",
+    "first_key": "G",
     "last_key": "J",
-    "full": "水十 (EJ)",
-    "cj_full": "水人田十 (EOWJ)",
-    "secret": "【海】速成取碼：首碼【水】(E) ＋ 尾碼【十】(J)",
-    "quickCode": "EJ"
-  },
-  "帝": {
-    "char": "帝",
-    "codes": [
-      "卜",
-      "月"
-    ],
-    "keys": [
-      "Y",
-      "B"
-    ],
-    "first_code": "卜",
-    "last_code": "月",
-    "first_key": "Y",
-    "last_key": "B",
-    "full": "卜月 (YB)",
-    "cj_full": "卜月中月 (YBLB)",
-    "secret": "【帝】速成取碼：首碼【卜】(Y) ＋ 尾碼【月】(B)",
-    "quickCode": "YB"
+    "full": "土十 (GJ)",
+    "cj_full": "土人日一十 (GOAMJ)",
+    "secret": "【趕】速成取碼：首碼【土】(G) ＋ 尾碼【十】(J)",
+    "quickCode": "GJ"
   },
   "跡": {
     "char": "跡",
@@ -15473,670 +16288,24 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【跡】速成取碼：首碼【口】(R) ＋ 尾碼【金】(C)",
     "quickCode": "RC"
   },
-  "德": {
-    "char": "德",
+  "路": {
+    "char": "路",
     "codes": [
-      "竹",
-      "心"
-    ],
-    "keys": [
-      "H",
-      "P"
-    ],
-    "first_code": "竹",
-    "last_code": "心",
-    "first_key": "H",
-    "last_key": "P",
-    "full": "竹心 (HP)",
-    "cj_full": "竹人十田心 (HOJWP)",
-    "secret": "【德】速成取碼：首碼【竹】(H) ＋ 尾碼【心】(P)",
-    "quickCode": "HP"
-  },
-  "要": {
-    "char": "要",
-    "codes": [
-      "一",
-      "女"
-    ],
-    "keys": [
-      "M",
-      "V"
-    ],
-    "first_code": "一",
-    "last_code": "女",
-    "first_key": "M",
-    "last_key": "V",
-    "full": "一女 (MV)",
-    "cj_full": "一田女 (MWV)",
-    "secret": "【要】速成取碼：首碼【一】(M) ＋ 尾碼【女】(V)",
-    "quickCode": "MV"
-  },
-  "承": {
-    "char": "承",
-    "codes": [
-      "弓",
-      "人"
-    ],
-    "keys": [
-      "N",
-      "O"
-    ],
-    "first_code": "弓",
-    "last_code": "人",
-    "first_key": "N",
-    "last_key": "O",
-    "full": "弓人 (NO)",
-    "cj_full": "弓弓手人 (NNQO)",
-    "secret": "【承】速成取碼：首碼【弓】(N) ＋ 尾碼【人】(O)",
-    "quickCode": "NO"
-  },
-  "資": {
-    "char": "資",
-    "codes": [
-      "戈",
-      "金"
-    ],
-    "keys": [
-      "I",
-      "C"
-    ],
-    "first_code": "戈",
-    "last_code": "金",
-    "first_key": "I",
-    "last_key": "C",
-    "full": "戈金 (IC)",
-    "cj_full": "戈人月山金 (IOBUC)",
-    "secret": "【資】速成取碼：首碼【戈】(I) ＋ 尾碼【金】(C)",
-    "quickCode": "IC"
-  },
-  "放": {
-    "char": "放",
-    "codes": [
-      "卜",
-      "大"
-    ],
-    "keys": [
-      "Y",
-      "K"
-    ],
-    "first_code": "卜",
-    "last_code": "大",
-    "first_key": "Y",
-    "last_key": "K",
-    "full": "卜大 (YK)",
-    "cj_full": "卜尸人大 (YSOK)",
-    "secret": "【放】速成取碼：首碼【卜】(Y) ＋ 尾碼【大】(K)",
-    "quickCode": "YK"
-  },
-  "右": {
-    "char": "右",
-    "codes": [
-      "大",
+      "口",
       "口"
     ],
     "keys": [
-      "K",
+      "R",
       "R"
     ],
-    "first_code": "大",
+    "first_code": "口",
     "last_code": "口",
-    "first_key": "K",
+    "first_key": "R",
     "last_key": "R",
-    "full": "大口 (KR)",
-    "cj_full": "大口 (KR)",
-    "secret": "【右】速成取碼：首碼【大】(K) ＋ 尾碼【口】(R)",
-    "quickCode": "KR"
-  },
-  "流": {
-    "char": "流",
-    "codes": [
-      "水",
-      "山"
-    ],
-    "keys": [
-      "E",
-      "U"
-    ],
-    "first_code": "水",
-    "last_code": "山",
-    "first_key": "E",
-    "last_key": "U",
-    "full": "水山 (EU)",
-    "cj_full": "水卜戈山 (EYIU)",
-    "secret": "【流】速成取碼：首碼【水】(E) ＋ 尾碼【山】(U)",
-    "quickCode": "EU"
-  },
-  "娜": {
-    "char": "娜",
-    "codes": [
-      "女",
-      "中"
-    ],
-    "keys": [
-      "V",
-      "L"
-    ],
-    "first_code": "女",
-    "last_code": "中",
-    "first_key": "V",
-    "last_key": "L",
-    "full": "女中 (VL)",
-    "cj_full": "女尸手中 (VSQL)",
-    "secret": "【娜】速成取碼：首碼【女】(V) ＋ 尾碼【中】(L)",
-    "quickCode": "VL"
-  },
-  "歲": {
-    "char": "歲",
-    "codes": [
-      "卜",
-      "竹"
-    ],
-    "keys": [
-      "Y",
-      "H"
-    ],
-    "first_code": "卜",
-    "last_code": "竹",
-    "first_key": "Y",
-    "last_key": "H",
-    "full": "卜竹 (YH)",
-    "cj_full": "卜一戈竹竹 (YMIHH)",
-    "secret": "【歲】速成取碼：首碼【卜】(Y) ＋ 尾碼【竹】(H)",
-    "quickCode": "YH"
-  },
-  "黃": {
-    "char": "黃",
-    "codes": [
-      "廿",
-      "金"
-    ],
-    "keys": [
-      "T",
-      "C"
-    ],
-    "first_code": "廿",
-    "last_code": "金",
-    "first_key": "T",
-    "last_key": "C",
-    "full": "廿金 (TC)",
-    "cj_full": "廿一中金 (TMLC)",
-    "secret": "【黃】速成取碼：首碼【廿】(T) ＋ 尾碼【金】(C)",
-    "quickCode": "TC"
-  },
-  "留": {
-    "char": "留",
-    "codes": [
-      "竹",
-      "田"
-    ],
-    "keys": [
-      "H",
-      "W"
-    ],
-    "first_code": "竹",
-    "last_code": "田",
-    "first_key": "H",
-    "last_key": "W",
-    "full": "竹田 (HW)",
-    "cj_full": "竹竹田 (HHW)",
-    "secret": "【留】速成取碼：首碼【竹】(H) ＋ 尾碼【田】(W)",
-    "quickCode": "HW"
-  },
-  "亮": {
-    "char": "亮",
-    "codes": [
-      "卜",
-      "弓"
-    ],
-    "keys": [
-      "Y",
-      "N"
-    ],
-    "first_code": "卜",
-    "last_code": "弓",
-    "first_key": "Y",
-    "last_key": "N",
-    "full": "卜弓 (YN)",
-    "cj_full": "卜口月弓 (YRBN)",
-    "secret": "【亮】速成取碼：首碼【卜】(Y) ＋ 尾碼【弓】(N)",
-    "quickCode": "YN"
-  },
-  "院": {
-    "char": "院",
-    "codes": [
-      "弓",
-      "山"
-    ],
-    "keys": [
-      "N",
-      "U"
-    ],
-    "first_code": "弓",
-    "last_code": "山",
-    "first_key": "N",
-    "last_key": "U",
-    "full": "弓山 (NU)",
-    "cj_full": "弓中十一山 (NLJMU)",
-    "secret": "【院】速成取碼：首碼【弓】(N) ＋ 尾碼【山】(U)",
-    "quickCode": "NU"
-  },
-  "走": {
-    "char": "走",
-    "codes": [
-      "土",
-      "人"
-    ],
-    "keys": [
-      "G",
-      "O"
-    ],
-    "first_code": "土",
-    "last_code": "人",
-    "first_key": "G",
-    "last_key": "O",
-    "full": "土人 (GO)",
-    "cj_full": "土卜人 (GYO)",
-    "secret": "【走】速成取碼：首碼【土】(G) ＋ 尾碼【人】(O)",
-    "quickCode": "GO"
-  },
-  "六": {
-    "char": "六",
-    "codes": [
-      "卜",
-      "金"
-    ],
-    "keys": [
-      "Y",
-      "C"
-    ],
-    "first_code": "卜",
-    "last_code": "金",
-    "first_key": "Y",
-    "last_key": "C",
-    "full": "卜金 (YC)",
-    "cj_full": "卜金 (YC)",
-    "secret": "【六】速成取碼：首碼【卜】(Y) ＋ 尾碼【金】(C)",
-    "quickCode": "YC"
-  },
-  "媽": {
-    "char": "媽",
-    "codes": [
-      "女",
-      "火"
-    ],
-    "keys": [
-      "V",
-      "F"
-    ],
-    "first_code": "女",
-    "last_code": "火",
-    "first_key": "V",
-    "last_key": "F",
-    "full": "女火 (VF)",
-    "cj_full": "女尸手火 (VSQF)",
-    "secret": "【媽】速成取碼：首碼【女】(V) ＋ 尾碼【火】(F)",
-    "quickCode": "VF"
-  },
-  "找": {
-    "char": "找",
-    "codes": [
-      "手",
-      "戈"
-    ],
-    "keys": [
-      "Q",
-      "I"
-    ],
-    "first_code": "手",
-    "last_code": "戈",
-    "first_key": "Q",
-    "last_key": "I",
-    "full": "手戈 (QI)",
-    "cj_full": "手戈 (QI)",
-    "secret": "【找】速成取碼：首碼【手】(Q) ＋ 尾碼【戈】(I)",
-    "quickCode": "QI"
-  },
-  "盛": {
-    "char": "盛",
-    "codes": [
-      "戈",
-      "廿"
-    ],
-    "keys": [
-      "I",
-      "T"
-    ],
-    "first_code": "戈",
-    "last_code": "廿",
-    "first_key": "I",
-    "last_key": "T",
-    "full": "戈廿 (IT)",
-    "cj_full": "戈尸月廿 (ISBT)",
-    "secret": "【盛】速成取碼：首碼【戈】(I) ＋ 尾碼【廿】(T)",
-    "quickCode": "IT"
-  },
-  "玩": {
-    "char": "玩",
-    "codes": [
-      "一",
-      "山"
-    ],
-    "keys": [
-      "M",
-      "U"
-    ],
-    "first_code": "一",
-    "last_code": "山",
-    "first_key": "M",
-    "last_key": "U",
-    "full": "一山 (MU)",
-    "cj_full": "一土一一山 (MGMMU)",
-    "secret": "【玩】速成取碼：首碼【一】(M) ＋ 尾碼【山】(U)",
-    "quickCode": "MU"
-  },
-  "稱": {
-    "char": "稱",
-    "codes": [
-      "竹",
-      "月"
-    ],
-    "keys": [
-      "H",
-      "B"
-    ],
-    "first_code": "竹",
-    "last_code": "月",
-    "first_key": "H",
-    "last_key": "B",
-    "full": "竹月 (HB)",
-    "cj_full": "竹木月土月 (HDBGB)",
-    "secret": "【稱】速成取碼：首碼【竹】(H) ＋ 尾碼【月】(B)",
-    "quickCode": "HB"
-  },
-  "場": {
-    "char": "場",
-    "codes": [
-      "土",
-      "竹"
-    ],
-    "keys": [
-      "G",
-      "H"
-    ],
-    "first_code": "土",
-    "last_code": "竹",
-    "first_key": "G",
-    "last_key": "H",
-    "full": "土竹 (GH)",
-    "cj_full": "土日一竹 (GAMH)",
-    "secret": "【場】速成取碼：首碼【土】(G) ＋ 尾碼【竹】(H)",
-    "quickCode": "GH"
-  },
-  "趕": {
-    "char": "趕",
-    "codes": [
-      "土",
-      "十"
-    ],
-    "keys": [
-      "G",
-      "J"
-    ],
-    "first_code": "土",
-    "last_code": "十",
-    "first_key": "G",
-    "last_key": "J",
-    "full": "土十 (GJ)",
-    "cj_full": "土人日一十 (GOAMJ)",
-    "secret": "【趕】速成取碼：首碼【土】(G) ＋ 尾碼【十】(J)",
-    "quickCode": "GJ"
-  },
-  "坐": {
-    "char": "坐",
-    "codes": [
-      "人",
-      "土"
-    ],
-    "keys": [
-      "O",
-      "G"
-    ],
-    "first_code": "人",
-    "last_code": "土",
-    "first_key": "O",
-    "last_key": "G",
-    "full": "人土 (OG)",
-    "cj_full": "人人土 (OOG)",
-    "secret": "【坐】速成取碼：首碼【人】(O) ＋ 尾碼【土】(G)",
-    "quickCode": "OG"
-  },
-  "可": {
-    "char": "可",
-    "codes": [
-      "一",
-      "口"
-    ],
-    "keys": [
-      "M",
-      "R"
-    ],
-    "first_code": "一",
-    "last_code": "口",
-    "first_key": "M",
-    "last_key": "R",
-    "full": "一口 (MR)",
-    "cj_full": "一弓口 (MNR)",
-    "secret": "【可】速成取碼：首碼【一】(M) ＋ 尾碼【口】(R)",
-    "quickCode": "MR"
-  },
-  "預": {
-    "char": "預",
-    "codes": [
-      "弓",
-      "金"
-    ],
-    "keys": [
-      "N",
-      "C"
-    ],
-    "first_code": "弓",
-    "last_code": "金",
-    "first_key": "N",
-    "last_key": "C",
-    "full": "弓金 (NC)",
-    "cj_full": "弓弓一月金 (NNMBC)",
-    "secret": "【預】速成取碼：首碼【弓】(N) ＋ 尾碼【金】(C)",
-    "quickCode": "NC"
-  },
-  "繼": {
-    "char": "繼",
-    "codes": [
-      "女",
-      "戈"
-    ],
-    "keys": [
-      "V",
-      "I"
-    ],
-    "first_code": "女",
-    "last_code": "戈",
-    "first_key": "V",
-    "last_key": "I",
-    "full": "女戈 (VI)",
-    "cj_full": "女火女女戈 (VFVVI)",
-    "secret": "【繼】速成取碼：首碼【女】(V) ＋ 尾碼【戈】(I)",
-    "quickCode": "VI"
-  },
-  "際": {
-    "char": "際",
-    "codes": [
-      "弓",
-      "火"
-    ],
-    "keys": [
-      "N",
-      "F"
-    ],
-    "first_code": "弓",
-    "last_code": "火",
-    "first_key": "N",
-    "last_key": "F",
-    "full": "弓火 (NF)",
-    "cj_full": "弓中月人火 (NLBOF)",
-    "secret": "【際】速成取碼：首碼【弓】(N) ＋ 尾碼【火】(F)",
-    "quickCode": "NF"
-  },
-  "談": {
-    "char": "談",
-    "codes": [
-      "卜",
-      "火"
-    ],
-    "keys": [
-      "Y",
-      "F"
-    ],
-    "first_code": "卜",
-    "last_code": "火",
-    "first_key": "Y",
-    "last_key": "F",
-    "full": "卜火 (YF)",
-    "cj_full": "卜口火火 (YRFF)",
-    "secret": "【談】速成取碼：首碼【卜】(Y) ＋ 尾碼【火】(F)",
-    "quickCode": "YF"
-  },
-  "夢": {
-    "char": "夢",
-    "codes": [
-      "廿",
-      "弓"
-    ],
-    "keys": [
-      "T",
-      "N"
-    ],
-    "first_code": "廿",
-    "last_code": "弓",
-    "first_key": "T",
-    "last_key": "N",
-    "full": "廿弓 (TN)",
-    "cj_full": "廿田中弓 (TWLN)",
-    "secret": "【夢】速成取碼：首碼【廿】(T) ＋ 尾碼【弓】(N)",
-    "quickCode": "TN"
-  },
-  "今": {
-    "char": "今",
-    "codes": [
-      "人",
-      "弓"
-    ],
-    "keys": [
-      "O",
-      "N"
-    ],
-    "first_code": "人",
-    "last_code": "弓",
-    "first_key": "O",
-    "last_key": "N",
-    "full": "人弓 (ON)",
-    "cj_full": "人戈弓 (OIN)",
-    "secret": "【今】速成取碼：首碼【人】(O) ＋ 尾碼【弓】(N)",
-    "quickCode": "ON"
-  },
-  "藝": {
-    "char": "藝",
-    "codes": [
-      "廿",
-      "戈"
-    ],
-    "keys": [
-      "T",
-      "I"
-    ],
-    "first_code": "廿",
-    "last_code": "戈",
-    "first_key": "T",
-    "last_key": "I",
-    "full": "廿戈 (TI)",
-    "cj_full": "廿土戈戈 (TGII)",
-    "secret": "【藝】速成取碼：首碼【廿】(T) ＋ 尾碼【戈】(I)",
-    "quickCode": "TI"
-  },
-  "四": {
-    "char": "四",
-    "codes": [
-      "田",
-      "金"
-    ],
-    "keys": [
-      "W",
-      "C"
-    ],
-    "first_code": "田",
-    "last_code": "金",
-    "first_key": "W",
-    "last_key": "C",
-    "full": "田金 (WC)",
-    "cj_full": "田金 (WC)",
-    "secret": "【四】速成取碼：首碼【田】(W) ＋ 尾碼【金】(C)",
-    "quickCode": "WC"
-  },
-  "保": {
-    "char": "保",
-    "codes": [
-      "人",
-      "木"
-    ],
-    "keys": [
-      "O",
-      "D"
-    ],
-    "first_code": "人",
-    "last_code": "木",
-    "first_key": "O",
-    "last_key": "D",
-    "full": "人木 (OD)",
-    "cj_full": "人口木 (ORD)",
-    "secret": "【保】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)",
-    "quickCode": "OD"
-  },
-  "負": {
-    "char": "負",
-    "codes": [
-      "竹",
-      "金"
-    ],
-    "keys": [
-      "H",
-      "C"
-    ],
-    "first_code": "竹",
-    "last_code": "金",
-    "first_key": "H",
-    "last_key": "C",
-    "full": "竹金 (HC)",
-    "cj_full": "竹尸月山金 (HSBUC)",
-    "secret": "【負】速成取碼：首碼【竹】(H) ＋ 尾碼【金】(C)",
-    "quickCode": "HC"
-  },
-  "張": {
-    "char": "張",
-    "codes": [
-      "弓",
-      "女"
-    ],
-    "keys": [
-      "N",
-      "V"
-    ],
-    "first_code": "弓",
-    "last_code": "女",
-    "first_key": "N",
-    "last_key": "V",
-    "full": "弓女 (NV)",
-    "cj_full": "弓尸一女 (NSMV)",
-    "secret": "【張】速成取碼：首碼【弓】(N) ＋ 尾碼【女】(V)",
-    "quickCode": "NV"
+    "full": "口口 (RR)",
+    "cj_full": "口一竹水口 (RMHER)",
+    "secret": "【路】速成取碼：首碼【口】(R) ＋ 尾碼【口】(R)",
+    "quickCode": "RR"
   },
   "速": {
     "char": "速",
@@ -16156,251 +16325,6 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "cj_full": "卜木中 (YDL)",
     "secret": "【速】速成取碼：首碼【卜】(Y) ＋ 尾碼【中】(L)",
     "quickCode": "YL"
-  },
-  "易": {
-    "char": "易",
-    "codes": [
-      "日",
-      "竹"
-    ],
-    "keys": [
-      "A",
-      "H"
-    ],
-    "first_code": "日",
-    "last_code": "竹",
-    "first_key": "A",
-    "last_key": "H",
-    "full": "日竹 (AH)",
-    "cj_full": "日心竹竹 (APHH)",
-    "secret": "【易】速成取碼：首碼【日】(A) ＋ 尾碼【竹】(H)",
-    "quickCode": "AH"
-  },
-  "中": {
-    "char": "中",
-    "codes": [
-      "中"
-    ],
-    "keys": [
-      "L"
-    ],
-    "first_code": "中",
-    "last_code": "中",
-    "first_key": "L",
-    "last_key": "L",
-    "full": "中 (L)",
-    "cj_full": "中 (L)",
-    "secret": "【中】速成取碼：單碼【中】(L)",
-    "quickCode": "L"
-  },
-  "失": {
-    "char": "失",
-    "codes": [
-      "竹",
-      "人"
-    ],
-    "keys": [
-      "H",
-      "O"
-    ],
-    "first_code": "竹",
-    "last_code": "人",
-    "first_key": "H",
-    "last_key": "O",
-    "full": "竹人 (HO)",
-    "cj_full": "竹手人 (HQO)",
-    "secret": "【失】速成取碼：首碼【竹】(H) ＋ 尾碼【人】(O)",
-    "quickCode": "HO"
-  },
-  "課": {
-    "char": "課",
-    "codes": [
-      "卜",
-      "木"
-    ],
-    "keys": [
-      "Y",
-      "D"
-    ],
-    "first_code": "卜",
-    "last_code": "木",
-    "first_key": "Y",
-    "last_key": "D",
-    "full": "卜木 (YD)",
-    "cj_full": "卜口田木 (YRWD)",
-    "secret": "【課】速成取碼：首碼【卜】(Y) ＋ 尾碼【木】(D)",
-    "quickCode": "YD"
-  },
-  "聯": {
-    "char": "聯",
-    "codes": [
-      "尸",
-      "廿"
-    ],
-    "keys": [
-      "S",
-      "T"
-    ],
-    "first_code": "尸",
-    "last_code": "廿",
-    "first_key": "S",
-    "last_key": "T",
-    "full": "尸廿 (ST)",
-    "cj_full": "尸十女戈廿 (SJVIT)",
-    "secret": "【聯】速成取碼：首碼【尸】(S) ＋ 尾碼【廿】(T)",
-    "quickCode": "ST"
-  },
-  "宣": {
-    "char": "宣",
-    "codes": [
-      "十",
-      "一"
-    ],
-    "keys": [
-      "J",
-      "M"
-    ],
-    "first_code": "十",
-    "last_code": "一",
-    "first_key": "J",
-    "last_key": "M",
-    "full": "十一 (JM)",
-    "cj_full": "十一日一 (JMAM)",
-    "secret": "【宣】速成取碼：首碼【十】(J) ＋ 尾碼【一】(M)",
-    "quickCode": "JM"
-  },
-  "藥": {
-    "char": "藥",
-    "codes": [
-      "廿",
-      "木"
-    ],
-    "keys": [
-      "T",
-      "D"
-    ],
-    "first_code": "廿",
-    "last_code": "木",
-    "first_key": "T",
-    "last_key": "D",
-    "full": "廿木 (TD)",
-    "cj_full": "廿女戈木 (TVID)",
-    "secret": "【藥】速成取碼：首碼【廿】(T) ＋ 尾碼【木】(D)",
-    "quickCode": "TD"
-  },
-  "園": {
-    "char": "園",
-    "codes": [
-      "田",
-      "女"
-    ],
-    "keys": [
-      "W",
-      "V"
-    ],
-    "first_code": "田",
-    "last_code": "女",
-    "first_key": "W",
-    "last_key": "V",
-    "full": "田女 (WV)",
-    "cj_full": "田土口女 (WGRV)",
-    "secret": "【園】速成取碼：首碼【田】(W) ＋ 尾碼【女】(V)",
-    "quickCode": "WV"
-  },
-  "醫": {
-    "char": "醫",
-    "codes": [
-      "尸",
-      "田"
-    ],
-    "keys": [
-      "S",
-      "W"
-    ],
-    "first_code": "尸",
-    "last_code": "田",
-    "first_key": "S",
-    "last_key": "W",
-    "full": "尸田 (SW)",
-    "cj_full": "尸水一金田 (SEMCW)",
-    "secret": "【醫】速成取碼：首碼【尸】(S) ＋ 尾碼【田】(W)",
-    "quickCode": "SW"
-  },
-  "何": {
-    "char": "何",
-    "codes": [
-      "人",
-      "口"
-    ],
-    "keys": [
-      "O",
-      "R"
-    ],
-    "first_code": "人",
-    "last_code": "口",
-    "first_key": "O",
-    "last_key": "R",
-    "full": "人口 (OR)",
-    "cj_full": "人一弓口 (OMNR)",
-    "secret": "【何】速成取碼：首碼【人】(O) ＋ 尾碼【口】(R)",
-    "quickCode": "OR"
-  },
-  "回": {
-    "char": "回",
-    "codes": [
-      "田",
-      "口"
-    ],
-    "keys": [
-      "W",
-      "R"
-    ],
-    "first_code": "田",
-    "last_code": "口",
-    "first_key": "W",
-    "last_key": "R",
-    "full": "田口 (WR)",
-    "cj_full": "田口 (WR)",
-    "secret": "【回】速成取碼：首碼【田】(W) ＋ 尾碼【口】(R)",
-    "quickCode": "WR"
-  },
-  "答": {
-    "char": "答",
-    "codes": [
-      "竹",
-      "口"
-    ],
-    "keys": [
-      "H",
-      "R"
-    ],
-    "first_code": "竹",
-    "last_code": "口",
-    "first_key": "H",
-    "last_key": "R",
-    "full": "竹口 (HR)",
-    "cj_full": "竹人一口 (HOMR)",
-    "secret": "【答】速成取碼：首碼【竹】(H) ＋ 尾碼【口】(R)",
-    "quickCode": "HR"
-  },
-  "袋": {
-    "char": "袋",
-    "codes": [
-      "人",
-      "女"
-    ],
-    "keys": [
-      "O",
-      "V"
-    ],
-    "first_code": "人",
-    "last_code": "女",
-    "first_key": "O",
-    "last_key": "V",
-    "full": "人女 (OV)",
-    "cj_full": "人心卜竹女 (OPYHV)",
-    "secret": "【袋】速成取碼：首碼【人】(O) ＋ 尾碼【女】(V)",
-    "quickCode": "OV"
   },
   "造": {
     "char": "造",
@@ -16440,347 +16364,195 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【遇】速成取碼：首碼【卜】(Y) ＋ 尾碼【月】(B)",
     "quickCode": "YB"
   },
-  "希": {
-    "char": "希",
-    "codes": [
-      "大",
-      "月"
-    ],
-    "keys": [
-      "K",
-      "B"
-    ],
-    "first_code": "大",
-    "last_code": "月",
-    "first_key": "K",
-    "last_key": "B",
-    "full": "大月 (KB)",
-    "cj_full": "大大中月 (KKLB)",
-    "secret": "【希】速成取碼：首碼【大】(K) ＋ 尾碼【月】(B)",
-    "quickCode": "KB"
-  },
-  "疑": {
-    "char": "疑",
-    "codes": [
-      "心",
-      "人"
-    ],
-    "keys": [
-      "P",
-      "O"
-    ],
-    "first_code": "心",
-    "last_code": "人",
-    "first_key": "P",
-    "last_key": "O",
-    "full": "心人 (PO)",
-    "cj_full": "心大弓戈人 (PKNIO)",
-    "secret": "【疑】速成取碼：首碼【心】(P) ＋ 尾碼【人】(O)",
-    "quickCode": "PO"
-  },
-  "聲": {
-    "char": "聲",
-    "codes": [
-      "土",
-      "十"
-    ],
-    "keys": [
-      "G",
-      "J"
-    ],
-    "first_code": "土",
-    "last_code": "十",
-    "first_key": "G",
-    "last_key": "J",
-    "full": "土十 (GJ)",
-    "cj_full": "土水尸十 (GESJ)",
-    "secret": "【聲】速成取碼：首碼【土】(G) ＋ 尾碼【十】(J)",
-    "quickCode": "GJ"
-  },
-  "久": {
-    "char": "久",
-    "codes": [
-      "弓",
-      "人"
-    ],
-    "keys": [
-      "N",
-      "O"
-    ],
-    "first_code": "弓",
-    "last_code": "人",
-    "first_key": "N",
-    "last_key": "O",
-    "full": "弓人 (NO)",
-    "cj_full": "弓人 (NO)",
-    "secret": "【久】速成取碼：首碼【弓】(N) ＋ 尾碼【人】(O)",
-    "quickCode": "NO"
-  },
-  "感": {
-    "char": "感",
-    "codes": [
-      "戈",
-      "心"
-    ],
-    "keys": [
-      "I",
-      "P"
-    ],
-    "first_code": "戈",
-    "last_code": "心",
-    "first_key": "I",
-    "last_key": "P",
-    "full": "戈心 (IP)",
-    "cj_full": "戈口心 (IRP)",
-    "secret": "【感】速成取碼：首碼【戈】(I) ＋ 尾碼【心】(P)",
-    "quickCode": "IP"
-  },
-  "本": {
-    "char": "本",
-    "codes": [
-      "木",
-      "一"
-    ],
-    "keys": [
-      "D",
-      "M"
-    ],
-    "first_code": "木",
-    "last_code": "一",
-    "first_key": "D",
-    "last_key": "M",
-    "full": "木一 (DM)",
-    "cj_full": "木一 (DM)",
-    "secret": "【本】速成取碼：首碼【木】(D) ＋ 尾碼【一】(M)",
-    "quickCode": "DM"
-  },
-  "忘": {
-    "char": "忘",
+  "達": {
+    "char": "達",
     "codes": [
       "卜",
-      "心"
-    ],
-    "keys": [
-      "Y",
-      "P"
-    ],
-    "first_code": "卜",
-    "last_code": "心",
-    "first_key": "Y",
-    "last_key": "P",
-    "full": "卜心 (YP)",
-    "cj_full": "卜女心 (YVP)",
-    "secret": "【忘】速成取碼：首碼【卜】(Y) ＋ 尾碼【心】(P)",
-    "quickCode": "YP"
-  },
-  "八": {
-    "char": "八",
-    "codes": [
-      "竹",
-      "人"
-    ],
-    "keys": [
-      "H",
-      "O"
-    ],
-    "first_code": "竹",
-    "last_code": "人",
-    "first_key": "H",
-    "last_key": "O",
-    "full": "竹人 (HO)",
-    "cj_full": "竹人 (HO)",
-    "secret": "【八】速成取碼：首碼【竹】(H) ＋ 尾碼【人】(O)",
-    "quickCode": "HO"
-  },
-  "模": {
-    "char": "模",
-    "codes": [
-      "木",
       "大"
     ],
     "keys": [
-      "D",
+      "Y",
       "K"
     ],
-    "first_code": "木",
+    "first_code": "卜",
     "last_code": "大",
-    "first_key": "D",
+    "first_key": "Y",
     "last_key": "K",
-    "full": "木大 (DK)",
-    "cj_full": "木廿日大 (DTAK)",
-    "secret": "【模】速成取碼：首碼【木】(D) ＋ 尾碼【大】(K)",
-    "quickCode": "DK"
+    "full": "卜大 (YK)",
+    "cj_full": "卜土戈大 (YGIK)",
+    "secret": "【達】速成取碼：首碼【卜】(Y) ＋ 尾碼【大】(K)",
+    "quickCode": "YK"
   },
-  "古": {
-    "char": "古",
+  "還": {
+    "char": "還",
     "codes": [
-      "十",
-      "口"
+      "卜",
+      "女"
     ],
     "keys": [
-      "J",
-      "R"
+      "Y",
+      "V"
     ],
-    "first_code": "十",
-    "last_code": "口",
-    "first_key": "J",
-    "last_key": "R",
-    "full": "十口 (JR)",
-    "cj_full": "十口 (JR)",
-    "secret": "【古】速成取碼：首碼【十】(J) ＋ 尾碼【口】(R)",
-    "quickCode": "JR"
+    "first_code": "卜",
+    "last_code": "女",
+    "first_key": "Y",
+    "last_key": "V",
+    "full": "卜女 (YV)",
+    "cj_full": "卜田中女 (YWLV)",
+    "secret": "【還】速成取碼：首碼【卜】(Y) ＋ 尾碼【女】(V)",
+    "quickCode": "YV"
   },
-  "動": {
-    "char": "動",
-    "codes": [
-      "竹",
-      "尸"
-    ],
-    "keys": [
-      "H",
-      "S"
-    ],
-    "first_code": "竹",
-    "last_code": "尸",
-    "first_key": "H",
-    "last_key": "S",
-    "full": "竹尸 (HS)",
-    "cj_full": "竹土大尸 (HGKS)",
-    "secret": "【動】速成取碼：首碼【竹】(H) ＋ 尾碼【尸】(S)",
-    "quickCode": "HS"
-  },
-  "難": {
-    "char": "難",
-    "codes": [
-      "廿",
-      "土"
-    ],
-    "keys": [
-      "T",
-      "G"
-    ],
-    "first_code": "廿",
-    "last_code": "土",
-    "first_key": "T",
-    "last_key": "G",
-    "full": "廿土 (TG)",
-    "cj_full": "廿人人土 (TOOG)",
-    "secret": "【難】速成取碼：首碼【廿】(T) ＋ 尾碼【土】(G)",
-    "quickCode": "TG"
-  },
-  "基": {
-    "char": "基",
-    "codes": [
-      "廿",
-      "土"
-    ],
-    "keys": [
-      "T",
-      "G"
-    ],
-    "first_code": "廿",
-    "last_code": "土",
-    "first_key": "T",
-    "last_key": "G",
-    "full": "廿土 (TG)",
-    "cj_full": "廿金土 (TCG)",
-    "secret": "【基】速成取碼：首碼【廿】(T) ＋ 尾碼【土】(G)",
-    "quickCode": "TG"
-  },
-  "型": {
-    "char": "型",
-    "codes": [
-      "一",
-      "土"
-    ],
-    "keys": [
-      "M",
-      "G"
-    ],
-    "first_code": "一",
-    "last_code": "土",
-    "first_key": "M",
-    "last_key": "G",
-    "full": "一土 (MG)",
-    "cj_full": "一弓土 (MNG)",
-    "secret": "【型】速成取碼：首碼【一】(M) ＋ 尾碼【土】(G)",
-    "quickCode": "MG"
-  },
-  "慢": {
-    "char": "慢",
-    "codes": [
-      "心",
-      "水"
-    ],
-    "keys": [
-      "P",
-      "E"
-    ],
-    "first_code": "心",
-    "last_code": "水",
-    "first_key": "P",
-    "last_key": "E",
-    "full": "心水 (PE)",
-    "cj_full": "心日田水 (PAWE)",
-    "secret": "【慢】速成取碼：首碼【心】(P) ＋ 尾碼【水】(E)",
-    "quickCode": "PE"
-  },
-  "擔": {
-    "char": "擔",
-    "codes": [
-      "手",
-      "口"
-    ],
-    "keys": [
-      "Q",
-      "R"
-    ],
-    "first_code": "手",
-    "last_code": "口",
-    "first_key": "Q",
-    "last_key": "R",
-    "full": "手口 (QR)",
-    "cj_full": "手弓金口 (QNCR)",
-    "secret": "【擔】速成取碼：首碼【手】(Q) ＋ 尾碼【口】(R)",
-    "quickCode": "QR"
-  },
-  "家": {
-    "char": "家",
-    "codes": [
-      "十",
-      "人"
-    ],
-    "keys": [
-      "J",
-      "O"
-    ],
-    "first_code": "十",
-    "last_code": "人",
-    "first_key": "J",
-    "last_key": "O",
-    "full": "十人 (JO)",
-    "cj_full": "十一尸人 (JMSO)",
-    "secret": "【家】速成取碼：首碼【十】(J) ＋ 尾碼【人】(O)",
-    "quickCode": "JO"
-  },
-  "緊": {
-    "char": "緊",
+  "醫": {
+    "char": "醫",
     "codes": [
       "尸",
-      "火"
+      "田"
     ],
     "keys": [
       "S",
-      "F"
+      "W"
     ],
     "first_code": "尸",
-    "last_code": "火",
+    "last_code": "田",
     "first_key": "S",
+    "last_key": "W",
+    "full": "尸田 (SW)",
+    "cj_full": "尸水一金田 (SEMCW)",
+    "secret": "【醫】速成取碼：首碼【尸】(S) ＋ 尾碼【田】(W)",
+    "quickCode": "SW"
+  },
+  "野": {
+    "char": "野",
+    "codes": [
+      "田",
+      "弓"
+    ],
+    "keys": [
+      "W",
+      "N"
+    ],
+    "first_code": "田",
+    "last_code": "弓",
+    "first_key": "W",
+    "last_key": "N",
+    "full": "田弓 (WN)",
+    "cj_full": "田土弓戈弓 (WGNIN)",
+    "secret": "【野】速成取碼：首碼【田】(W) ＋ 尾碼【弓】(N)",
+    "quickCode": "WN"
+  },
+  "錢": {
+    "char": "錢",
+    "codes": [
+      "金",
+      "戈"
+    ],
+    "keys": [
+      "C",
+      "I"
+    ],
+    "first_code": "金",
+    "last_code": "戈",
+    "first_key": "C",
+    "last_key": "I",
+    "full": "金戈 (CI)",
+    "cj_full": "金戈戈 (CII)",
+    "secret": "【錢】速成取碼：首碼【金】(C) ＋ 尾碼【戈】(I)",
+    "quickCode": "CI"
+  },
+  "鐵": {
+    "char": "鐵",
+    "codes": [
+      "金",
+      "土"
+    ],
+    "keys": [
+      "C",
+      "G"
+    ],
+    "first_code": "金",
+    "last_code": "土",
+    "first_key": "C",
+    "last_key": "G",
+    "full": "金土 (CG)",
+    "cj_full": "金十戈土 (CJIG)",
+    "secret": "【鐵】速成取碼：首碼【金】(C) ＋ 尾碼【土】(G)",
+    "quickCode": "CG"
+  },
+  "門": {
+    "char": "門",
+    "codes": [
+      "日",
+      "弓"
+    ],
+    "keys": [
+      "A",
+      "N"
+    ],
+    "first_code": "日",
+    "last_code": "弓",
+    "first_key": "A",
+    "last_key": "N",
+    "full": "日弓 (AN)",
+    "cj_full": "日弓 (AN)",
+    "secret": "【門】速成取碼：首碼【日】(A) ＋ 尾碼【弓】(N)",
+    "quickCode": "AN"
+  },
+  "阿": {
+    "char": "阿",
+    "codes": [
+      "弓",
+      "口"
+    ],
+    "keys": [
+      "N",
+      "R"
+    ],
+    "first_code": "弓",
+    "last_code": "口",
+    "first_key": "N",
+    "last_key": "R",
+    "full": "弓口 (NR)",
+    "cj_full": "弓中一弓口 (NLMNR)",
+    "secret": "【阿】速成取碼：首碼【弓】(N) ＋ 尾碼【口】(R)",
+    "quickCode": "NR"
+  },
+  "院": {
+    "char": "院",
+    "codes": [
+      "弓",
+      "山"
+    ],
+    "keys": [
+      "N",
+      "U"
+    ],
+    "first_code": "弓",
+    "last_code": "山",
+    "first_key": "N",
+    "last_key": "U",
+    "full": "弓山 (NU)",
+    "cj_full": "弓中十一山 (NLJMU)",
+    "secret": "【院】速成取碼：首碼【弓】(N) ＋ 尾碼【山】(U)",
+    "quickCode": "NU"
+  },
+  "際": {
+    "char": "際",
+    "codes": [
+      "弓",
+      "火"
+    ],
+    "keys": [
+      "N",
+      "F"
+    ],
+    "first_code": "弓",
+    "last_code": "火",
+    "first_key": "N",
     "last_key": "F",
-    "full": "尸火 (SF)",
-    "cj_full": "尸水女戈火 (SEVIF)",
-    "secret": "【緊】速成取碼：首碼【尸】(S) ＋ 尾碼【火】(F)",
-    "quickCode": "SF"
+    "full": "弓火 (NF)",
+    "cj_full": "弓中月人火 (NLBOF)",
+    "secret": "【際】速成取碼：首碼【弓】(N) ＋ 尾碼【火】(F)",
+    "quickCode": "NF"
   },
   "險": {
     "char": "險",
@@ -16801,81 +16573,309 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "secret": "【險】速成取碼：首碼【弓】(N) ＋ 尾碼【人】(O)",
     "quickCode": "NO"
   },
-  "設": {
-    "char": "設",
+  "集": {
+    "char": "集",
+    "codes": [
+      "人",
+      "木"
+    ],
+    "keys": [
+      "O",
+      "D"
+    ],
+    "first_code": "人",
+    "last_code": "木",
+    "first_key": "O",
+    "last_key": "D",
+    "full": "人木 (OD)",
+    "cj_full": "人土木 (OGD)",
+    "secret": "【集】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)",
+    "quickCode": "OD"
+  },
+  "離": {
+    "char": "離",
     "codes": [
       "卜",
-      "水"
+      "土"
     ],
     "keys": [
       "Y",
-      "E"
+      "G"
     ],
     "first_code": "卜",
-    "last_code": "水",
+    "last_code": "土",
     "first_key": "Y",
-    "last_key": "E",
-    "full": "卜水 (YE)",
-    "cj_full": "卜口竹弓水 (YRHNE)",
-    "secret": "【設】速成取碼：首碼【卜】(Y) ＋ 尾碼【水】(E)",
-    "quickCode": "YE"
+    "last_key": "G",
+    "full": "卜土 (YG)",
+    "cj_full": "卜月人土 (YBOG)",
+    "secret": "【離】速成取碼：首碼【卜】(Y) ＋ 尾碼【土】(G)",
+    "quickCode": "YG"
   },
-  "表": {
-    "char": "表",
+  "難": {
+    "char": "難",
     "codes": [
-      "手",
-      "女"
+      "廿",
+      "土"
     ],
     "keys": [
-      "Q",
-      "V"
+      "T",
+      "G"
     ],
-    "first_code": "手",
-    "last_code": "女",
-    "first_key": "Q",
-    "last_key": "V",
-    "full": "手女 (QV)",
-    "cj_full": "手一女 (QMV)",
-    "secret": "【表】速成取碼：首碼【手】(Q) ＋ 尾碼【女】(V)",
-    "quickCode": "QV"
+    "first_code": "廿",
+    "last_code": "土",
+    "first_key": "T",
+    "last_key": "G",
+    "full": "廿土 (TG)",
+    "cj_full": "廿人人土 (TOOG)",
+    "secret": "【難】速成取碼：首碼【廿】(T) ＋ 尾碼【土】(G)",
+    "quickCode": "TG"
   },
-  "算": {
-    "char": "算",
+  "雷": {
+    "char": "雷",
     "codes": [
-      "竹",
+      "一",
+      "田"
+    ],
+    "keys": [
+      "M",
+      "W"
+    ],
+    "first_code": "一",
+    "last_code": "田",
+    "first_key": "M",
+    "last_key": "W",
+    "full": "一田 (MW)",
+    "cj_full": "一月田 (MBW)",
+    "secret": "【雷】速成取碼：首碼【一】(M) ＋ 尾碼【田】(W)",
+    "quickCode": "MW"
+  },
+  "鞋": {
+    "char": "鞋",
+    "codes": [
+      "廿",
+      "土"
+    ],
+    "keys": [
+      "T",
+      "G"
+    ],
+    "first_code": "廿",
+    "last_code": "土",
+    "first_key": "T",
+    "last_key": "G",
+    "full": "廿土 (TG)",
+    "cj_full": "廿十土土 (TJGG)",
+    "secret": "【鞋】速成取碼：首碼【廿】(T) ＋ 尾碼【土】(G)",
+    "quickCode": "TG"
+  },
+  "音": {
+    "char": "音",
+    "codes": [
+      "卜",
+      "日"
+    ],
+    "keys": [
+      "Y",
+      "A"
+    ],
+    "first_code": "卜",
+    "last_code": "日",
+    "first_key": "Y",
+    "last_key": "A",
+    "full": "卜日 (YA)",
+    "cj_full": "卜廿日 (YTA)",
+    "secret": "【音】速成取碼：首碼【卜】(Y) ＋ 尾碼【日】(A)",
+    "quickCode": "YA"
+  },
+  "預": {
+    "char": "預",
+    "codes": [
+      "弓",
+      "金"
+    ],
+    "keys": [
+      "N",
+      "C"
+    ],
+    "first_code": "弓",
+    "last_code": "金",
+    "first_key": "N",
+    "last_key": "C",
+    "full": "弓金 (NC)",
+    "cj_full": "弓弓一月金 (NNMBC)",
+    "secret": "【預】速成取碼：首碼【弓】(N) ＋ 尾碼【金】(C)",
+    "quickCode": "NC"
+  },
+  "願": {
+    "char": "願",
+    "codes": [
+      "一",
+      "金"
+    ],
+    "keys": [
+      "M",
+      "C"
+    ],
+    "first_code": "一",
+    "last_code": "金",
+    "first_key": "M",
+    "last_key": "C",
+    "full": "一金 (MC)",
+    "cj_full": "一火一月金 (MFMBC)",
+    "secret": "【願】速成取碼：首碼【一】(M) ＋ 尾碼【金】(C)",
+    "quickCode": "MC"
+  },
+  "飯": {
+    "char": "飯",
+    "codes": [
+      "人",
+      "水"
+    ],
+    "keys": [
+      "O",
+      "E"
+    ],
+    "first_code": "人",
+    "last_code": "水",
+    "first_key": "O",
+    "last_key": "E",
+    "full": "人水 (OE)",
+    "cj_full": "人戈竹水 (OIHE)",
+    "secret": "【飯】速成取碼：首碼【人】(O) ＋ 尾碼【水】(E)",
+    "quickCode": "OE"
+  },
+  "餘": {
+    "char": "餘",
+    "codes": [
+      "人",
+      "木"
+    ],
+    "keys": [
+      "O",
+      "D"
+    ],
+    "first_code": "人",
+    "last_code": "木",
+    "first_key": "O",
+    "last_key": "D",
+    "full": "人木 (OD)",
+    "cj_full": "人戈人一木 (OIOMD)",
+    "secret": "【餘】速成取碼：首碼【人】(O) ＋ 尾碼【木】(D)",
+    "quickCode": "OD"
+  },
+  "館": {
+    "char": "館",
+    "codes": [
+      "人",
+      "口"
+    ],
+    "keys": [
+      "O",
+      "R"
+    ],
+    "first_code": "人",
+    "last_code": "口",
+    "first_key": "O",
+    "last_key": "R",
+    "full": "人口 (OR)",
+    "cj_full": "人戈十口口 (OIJRR)",
+    "secret": "【館】速成取碼：首碼【人】(O) ＋ 尾碼【口】(R)",
+    "quickCode": "OR"
+  },
+  "體": {
+    "char": "體",
+    "codes": [
+      "月",
       "廿"
     ],
     "keys": [
-      "H",
+      "B",
       "T"
     ],
-    "first_code": "竹",
+    "first_code": "月",
     "last_code": "廿",
-    "first_key": "H",
+    "first_key": "B",
     "last_key": "T",
-    "full": "竹廿 (HT)",
-    "cj_full": "竹月山廿 (HBUT)",
-    "secret": "【算】速成取碼：首碼【竹】(H) ＋ 尾碼【廿】(T)",
-    "quickCode": "HT"
+    "full": "月廿 (BT)",
+    "cj_full": "月月廿田廿 (BBTWT)",
+    "secret": "【體】速成取碼：首碼【月】(B) ＋ 尾碼【廿】(T)",
+    "quickCode": "BT"
   },
-  "布": {
-    "char": "布",
+  "高": {
+    "char": "高",
     "codes": [
-      "大",
-      "月"
+      "卜",
+      "口"
     ],
     "keys": [
-      "K",
-      "B"
+      "Y",
+      "R"
     ],
-    "first_code": "大",
-    "last_code": "月",
-    "first_key": "K",
-    "last_key": "B",
-    "full": "大月 (KB)",
-    "cj_full": "大中月 (KLB)",
-    "secret": "【布】速成取碼：首碼【大】(K) ＋ 尾碼【月】(B)",
-    "quickCode": "KB"
+    "first_code": "卜",
+    "last_code": "口",
+    "first_key": "Y",
+    "last_key": "R",
+    "full": "卜口 (YR)",
+    "cj_full": "卜口月口 (YRBR)",
+    "secret": "【高】速成取碼：首碼【卜】(Y) ＋ 尾碼【口】(R)",
+    "quickCode": "YR"
+  },
+  "鮮": {
+    "char": "鮮",
+    "codes": [
+      "弓",
+      "手"
+    ],
+    "keys": [
+      "N",
+      "Q"
+    ],
+    "first_code": "弓",
+    "last_code": "手",
+    "first_key": "N",
+    "last_key": "Q",
+    "full": "弓手 (NQ)",
+    "cj_full": "弓火廿手 (NFTQ)",
+    "secret": "【鮮】速成取碼：首碼【弓】(N) ＋ 尾碼【手】(Q)",
+    "quickCode": "NQ"
+  },
+  "黃": {
+    "char": "黃",
+    "codes": [
+      "廿",
+      "金"
+    ],
+    "keys": [
+      "T",
+      "C"
+    ],
+    "first_code": "廿",
+    "last_code": "金",
+    "first_key": "T",
+    "last_key": "C",
+    "full": "廿金 (TC)",
+    "cj_full": "廿一田金 (TMWC)",
+    "secret": "【黃】速成取碼：首碼【廿】(T) ＋ 尾碼【金】(C)",
+    "quickCode": "TC"
+  },
+  "點": {
+    "char": "點",
+    "codes": [
+      "田",
+      "口"
+    ],
+    "keys": [
+      "W",
+      "R"
+    ],
+    "first_code": "田",
+    "last_code": "口",
+    "first_key": "W",
+    "last_key": "R",
+    "full": "田口 (WR)",
+    "cj_full": "田火卜口 (WFYR)",
+    "secret": "【點】速成取碼：首碼【田】(W) ＋ 尾碼【口】(R)",
+    "quickCode": "WR"
   }
 };
 
