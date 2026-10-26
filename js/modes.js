@@ -230,12 +230,21 @@
       } catch(e) {}
       return updated;
     },
+    _isTeacherUnlocked: function(isTeacher) {
+      return Boolean(
+        isTeacher ||
+        (typeof root !== "undefined" && (root.isTeacherMode || root.DEV_TEST_ALL_UNLOCKED)) ||
+        (typeof window !== "undefined" && (window.isTeacherMode || window.DEV_TEST_ALL_UNLOCKED))
+      );
+    },
     isMainLineFullyUnlocked: function(cls, num, isTeacher) {
+      isTeacher = this._isTeacherUnlocked(isTeacher);
       if (isTeacher) return true;
       var dailyPts = this.getDailyEarnedScore(cls, num);
       return dailyPts >= 350; // 達到站4門檻即視為主線全解鎖
     },
     getCurrentHighestUnlockedOrder: function(cls, num, isTeacher) {
+      isTeacher = this._isTeacherUnlocked(isTeacher);
       if (isTeacher) return 4;
       var dailyPts = this.getDailyEarnedScore(cls, num);
       var mainSeq = this.mainSequence();
@@ -248,6 +257,7 @@
       return highest;
     },
     getScoreDecayMultiplier: function(modeId, cls, num, isTeacher) {
+      isTeacher = this._isTeacherUnlocked(isTeacher);
       if (modeId === 'speed') return 1.0;
       if (isTeacher) return 1.0;
 
@@ -280,6 +290,7 @@
       return 1.0;
     },
     getUnlockStatus: function(modeId, cls, num, isTeacher) {
+      isTeacher = this._isTeacherUnlocked(isTeacher);
       if (isTeacher) {
         return { unlocked: true, currentDailyScore: 9999, threshold: 0, neededScore: 0, prevStationName: '' };
       }

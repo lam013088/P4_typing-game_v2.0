@@ -130,10 +130,10 @@
   };
 
   root.P4UploadQueue = P4UploadQueue;
+  root.P6UploadQueue = P4UploadQueue;
   if (typeof window !== 'undefined') {
     window.addEventListener('online', function() { P4UploadQueue.processQueue(); });
     window.addEventListener('focus', function() { P4UploadQueue.processQueue(); });
   }
 })(typeof window !== 'undefined' ? window : this);
 
-  root.P6UploadQueue = P4UploadQueue;

@@ -1,3 +1,6 @@
+var isTeacherMode = false;
+if (typeof window !== "undefined") window.isTeacherMode = false;
+if (typeof global !== "undefined") global.isTeacherMode = false;
 /**
  * =========================================================================
  * 🎮 APP.JS - 四年級速成打字業務邏輯、UI 互動與跨電腦雲端同步核心
@@ -1029,7 +1032,12 @@ const ThunderboltSFX = (function() {
       const bannerEl = document.getElementById('scoring-note-banner');
       if (bannerEl && typeof P4Mode !== 'undefined') {
         const isAllUnlocked = P4Mode.isMainLineFullyUnlocked(cls, num, isTeacher);
-        if (isAllUnlocked) {
+        if (isTeacher) {
+          bannerEl.style.background = '#ECFDF5';
+          bannerEl.style.borderColor = '#10B981';
+          bannerEl.style.color = '#065F46';
+          bannerEl.innerHTML = `🔓 <strong>【教師測試特權已啟動】</strong>全部遊戲鏈條（第 1～4 站及手速賽全部週次）已全數解鎖！可自由點擊上方任一關卡直接進入測試（再次觸發解鎖指令即可恢復學生鎖定狀態）。`;
+        } else if (isAllUnlocked) {
           bannerEl.style.background = '#ECFDF5';
           bannerEl.style.borderColor = '#A7F3D0';
           bannerEl.style.color = '#065F46';
@@ -4171,7 +4179,7 @@ function initLoginDropdowns() {
       if (siegeTimeInterval) clearInterval(siegeTimeInterval);
 
       let decayMult = 1.0;
-      const isTeacherCheck = (typeof isTeacherMode !== 'undefined' && isTeacherMode);
+      const isTeacherCheck = Boolean((typeof isTeacherMode !== 'undefined' && isTeacherMode) || (typeof window !== 'undefined' && window.isTeacherMode) || (typeof global !== 'undefined' && global.isTeacherMode));
       if (typeof P4Mode !== 'undefined' && currentStudent) {
         decayMult = P4Mode.getScoreDecayMultiplier('siege', currentStudent.cls, currentStudent.num, isTeacherCheck);
       }
@@ -4255,6 +4263,9 @@ function initLoginDropdowns() {
         if (titleEl) titleEl.textContent = currentTier.title;
         if (scoreEl) scoreEl.textContent = stats.totalScore.toLocaleString();
         if (killsEl) killsEl.textContent = stats.kills;
+        if (typeof renderModeTabs === "function") {
+          try { renderModeTabs(); } catch(err) {}
+        }
       } catch(e) {
         console.warn("loadStudentProfile error:", e);
       }
@@ -6657,25 +6668,97 @@ if (typeof global !== 'undefined') {
   global.getSpeedWordList = () => speedWordList;
 }
 
-// ⚡ 測試專屬快捷鍵：Control + Shift + P (同時支援 Mac Command + Shift + P) 解鎖全部遊戲鏈條
-window.addEventListener('keydown', function(e) {
-  if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'T' || e.key === 't' || e.code === 'KeyT' || e.key === 'P' || e.key === 'p' || e.code === 'KeyP')) {
-    if (typeof initSpeedWeekDropdown === 'function') {
-      setTimeout(() => { try { initSpeedWeekDropdown(); } catch(err) {} }, 50);
+    // =========================================================================
+    // ⚡ 教師測試專屬全解鎖引擎 (嚴格僅保留：Ctrl+Alt+P [Mac: Option+Shift+P] 與 連點計分規則橫幅 3 下)
+    // =========================================================================
+    function toggleTeacherUnlockMode(forceState) {
+      isTeacherMode = (typeof forceState === "boolean") ? forceState : !isTeacherMode;
+      if (typeof window !== "undefined") window.isTeacherMode = isTeacherMode;
+      if (typeof global !== "undefined") global.isTeacherMode = isTeacherMode;
+
+      // 若教師在首頁登入框（尚未選擇學生）直接觸發解鎖，自動以測試身份進入戰鬥主畫面
+      if (isTeacherMode) {
+        const idSec = document.getElementById("identity-section");
+        const batSec = document.getElementById("battle-section");
+        const confirmModal = document.getElementById("modal-confirm");
+        if (confirmModal) confirmModal.style.display = "none";
+        if (!currentStudent) {
+          currentStudent = { cls: "P4A", num: 1, name: "訓練家" };
+        }
+        if (batSec && batSec.style.display === "none") {
+          if (idSec) idSec.style.display = "none";
+          batSec.style.display = "block";
+          try { if (typeof loadStudentProfile === "function") loadStudentProfile(); } catch(e) {}
+          try { if (typeof startNewSession === "function" && !currentQuiz) startNewSession(); } catch(e) {}
+        }
+      }
+
+      if (typeof renderModeTabs === "function") {
+        try { renderModeTabs(); } catch(err) { console.error("renderModeTabs err:", err); }
+      }
+      if (typeof initSpeedWeekDropdown === "function") {
+        try { initSpeedWeekDropdown(); } catch(err) {}
+        setTimeout(() => { try { initSpeedWeekDropdown(); } catch(err) {} }, 50);
+      }
+
+      const tip = isTeacherMode
+        ? "🔓【教師測試特權已啟動】全部遊戲鏈條已全數解鎖！可自由進入站 1~4 及手速賽全部週次"
+        : "🔒【教師測試特權已關閉】已恢復學生正常每日階梯解鎖鏈條";
+      if (typeof showPassToast === "function") {
+        showPassToast(tip);
+      }
+      return isTeacherMode;
     }
-    e.preventDefault();
-    e.stopPropagation();
-    isTeacherMode = !isTeacherMode;
-    window.isTeacherMode = isTeacherMode;
-    if (typeof global !== 'undefined') global.isTeacherMode = isTeacherMode;
-    if (typeof renderModeTabs === 'function') {
-      renderModeTabs();
+
+    if (typeof window !== "undefined") {
+      window.toggleTeacherUnlockMode = toggleTeacherUnlockMode;
+      window.renderModeTabs = renderModeTabs;
+      window.setGameMode = setGameMode;
     }
-    const tip = isTeacherMode 
-      ? '🔓【測試特權已啟動】全部遊戲鏈條已全數解鎖！可自由進入站 1~4 及手速賽' 
-      : '🔒【測試特權已關閉】已恢復學生正常每日階梯解鎖鏈條';
-    if (typeof showPassToast === 'function') {
-      showPassToast(tip);
+    if (typeof global !== "undefined") {
+      global.toggleTeacherUnlockMode = toggleTeacherUnlockMode;
+      global.renderModeTabs = renderModeTabs;
+      global.setGameMode = setGameMode;
     }
-  }
-}, true);
+
+    if (typeof window !== "undefined" && !window.__p4TeacherShortcutBound) {
+      window.__p4TeacherShortcutBound = true;
+      // 方式一（原方式二）：僅限 Ctrl + Alt + P (Windows) 或 Option + Shift + P (Mac)
+      window.addEventListener("keydown", function(e) {
+        if (e.repeat) return;
+        const code = e.code || "";
+        const key = e.key || "";
+        const kc = e.keyCode || e.which || 0;
+        const isPKey = (
+          code === "KeyP" ||
+          kc === 80 ||
+          key === "p" || key === "P" || key === "∏" || key === "π" || key === "心"
+        );
+        const isCtrlAlt = (e.ctrlKey && e.altKey && !e.shiftKey && !e.metaKey);
+        const isOptShift = (e.altKey && e.shiftKey && !e.ctrlKey && !e.metaKey);
+        if (isPKey && (isCtrlAlt || isOptShift)) {
+          if (e.preventDefault) e.preventDefault();
+          if (e.stopPropagation) e.stopPropagation();
+          if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+          toggleTeacherUnlockMode();
+        }
+      }, true);
+
+      // 方式二（原方式三）：連續點擊 3 下「📖 計分規則」橫幅 (#scoring-note-banner)
+      let bannerClickCount = 0;
+      let bannerClickTimer = null;
+      document.addEventListener("click", function(e) {
+        const target = e.target;
+        if (target && target.closest && target.closest("#scoring-note-banner")) {
+          bannerClickCount++;
+          if (bannerClickTimer) clearTimeout(bannerClickTimer);
+          if (bannerClickCount >= 3) {
+            bannerClickCount = 0;
+            toggleTeacherUnlockMode();
+          } else {
+            bannerClickTimer = setTimeout(() => { bannerClickCount = 0; }, 700);
+          }
+        }
+      }, true);
+    }
+
