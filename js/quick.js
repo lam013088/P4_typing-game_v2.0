@@ -15809,7 +15809,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "T",
     "last_key": "I",
     "full": "廿戈 (TI)",
-    "cj_full": "廿土大戈 (TGKI)",
+    "cj_full": "廿土戈戈 (TGII)",
     "secret": "【藝】速成取碼：首碼【廿】(T) ＋ 尾碼【戈】(I)",
     "quickCode": "TI"
   },
@@ -16208,7 +16208,7 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "first_key": "G",
     "last_key": "U",
     "full": "土山 (GU)",
-    "cj_full": "土人尸山 (GOSU)",
+    "cj_full": "土人口山 (GORU)",
     "secret": "【起】速成取碼：首碼【土】(G) ＋ 尾碼【山】(U)",
     "quickCode": "GU"
   },

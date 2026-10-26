@@ -26771,7 +26771,7 @@ const MODE2_WEEKLY_BANKS = {
         "first_key": "G",
         "last_key": "U",
         "full": "土山 (GU)",
-        "cj_full": "土人尸山 (GOSU)",
+        "cj_full": "土人口山 (GORU)",
         "secret": "【起】速成取碼：首碼【土】(G) ＋ 尾碼【山】(U)",
         "quickCode": "GU"
       },
@@ -28508,7 +28508,7 @@ const MODE2_WEEKLY_BANKS = {
         "first_key": "T",
         "last_key": "I",
         "full": "廿戈 (TI)",
-        "cj_full": "廿土大戈 (TGKI)",
+        "cj_full": "廿土戈戈 (TGII)",
         "secret": "【藝】速成取碼：首碼【廿】(T) ＋ 尾碼【戈】(I)",
         "quickCode": "TI"
       },
@@ -44562,17 +44562,17 @@ const MASTER_CJ3_DICT = {
     "codes": [
       "廿",
       "土",
-      "大",
+      "戈",
       "戈"
     ],
     "keys": [
       "T",
       "G",
-      "K",
+      "I",
       "I"
     ],
-    "full": "廿土大戈 (TGKI)",
-    "secret": "藝：廿土大戈 (TGKI)",
+    "full": "廿土戈戈 (TGII)",
+    "secret": "藝：廿土戈戈 (TGII)",
     "quickCode": "TI"
   },
   "藥": {
@@ -44948,17 +44948,17 @@ const MASTER_CJ3_DICT = {
     "codes": [
       "土",
       "人",
-      "尸",
+      "口",
       "山"
     ],
     "keys": [
       "G",
       "O",
-      "S",
+      "R",
       "U"
     ],
-    "full": "土人尸山 (GOSU)",
-    "secret": "起：土人尸山 (GOSU)",
+    "full": "土人口山 (GORU)",
+    "secret": "起：土人口山 (GORU)",
     "quickCode": "GU"
   },
   "超": {

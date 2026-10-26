@@ -8,7 +8,7 @@
   'use strict';
 
   var P4WordBankCore = {
-    CACHE_KEY: 'p4_word_bank_cache_v8_w10',
+    CACHE_KEY: 'p4_word_bank_cache_v9_w10',
     CACHE_META_KEY: 'p4_word_bank_meta_v8_w10',
     LEGACY_KEYS: ['p4_word_bank_cache_v1', 'p4_word_bank_cache_v2', 'p4_word_bank_cache_v3', 'p4_word_bank_meta_v2'],
     purgeLegacyCache: function() {
