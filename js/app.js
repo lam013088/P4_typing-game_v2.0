@@ -6511,7 +6511,7 @@ function initLoginDropdowns() {
 
         cloudList.forEach(cs => {
           const mapKey = `${cs.cls}_${cs.num}`;
-          const time = parseFloat(cs.bestTime !== undefined ? cs.bestTime : cs.best10);
+          const time = parseFloat(cs.time !== undefined ? cs.time : (cs.bestTime !== undefined ? cs.bestTime : cs.best10));
           if (!isNaN(time) && time > 0 && time < 900) {
             const curEntry = allSpeedMap[mapKey];
             if (!curEntry || !curEntry.hasRecord || curEntry.bestTime > time) {

@@ -9,6 +9,559 @@
  */
 
 const DATA = {
+  "cloud_speed_records": {
+  "w2_hw1": [
+    {
+      "cls": "P4A",
+      "num": 27,
+      "name": "P4A 27號",
+      "time": 17.27,
+      "bestTime": 17.27,
+      "best10": 17.27,
+      "rawTime": 17.27,
+      "accuracy": 100,
+      "cpm": 35
+    },
+    {
+      "cls": "P4A",
+      "num": 21,
+      "name": "P4A 21號",
+      "time": 40.61,
+      "bestTime": 40.61,
+      "best10": 40.61,
+      "rawTime": 40.61,
+      "accuracy": 100,
+      "cpm": 15
+    },
+    {
+      "cls": "P4C",
+      "num": 9,
+      "name": "P4C 09號",
+      "time": 47.38,
+      "bestTime": 47.38,
+      "best10": 47.38,
+      "rawTime": 47.38,
+      "accuracy": 100,
+      "cpm": 13
+    },
+    {
+      "cls": "P4A",
+      "num": 22,
+      "name": "P4A 22號",
+      "time": 55.58,
+      "bestTime": 55.58,
+      "best10": 55.58,
+      "rawTime": 55.58,
+      "accuracy": 100,
+      "cpm": 11
+    },
+    {
+      "cls": "P4A",
+      "num": 11,
+      "name": "P4A 11號",
+      "time": 79.45,
+      "bestTime": 79.45,
+      "best10": 79.45,
+      "rawTime": 79.45,
+      "accuracy": 100,
+      "cpm": 8
+    }
+  ],
+  "w2_hw2": [
+    {
+      "cls": "P4A",
+      "num": 22,
+      "name": "P4A 22號",
+      "time": 37.62,
+      "bestTime": 37.62,
+      "best10": 37.62,
+      "rawTime": 37.62,
+      "accuracy": 100,
+      "cpm": 16
+    }
+  ],
+  "w6_hw1": [
+    {
+      "cls": "P4A",
+      "num": 27,
+      "name": "P4A 27號",
+      "time": 12.09,
+      "bestTime": 12.09,
+      "best10": 12.09,
+      "rawTime": 12.09,
+      "accuracy": 100,
+      "cpm": 50
+    },
+    {
+      "cls": "P4A",
+      "num": 1,
+      "name": "P4A 01號",
+      "time": 13.06,
+      "bestTime": 13.06,
+      "best10": 13.06,
+      "rawTime": 13.06,
+      "accuracy": 100,
+      "cpm": 46
+    },
+    {
+      "cls": "P4A",
+      "num": 2,
+      "name": "P4A 02號",
+      "time": 14.85,
+      "bestTime": 14.85,
+      "best10": 14.85,
+      "rawTime": 14.85,
+      "accuracy": 100,
+      "cpm": 40
+    },
+    {
+      "cls": "P4A",
+      "num": 22,
+      "name": "P4A 22號",
+      "time": 17.16,
+      "bestTime": 17.16,
+      "best10": 17.16,
+      "rawTime": 17.16,
+      "accuracy": 100,
+      "cpm": 35
+    },
+    {
+      "cls": "P4B",
+      "num": 35,
+      "name": "P4B 35號",
+      "time": 33.59,
+      "bestTime": 33.59,
+      "best10": 33.59,
+      "rawTime": 33.59,
+      "accuracy": 100,
+      "cpm": 18
+    },
+    {
+      "cls": "P4C",
+      "num": 31,
+      "name": "P4C 31號",
+      "time": 34.29,
+      "bestTime": 34.29,
+      "best10": 34.29,
+      "rawTime": 34.29,
+      "accuracy": 100,
+      "cpm": 17
+    },
+    {
+      "cls": "P4C",
+      "num": 9,
+      "name": "P4C 09號",
+      "time": 44.61,
+      "bestTime": 44.61,
+      "best10": 44.61,
+      "rawTime": 44.61,
+      "accuracy": 100,
+      "cpm": 13
+    },
+    {
+      "cls": "P4B",
+      "num": 26,
+      "name": "P4B 26號",
+      "time": 46.52,
+      "bestTime": 46.52,
+      "best10": 46.52,
+      "rawTime": 46.52,
+      "accuracy": 100,
+      "cpm": 13
+    },
+    {
+      "cls": "P4B",
+      "num": 16,
+      "name": "P4B 16號",
+      "time": 49.63,
+      "bestTime": 49.63,
+      "best10": 49.63,
+      "rawTime": 49.63,
+      "accuracy": 100,
+      "cpm": 12
+    },
+    {
+      "cls": "P4A",
+      "num": 7,
+      "name": "P4A 07號",
+      "time": 66.21,
+      "bestTime": 66.21,
+      "best10": 66.21,
+      "rawTime": 66.21,
+      "accuracy": 100,
+      "cpm": 9
+    },
+    {
+      "cls": "P4A",
+      "num": 11,
+      "name": "P4A 11號",
+      "time": 75.58,
+      "bestTime": 75.58,
+      "best10": 75.58,
+      "rawTime": 75.58,
+      "accuracy": 100,
+      "cpm": 8
+    },
+    {
+      "cls": "P4B",
+      "num": 21,
+      "name": "P4B 21號",
+      "time": 78.41,
+      "bestTime": 78.41,
+      "best10": 78.41,
+      "rawTime": 78.41,
+      "accuracy": 100,
+      "cpm": 8
+    },
+    {
+      "cls": "P4B",
+      "num": 25,
+      "name": "P4B 25號",
+      "time": 84.75,
+      "bestTime": 84.75,
+      "best10": 84.75,
+      "rawTime": 84.75,
+      "accuracy": 100,
+      "cpm": 7
+    },
+    {
+      "cls": "P4A",
+      "num": 32,
+      "name": "P4A 32號",
+      "time": 86.84,
+      "bestTime": 86.84,
+      "best10": 86.84,
+      "rawTime": 86.84,
+      "accuracy": 100,
+      "cpm": 7
+    },
+    {
+      "cls": "P4A",
+      "num": 19,
+      "name": "P4A 19號",
+      "time": 98.0,
+      "bestTime": 98.0,
+      "best10": 98.0,
+      "rawTime": 98.0,
+      "accuracy": 100,
+      "cpm": 6
+    },
+    {
+      "cls": "P4A",
+      "num": 33,
+      "name": "P4A 33號",
+      "time": 102.14,
+      "bestTime": 102.14,
+      "best10": 102.14,
+      "rawTime": 102.14,
+      "accuracy": 100,
+      "cpm": 6
+    },
+    {
+      "cls": "P4C",
+      "num": 13,
+      "name": "P4C 13號",
+      "time": 111.24,
+      "bestTime": 111.24,
+      "best10": 111.24,
+      "rawTime": 111.24,
+      "accuracy": 100,
+      "cpm": 5
+    },
+    {
+      "cls": "P4B",
+      "num": 20,
+      "name": "P4B 20號",
+      "time": 122.88,
+      "bestTime": 122.88,
+      "best10": 122.88,
+      "rawTime": 122.88,
+      "accuracy": 100,
+      "cpm": 5
+    },
+    {
+      "cls": "P4A",
+      "num": 29,
+      "name": "P4A 29號",
+      "time": 231.07,
+      "bestTime": 231.07,
+      "best10": 231.07,
+      "rawTime": 231.07,
+      "accuracy": 100,
+      "cpm": 3
+    },
+    {
+      "cls": "P4A",
+      "num": 16,
+      "name": "P4A 16號",
+      "time": 251.95,
+      "bestTime": 251.95,
+      "best10": 251.95,
+      "rawTime": 251.95,
+      "accuracy": 100,
+      "cpm": 2
+    }
+  ],
+  "w6_hw2": [
+    {
+      "cls": "P4A",
+      "num": 22,
+      "name": "P4A 22號",
+      "time": 63.25,
+      "bestTime": 63.25,
+      "best10": 63.25,
+      "rawTime": 63.25,
+      "accuracy": 100,
+      "cpm": 9
+    }
+  ],
+  "w6_hw3": [
+    {
+      "cls": "P4A",
+      "num": 22,
+      "name": "P4A 22號",
+      "time": 45.5,
+      "bestTime": 45.5,
+      "best10": 45.5,
+      "rawTime": 45.5,
+      "accuracy": 100,
+      "cpm": 13
+    }
+  ],
+  "overall": [
+    {
+      "cls": "P4A",
+      "num": 27,
+      "name": "P4A 27號",
+      "time": 12.09,
+      "bestTime": 12.09,
+      "best10": 12.09,
+      "rawTime": 12.09,
+      "accuracy": 100,
+      "cpm": 50
+    },
+    {
+      "cls": "P4A",
+      "num": 1,
+      "name": "P4A 01號",
+      "time": 13.06,
+      "bestTime": 13.06,
+      "best10": 13.06,
+      "rawTime": 13.06,
+      "accuracy": 100,
+      "cpm": 46
+    },
+    {
+      "cls": "P4A",
+      "num": 2,
+      "name": "P4A 02號",
+      "time": 14.85,
+      "bestTime": 14.85,
+      "best10": 14.85,
+      "rawTime": 14.85,
+      "accuracy": 100,
+      "cpm": 40
+    },
+    {
+      "cls": "P4A",
+      "num": 22,
+      "name": "P4A 22號",
+      "time": 17.16,
+      "bestTime": 17.16,
+      "best10": 17.16,
+      "rawTime": 17.16,
+      "accuracy": 100,
+      "cpm": 35
+    },
+    {
+      "cls": "P4B",
+      "num": 35,
+      "name": "P4B 35號",
+      "time": 33.59,
+      "bestTime": 33.59,
+      "best10": 33.59,
+      "rawTime": 33.59,
+      "accuracy": 100,
+      "cpm": 18
+    },
+    {
+      "cls": "P4C",
+      "num": 31,
+      "name": "P4C 31號",
+      "time": 34.29,
+      "bestTime": 34.29,
+      "best10": 34.29,
+      "rawTime": 34.29,
+      "accuracy": 100,
+      "cpm": 17
+    },
+    {
+      "cls": "P4A",
+      "num": 21,
+      "name": "P4A 21號",
+      "time": 40.61,
+      "bestTime": 40.61,
+      "best10": 40.61,
+      "rawTime": 40.61,
+      "accuracy": 100,
+      "cpm": 15
+    },
+    {
+      "cls": "P4C",
+      "num": 9,
+      "name": "P4C 09號",
+      "time": 44.61,
+      "bestTime": 44.61,
+      "best10": 44.61,
+      "rawTime": 44.61,
+      "accuracy": 100,
+      "cpm": 13
+    },
+    {
+      "cls": "P4B",
+      "num": 26,
+      "name": "P4B 26號",
+      "time": 46.52,
+      "bestTime": 46.52,
+      "best10": 46.52,
+      "rawTime": 46.52,
+      "accuracy": 100,
+      "cpm": 13
+    },
+    {
+      "cls": "P4B",
+      "num": 16,
+      "name": "P4B 16號",
+      "time": 49.63,
+      "bestTime": 49.63,
+      "best10": 49.63,
+      "rawTime": 49.63,
+      "accuracy": 100,
+      "cpm": 12
+    },
+    {
+      "cls": "P4A",
+      "num": 7,
+      "name": "P4A 07號",
+      "time": 66.21,
+      "bestTime": 66.21,
+      "best10": 66.21,
+      "rawTime": 66.21,
+      "accuracy": 100,
+      "cpm": 9
+    },
+    {
+      "cls": "P4A",
+      "num": 11,
+      "name": "P4A 11號",
+      "time": 75.58,
+      "bestTime": 75.58,
+      "best10": 75.58,
+      "rawTime": 75.58,
+      "accuracy": 100,
+      "cpm": 8
+    },
+    {
+      "cls": "P4B",
+      "num": 21,
+      "name": "P4B 21號",
+      "time": 78.41,
+      "bestTime": 78.41,
+      "best10": 78.41,
+      "rawTime": 78.41,
+      "accuracy": 100,
+      "cpm": 8
+    },
+    {
+      "cls": "P4B",
+      "num": 25,
+      "name": "P4B 25號",
+      "time": 84.75,
+      "bestTime": 84.75,
+      "best10": 84.75,
+      "rawTime": 84.75,
+      "accuracy": 100,
+      "cpm": 7
+    },
+    {
+      "cls": "P4A",
+      "num": 32,
+      "name": "P4A 32號",
+      "time": 86.84,
+      "bestTime": 86.84,
+      "best10": 86.84,
+      "rawTime": 86.84,
+      "accuracy": 100,
+      "cpm": 7
+    },
+    {
+      "cls": "P4A",
+      "num": 19,
+      "name": "P4A 19號",
+      "time": 98.0,
+      "bestTime": 98.0,
+      "best10": 98.0,
+      "rawTime": 98.0,
+      "accuracy": 100,
+      "cpm": 6
+    },
+    {
+      "cls": "P4A",
+      "num": 33,
+      "name": "P4A 33號",
+      "time": 102.14,
+      "bestTime": 102.14,
+      "best10": 102.14,
+      "rawTime": 102.14,
+      "accuracy": 100,
+      "cpm": 6
+    },
+    {
+      "cls": "P4C",
+      "num": 13,
+      "name": "P4C 13號",
+      "time": 111.24,
+      "bestTime": 111.24,
+      "best10": 111.24,
+      "rawTime": 111.24,
+      "accuracy": 100,
+      "cpm": 5
+    },
+    {
+      "cls": "P4B",
+      "num": 20,
+      "name": "P4B 20號",
+      "time": 122.88,
+      "bestTime": 122.88,
+      "best10": 122.88,
+      "rawTime": 122.88,
+      "accuracy": 100,
+      "cpm": 5
+    },
+    {
+      "cls": "P4A",
+      "num": 29,
+      "name": "P4A 29號",
+      "time": 231.07,
+      "bestTime": 231.07,
+      "best10": 231.07,
+      "rawTime": 231.07,
+      "accuracy": 100,
+      "cpm": 3
+    },
+    {
+      "cls": "P4A",
+      "num": 16,
+      "name": "P4A 16號",
+      "time": 251.95,
+      "bestTime": 251.95,
+      "best10": 251.95,
+      "rawTime": 251.95,
+      "accuracy": 100,
+      "cpm": 2
+    }
+  ]
+},
   "top40": [
     {
       "cls": "P4D",
