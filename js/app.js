@@ -221,6 +221,8 @@ async function fetchCloudLeaderboard(silent = false) {
       // 僅在雲端明確提供 homeworkTop40 時才更新 DATA.top40，嚴禁使用 combatLeaderboard 覆蓋
       if (Array.isArray(data.homeworkTop40) && data.homeworkTop40.length > 0) {
         DATA.top40 = data.homeworkTop40;
+      } else if (Array.isArray(data.top40) && data.top40.length > 0) {
+        DATA.top40 = data.top40;
       }
       if (data.class_top10) DATA.class_top10 = data.class_top10;
       if (data.perfect_students) DATA.perfect_students = data.perfect_students;
