@@ -4422,13 +4422,13 @@ function initLoginDropdowns() {
         document.getElementById('game-prompt').textContent = '在下方野生原野區，捕捉正確的【首碼】與【尾碼】能量球！';
         document.getElementById('game-prompt').style.color = '#64748B';
 
-        const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+        const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
         const activeWords = getActiveWeekWords();
         const randIdx = Math.floor(Math.random() * activeWords.length);
         currentQuiz = activeWords[randIdx];
         document.getElementById('target-char').textContent = currentQuiz.char;
         const wkNumStr = activeWk.replace('w', '');
-        document.getElementById('target-sub-hint').textContent = `【第 ${wkNumStr} 周速成字根拆碼】 難度：★★★`;
+        document.getElementById('target-sub-hint').textContent = `【第 11 周速成字根拆碼 · 全周次平權均等題庫】 難度：★★★`;
 
         function getLetterInfo(code) {
           return DATA.cangjie_clean_letters.find(l => l.code === code) || { code, key: '', aux: '' };
@@ -4457,7 +4457,7 @@ function initLoginDropdowns() {
         // 模式 2：輔助字型大抓寶 (速成主字母 -> 找出對應輔助字型，隨機 1-3 個選項答案)
         document.getElementById('monster-icon').textContent = '🔮';
 
-        const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+        const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
         const activeWords = getActiveWeekWords();
         const activeRadicals = new Set();
         activeWords.forEach(w => {
@@ -4574,7 +4574,7 @@ function initLoginDropdowns() {
         slotLast.style.display = 'none';
         if (slotThird) slotThird.style.display = 'none';
 
-        const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+        const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
         const activeWords = getActiveWeekWords();
         const activeKeys = new Set();
         activeWords.forEach(w => {
@@ -5592,9 +5592,9 @@ function initLoginDropdowns() {
     
 
     
-    // 🌐 根據當前日期時間動態抽取當周字庫 (第 8 周) 與生字首尾碼
+    // 🌐 整合全學年歷屆周次與最新周次(w11)字庫，平權均等隨機抽取
     function getActiveWeekWords() {
-      const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+      const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
       let pool = [];
 
       const weekly = (typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS) 
@@ -5605,17 +5605,25 @@ function initLoginDropdowns() {
         ? window.CLOUD_WEEKLY_BANKS
         : (typeof CLOUD_WEEKLY_BANKS !== 'undefined' ? CLOUD_WEEKLY_BANKS : {});
 
-      // 1. 從當前週次（例如第8周 w8_hw1..4）抽取題目
-      for (let h = 1; h <= 4; h++) {
-        const k = `${activeWk}_hw${h}`;
-        if (weekly[k] && Array.isArray(weekly[k].words) && weekly[k].words.length > 0) {
-          pool = pool.concat(weekly[k].words);
-        } else if (cloud[k] && Array.isArray(cloud[k].words) && cloud[k].words.length > 0) {
-          pool = pool.concat(cloud[k].words);
-        } else if (typeof DATA !== 'undefined' && DATA[k] && Array.isArray(DATA[k].words)) {
-          pool = pool.concat(DATA[k].words);
+      // 1. 將所有可用週次（含最新周次 w11、當前 activeWk 及過往週次）全部納入題目池，生字出現率完全均等
+      Object.keys(weekly).forEach(k => {
+        if (weekly[k] && Array.isArray(weekly[k].words)) {
+          weekly[k].words.forEach(w => {
+            if (w && w.char && !pool.some(item => item.char === w.char)) {
+              pool.push(w);
+            }
+          });
         }
-      }
+      });
+      Object.keys(cloud).forEach(k => {
+        if (cloud[k] && Array.isArray(cloud[k].words)) {
+          cloud[k].words.forEach(w => {
+            if (w && w.char && !pool.some(item => item.char === w.char)) {
+              pool.push(w);
+            }
+          });
+        }
+      });
 
       // 2. 保底容錯：若當前週次題庫暫未載入，往前一個週次或全局題庫保底
       if (pool.length === 0 && typeof DATA !== 'undefined') {
@@ -5693,13 +5701,13 @@ function initLoginDropdowns() {
           }
         }
       }
-      return 'w10'; // 預設當前為第8周
+      return 'w11'; // 預設當前為第11周
     }
 
     function initSpeedWeekDropdown() {
       const select = document.getElementById('speed-ready-week-select');
       const lbSelect = document.getElementById('speed-lb-week-select');
-      const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+      const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
       const allBanks = (typeof MODE2_WEEKLY_BANKS === 'object' && MODE2_WEEKLY_BANKS) 
         ? MODE2_WEEKLY_BANKS 
         : ((typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS) ? window.MODE2_WEEKLY_BANKS : {});
@@ -5734,7 +5742,7 @@ function initLoginDropdowns() {
       if (!isTestUnlocked) {
         sortedWeeks = sortedWeeks.filter(wk => {
           const nw = parseInt(wk.replace('w', ''), 10) || 0;
-          if (nw <= 10 && nw !== 9) return true;
+          if (nw <= 40 && nw !== 9) return true;
           if (wk === activeWk) return true;
           const s = scheduleMap[wk];
           if (!s || !s.start) {
@@ -5896,7 +5904,7 @@ function initLoginDropdowns() {
       const allBanks = (typeof MODE2_WEEKLY_BANKS === "object" && MODE2_WEEKLY_BANKS) 
         ? MODE2_WEEKLY_BANKS 
         : ((typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS) ? window.MODE2_WEEKLY_BANKS : {});
-      const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w8';
+      const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
       const defaultKey = `${activeWk}_hw1`;
       const bank = allBanks[currentSpeedWeek] || allBanks[defaultKey] || allBanks["w8_hw1"] || allBanks["w7_hw1"] || Object.values(allBanks)[0] || { words: [] };
       const rawWords = (bank && Array.isArray(bank.words) && bank.words.length > 0) ? bank.words.map(w => {
