@@ -266,20 +266,9 @@ const P4_MASTER_QUICK_OVERRIDES = {
   },
   "沒": {
     "char": "沒",
-    "codes": [
-      "水",
-      "水"
-    ],
-    "keys": [
-      "E",
-      "E"
-    ],
-    "first_code": "水",
-    "last_code": "水",
-    "first_key": "E",
-    "last_key": "E",
+    "codes": ["水", "水"],
+    "keys": ["E", "E"],
     "full": "水水 (EE)",
-    "cj_full": "水弓水 (ENE)",
     "secret": "【沒】速成取碼：首碼【水】(E) ＋ 尾碼【水】(E)",
     "quickCode": "EE"
   },
@@ -1672,20 +1661,9 @@ const P4_MASTER_QUICK_OVERRIDES = {
   },
   "陣": {
     "char": "陣",
-    "codes": [
-      "弓",
-      "十"
-    ],
-    "keys": [
-      "N",
-      "J"
-    ],
-    "first_code": "弓",
-    "last_code": "十",
-    "first_key": "N",
-    "last_key": "J",
+    "codes": ["弓", "十"],
+    "keys": ["N", "J"],
     "full": "弓十 (NJ)",
-    "cj_full": "弓中十田十 (NLJWJ)",
     "secret": "【陣】速成取碼：首碼【弓】(N) ＋ 尾碼【十】(J)",
     "quickCode": "NJ"
   },
@@ -3988,20 +3966,9 @@ const P4_MASTER_QUICK_OVERRIDES = {
   },
   "行": {
     "char": "行",
-    "codes": [
-      "竹",
-      "弓"
-    ],
-    "keys": [
-      "H",
-      "N"
-    ],
-    "first_code": "竹",
-    "last_code": "弓",
-    "first_key": "H",
-    "last_key": "N",
+    "codes": ["竹", "弓"],
+    "keys": ["H", "N"],
     "full": "竹弓 (HN)",
-    "cj_full": "竹人一一弓 (HOMMN)",
     "secret": "【行】速成取碼：首碼【竹】(H) ＋ 尾碼【弓】(N)",
     "quickCode": "HN"
   },
@@ -7275,22 +7242,11 @@ const P4_MASTER_QUICK_OVERRIDES = {
   },
   "葉": {
     "char": "葉",
-    "codes": [
-      "心",
-      "木"
-    ],
-    "keys": [
-      "P",
-      "D"
-    ],
-    "first_code": "心",
-    "last_code": "木",
-    "first_key": "P",
-    "last_key": "D",
-    "full": "心木 (PD)",
-    "cj_full": "心廿木 (PTD)",
-    "secret": "【葉】速成取碼：首碼【心】(P) ＋ 尾碼【木】(D)",
-    "quickCode": "PD"
+    "codes": ["廿", "木"],
+    "keys": ["T", "D"],
+    "full": "廿木 (TD)",
+    "secret": "【葉】速成取碼：首碼【廿】(T) ＋ 尾碼【木】(D)",
+    "quickCode": "TD"
   },
   "泄": {
     "char": "泄",
@@ -7731,20 +7687,9 @@ const P4_MASTER_QUICK_OVERRIDES = {
   },
   "現": {
     "char": "現",
-    "codes": [
-      "一",
-      "山"
-    ],
-    "keys": [
-      "M",
-      "U"
-    ],
-    "first_code": "一",
-    "last_code": "山",
-    "first_key": "M",
-    "last_key": "U",
+    "codes": ["一", "山"],
+    "keys": ["M", "U"],
     "full": "一山 (MU)",
-    "cj_full": "一土一月山 (MGMBU)",
     "secret": "【現】速成取碼：首碼【一】(M) ＋ 尾碼【山】(U)",
     "quickCode": "MU"
   },
@@ -14390,20 +14335,9 @@ const P4_MASTER_QUICK_OVERRIDES = {
   },
   "感": {
     "char": "感",
-    "codes": [
-      "戈",
-      "心"
-    ],
-    "keys": [
-      "I",
-      "P"
-    ],
-    "first_code": "戈",
-    "last_code": "心",
-    "first_key": "I",
-    "last_key": "P",
+    "codes": ["戈", "心"],
+    "keys": ["I", "P"],
     "full": "戈心 (IP)",
-    "cj_full": "戈口心 (IRP)",
     "secret": "【感】速成取碼：首碼【戈】(I) ＋ 尾碼【心】(P)",
     "quickCode": "IP"
   },
@@ -15321,22 +15255,11 @@ const P4_MASTER_QUICK_OVERRIDES = {
   },
   "禮": {
     "char": "禮",
-    "codes": [
-      "戈",
-      "田"
-    ],
-    "keys": [
-      "I",
-      "W"
-    ],
-    "first_code": "戈",
-    "last_code": "田",
-    "first_key": "I",
-    "last_key": "W",
-    "full": "戈田 (IW)",
-    "cj_full": "戈火廿田 (IFTW)",
-    "secret": "【禮】速成取碼：首碼【戈】(I) ＋ 尾碼【田】(W)",
-    "quickCode": "IW"
+    "codes": ["戈", "廿"],
+    "keys": ["I", "T"],
+    "full": "戈廿 (IT)",
+    "secret": "【禮】速成取碼：首碼【戈】(I) ＋ 尾碼【廿】(T)",
+    "quickCode": "IT"
   },
   "程": {
     "char": "程",
@@ -16937,64 +16860,22 @@ function evalTierAndSkills(score) {
     }
   }
   const unlockedSkills = SKILLS.filter(s => score >= s.reqPts);
-  return { currentTier, nextTier, unlockedSkills };
-}
-
-/**
- * 手速賽秒數段位評定
- */
-function getSpeedTier(sec, wordCount) {
-  const multiplier = (wordCount === 20) ? 2.0 : 1.0;
-  if (sec <= 12.0 * multiplier) return '⚡ 神速天王';
-  if (sec <= 16.0 * multiplier) return '👑 鍵盤宗師';
-  if (sec <= 22.0 * multiplier) return '🔥 疾風射手';
-  if (sec <= 30.0 * multiplier) return '💎 靈動遊俠';
-  if (sec <= 42.0 * multiplier) return '🥇 穩健獵人';
-  if (sec <= 60.0 * multiplier) return '🥈 見習學徒';
-  return '🥉 新手訓練家';
-}
-
-/**
- * 懸浮提示框 (Toast)
- */
-function showPassToast(msg) {
-  try {
-    let t = document.getElementById('pass-toast-banner');
-    if (!t) {
-      t = document.createElement('div');
-      t.id = 'pass-toast-banner';
-      t.style.cssText = 'position:fixed; bottom:28px; left:50%; transform:translateX(-50%); background:#0F172A; color:#F8FAFC; border:1.5px solid #38BDF8; padding:10px 22px; border-radius:30px; font-weight:800; font-size:13.5px; z-index:999999; box-shadow:0 6px 18px rgba(0,0,0,0.3); transition:all 0.25s ease; opacity:0; pointer-events:none;';
-      document.body.appendChild(t);
-    }
-    t.textContent = msg;
-    t.style.opacity = '1';
-    t.style.transform = 'translateX(-50%) translateY(0)';
-    if (window._passToastTimer) clearTimeout(window._passToastTimer);
-    window._passToastTimer = setTimeout(() => {
-      if (t) {
-        t.style.opacity = '0';
-        t.style.transform = 'translateX(-50%) translateY(10px)';
-      }
-    }, 2200);
-  } catch(e) {
-    console.log('[Toast]', msg);
+  return { currentTier, nextTier, unlockedSkills   ,
+  "開": {
+    "char": "開",
+    "codes": ["日", "廿"],
+    "keys": ["A", "T"],
+    "full": "日廿 (AT)",
+    "secret": "【開】速成取碼：首碼【日】(A) ＋ 尾碼【廿】(T)",
+    "quickCode": "AT"
   }
-}
-if (typeof window !== 'undefined') {
-  window.evalTierAndSkills = evalTierAndSkills;
-  window.fisherYatesShuffle = fisherYatesShuffle;
-  window.autoDeriveWordKeys = autoDeriveWordKeys;
-  window.getSpeedTier = getSpeedTier;
-  window.showPassToast = showPassToast;
-  window.CANGJIE_RADICAL_MAP = CANGJIE_RADICAL_MAP;
-  window.P4_MASTER_QUICK_OVERRIDES = P4_MASTER_QUICK_OVERRIDES;
-}
-if (typeof global !== 'undefined') {
-  global.evalTierAndSkills = evalTierAndSkills;
-  global.fisherYatesShuffle = fisherYatesShuffle;
-  global.autoDeriveWordKeys = autoDeriveWordKeys;
-  global.getSpeedTier = getSpeedTier;
-  global.showPassToast = showPassToast;
-  global.CANGJIE_RADICAL_MAP = CANGJIE_RADICAL_MAP;
-  global.P4_MASTER_QUICK_OVERRIDES = P4_MASTER_QUICK_OVERRIDES;
-}
+  ,
+  "於": {
+    "char": "於",
+    "codes": ["卜", "卜"],
+    "keys": ["Y", "Y"],
+    "full": "卜卜 (YY)",
+    "secret": "【於】速成取碼：首碼【卜】(Y) ＋ 尾碼【卜】(Y)",
+    "quickCode": "YY"
+  }
+};
