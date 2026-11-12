@@ -1033,8 +1033,14 @@ const ThunderboltSFX = (function() {
       // 📖 動態更新常駐計分說明橫條 (主線全解 vs 未全解狀態即時響應)
       const bannerEl = document.getElementById('scoring-note-banner');
       if (bannerEl && typeof P4Mode !== 'undefined') {
+        const isStudentNormallyUnlocked = P4Mode.isMainLineFullyUnlocked(cls, num, false);
         const isAllUnlocked = P4Mode.isMainLineFullyUnlocked(cls, num, isTeacher);
-        if (isTeacher) {
+        if (isStudentNormallyUnlocked) {
+          bannerEl.style.background = '#ECFDF5';
+          bannerEl.style.borderColor = '#A7F3D0';
+          bannerEl.style.color = '#065F46';
+          bannerEl.innerHTML = `🎉 <strong>主線全解鎖特權已啟動！</strong>第 4 站【逃出恐怖屋】(基礎分×1.2) 全面解除限制，按原設定正常無限獲取積分！其他前置站次維持每日防刷分規則。`;
+        } else if (isTeacher) {
           bannerEl.style.background = '#ECFDF5';
           bannerEl.style.borderColor = '#10B981';
           bannerEl.style.color = '#065F46';
@@ -1209,6 +1215,8 @@ function initLoginDropdowns() {
 
     // 4. 確認並開始遊戲
     function confirmAndStartGame() {
+      isTeacherMode = false;
+      if (typeof window !== "undefined") window.isTeacherMode = false;
       closeModal('modal-confirm');
       const cls = document.getElementById('login-class-select').value;
       const num = parseInt(document.getElementById('login-num-select').value);
@@ -1231,6 +1239,8 @@ function initLoginDropdowns() {
 
     // 5. 切換身份
     function switchIdentity() {
+      isTeacherMode = false;
+      if (typeof window !== "undefined") window.isTeacherMode = false;
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
       currentStudent = null;
       SafeStorage.removeItem('p4_active_student');
