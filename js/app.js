@@ -6754,21 +6754,6 @@ if (typeof global !== 'undefined') {
         }
       }, true);
 
-      // 方式二（原方式三）：連續點擊 3 下「📖 計分規則」橫幅 (#scoring-note-banner)
-      let bannerClickCount = 0;
-      let bannerClickTimer = null;
-      document.addEventListener("click", function(e) {
-        const target = e.target;
-        if (target && target.closest && target.closest("#scoring-note-banner")) {
-          bannerClickCount++;
-          if (bannerClickTimer) clearTimeout(bannerClickTimer);
-          if (bannerClickCount >= 3) {
-            bannerClickCount = 0;
-            toggleTeacherUnlockMode();
-          } else {
-            bannerClickTimer = setTimeout(() => { bannerClickCount = 0; }, 700);
-          }
-        }
-      }, true);
+      // 🛡️ 已移除點擊「計分規則」橫幅 3 下觸發教師特權之機制，杜絕學生誤觸顯示【教師測試特權已啟動】
     }
 
