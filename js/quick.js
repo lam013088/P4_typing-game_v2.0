@@ -16799,6 +16799,44 @@ const P4_MASTER_QUICK_OVERRIDES = {
     "cj_full": "田火卜口 (WFYR)",
     "secret": "【點】速成取碼：首碼【田】(W) ＋ 尾碼【口】(R)",
     "quickCode": "WR"
+  },
+  "開": {
+    "char": "開",
+    "codes": [
+      "日",
+      "廿"
+    ],
+    "keys": [
+      "A",
+      "T"
+    ],
+    "first_code": "日",
+    "last_code": "廿",
+    "first_key": "A",
+    "last_key": "T",
+    "full": "日廿 (AT)",
+    "cj_full": "日弓一廿 (ANMT)",
+    "secret": "【開】速成取碼：首碼【日】(A) ＋ 尾碼【廿】(T)",
+    "quickCode": "AT"
+  },
+  "於": {
+    "char": "於",
+    "codes": [
+      "卜",
+      "卜"
+    ],
+    "keys": [
+      "Y",
+      "Y"
+    ],
+    "first_code": "卜",
+    "last_code": "卜",
+    "first_key": "Y",
+    "last_key": "Y",
+    "full": "卜卜 (YY)",
+    "cj_full": "卜尸人卜 (YSOY)",
+    "secret": "【於】速成取碼：首碼【卜】(Y) ＋ 尾碼【卜】(Y)",
+    "quickCode": "YY"
   }
 };
 
@@ -16860,22 +16898,5 @@ function evalTierAndSkills(score) {
     }
   }
   const unlockedSkills = SKILLS.filter(s => score >= s.reqPts);
-  return { currentTier, nextTier, unlockedSkills   ,
-  "開": {
-    "char": "開",
-    "codes": ["日", "廿"],
-    "keys": ["A", "T"],
-    "full": "日廿 (AT)",
-    "secret": "【開】速成取碼：首碼【日】(A) ＋ 尾碼【廿】(T)",
-    "quickCode": "AT"
-  }
-  ,
-  "於": {
-    "char": "於",
-    "codes": ["卜", "卜"],
-    "keys": ["Y", "Y"],
-    "full": "卜卜 (YY)",
-    "secret": "【於】速成取碼：首碼【卜】(Y) ＋ 尾碼【卜】(Y)",
-    "quickCode": "YY"
-  }
-};
+  return { currentTier, nextTier, unlockedSkills };
+}
