@@ -80,12 +80,12 @@
     </div>
 
     <h1 class="title">⚡ 四年級打字大師聯賽 · <span>寶可夢榮譽殿堂</span> 🏆</h1>
-    <p class="subtitle">2026/2027學年 資訊科技科 · 第 8 周速成打字積分榮譽盛典</p>
+    <p class="subtitle" id="subtitle-week-text">2026/2027學年 資訊科技科 · 第 11 周速成打字積分榮譽盛典</p>
     
     <div class="stats-bar">
-      <div class="stat-pill">🎉 滿分訓練家：<strong>102 位同學獲得 400 分！</strong></div>
-      <div class="stat-pill">⭐ 全級平均分：<strong>87.9 分</strong></div>
-      <div class="stat-pill">⚡ 速度神捕：<strong>P4D 19號</strong> (10/20 15:06 率先交齊)</div>
+      <div class="stat-pill" id="stat-perfect-pill">🎉 滿分訓練家：<strong>122 位同學獲得 400 分！</strong></div>
+      <div class="stat-pill" id="stat-avg-pill">⭐ 全級平均分：<strong>91.1 分</strong></div>
+      <div class="stat-pill" id="stat-pioneer-pill">⚡ 速度神捕：<strong>P4F 33號</strong> (11/09 13:24 率先交齊)</div>
     </div>
   </header>
 
@@ -94,7 +94,7 @@
     <div class="tab-bar">
       <button class="tab-btn active" onclick="switchTab('top40')">🏆 全級前40名龍虎榜</button>
       <button class="tab-btn" onclick="switchTab('class')">🌟 各班前10名榮譽榜</button>
-      <button class="tab-btn" onclick="switchTab('perfect')">🎉 400分滿分星光榜 (100人)</button>
+      <button class="tab-btn" id="tab-btn-perfect" onclick="switchTab('perfect')">🎉 400分滿分星光榜 (122人)</button>
       <button class="tab-btn" onclick="switchTab('game')">🎮 討伐錯字魔王 (速成小遊戲)</button>
       <button class="tab-btn" onclick="switchTab('vocab')">📖 Top 12 錯字寶典</button>
     </div>
@@ -141,7 +141,7 @@
     <!-- TAB 3: 400分滿分星光榜 (全員展示) -->
     <div class="tab-panel" id="panel-perfect">
       <div style="background: #FEF3C7; border: 2px solid #FACC15; border-radius: 16px; padding: 14px 20px; margin-bottom: 20px; text-align: center;">
-        <h3 style="color: #B45309; font-size: 16px; font-weight: 900; margin-bottom: 4px;">🌟 102 位 400 分大滿貫寶可夢訓練家全員在此！</h3>
+        <h3 id="perfect-banner-title" style="color: #B45309; font-size: 16px; font-weight: 900; margin-bottom: 4px;">🌟 122 位 400 分大滿貫寶可夢訓練家全員在此！</h3>
         <p style="font-size: 13px; color: #78350F;">每一位全力以赴達成滿分的同學，都是最具毅力的大師！✨</p>
       </div>
       <!-- 各班400分滿分人數分佈 統計棒形圖 -->
@@ -621,7 +621,7 @@
 
               <div style="display: flex; align-items: center; gap: 8px;">
                 <span id="speed-active-badge-tag" style="background: #1E293B; color: #38BDF8; border: 1.5px solid #0284C7; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 800;">
-                  ⚡ 10 字賽 · 第 3 周
+                  ⚡ 10 字賽 · 第 12 周
                 </span>
                 <button onclick="abortSpeedMatchToReady()" style="background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; border-radius: 8px; padding: 4px 10px; font-size: 11px; font-weight: 800; cursor: pointer;">
                   ✕ 放棄重來
@@ -936,7 +936,7 @@
 <div class="tab-panel" id="panel-vocab">
       <div style="margin-bottom: 15px;">
         <h3 style="color: #1E3A8A; font-size: 17px; font-weight: 900; margin-bottom: 4px;">📊 全級高頻常錯字 Top 12 排行與拆碼診斷</h3>
-        <p style="font-size: 13px; color: #64748B;">統計四年級全級學生在練習中最常錯的 12 個字，提供精準拆碼口訣與防錯指南！</p>
+        <p id="vocab-subtitle" style="font-size: 13px; color: #64748B;">依據第 11 周打字作業大數據統計之高頻易錯字 Top 12，提供精準拆碼口訣與防錯指南！</p>
       </div>
       <table class="ref-table" id="vocab-table">
         <thead>
