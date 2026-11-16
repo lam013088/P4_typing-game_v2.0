@@ -283,44 +283,7 @@ async function fetchCloudLeaderboard(silent = false) {
       if (data.perfect_students) DATA.perfect_students = data.perfect_students;
       updateDynamicHonorRollHeader(data);
 
-      if (data.weeklyBanks && typeof data.weeklyBanks === 'object' && Object.keys(data.weeklyBanks).length > 0) {
-        const builtinBanks = (typeof MODE2_WEEKLY_BANKS !== 'undefined' && MODE2_WEEKLY_BANKS) ? MODE2_WEEKLY_BANKS : (window.MODE2_WEEKLY_BANKS || {});
-        const liveWordBank = (typeof window !== 'undefined' && window.P4WordBank && window.P4WordBank.isLoaded && window.MODE2_WEEKLY_BANKS) ? window.MODE2_WEEKLY_BANKS : {};
-        const mergedCloudBanks = Object.assign({}, builtinBanks, data.weeklyBanks, liveWordBank);
-        Object.keys(builtinBanks).forEach(k => {
-          const cloudBank = data.weeklyBanks[k];
-          if (!cloudBank || !Array.isArray(cloudBank.words) || cloudBank.words.length === 0) {
-            mergedCloudBanks[k] = builtinBanks[k];
-          } else if (!cloudBank.title && builtinBanks[k] && builtinBanks[k].title) {
-            mergedCloudBanks[k] = Object.assign({}, cloudBank, { title: builtinBanks[k].title });
-          }
-        });
-        window.MODE2_WEEKLY_BANKS = mergedCloudBanks;
-            // 🛡️ 權威校本防護：防止雲端 Webhook 快取殘留或舊部署覆蓋導致字碼偏差
-            Object.values(window.MODE2_WEEKLY_BANKS).forEach(b => {
-              if (b && Array.isArray(b.words)) {
-                b.words.forEach(w => {
-                  if (w && w.char === '機') {
-                    w.codes = ['木', '戈'];
-                    w.keys = ['D', 'I'];
-                    w.full = '木戈 (DI)';
-                    w.cj_full = '木女戈戈 (DVII)';
-                    w.secret = '速成首碼【木】(D) ＋ 尾碼【戈】(I)';
-                  }
-                });
-              }
-            });
-        if (typeof initSpeedWeekDropdown === 'function') {
-          try { initSpeedWeekDropdown(); } catch(e) {}
-        }
-        Object.values(window.MODE2_WEEKLY_BANKS).forEach(b => {
-          if (b && Array.isArray(b.words)) {
-            b.words.forEach(w => {
-              if (typeof autoDeriveWordKeys === 'function') autoDeriveWordKeys(w);
-            });
-          }
-        });
-      }
+      // 職責分離：字庫僅由 word-bank.js（對接《2026每周打字字庫表》）單一通道載入，成績 Webhook 不再覆寫題庫
 
       renderLeaderboardTable();
       renderSpeedLeaderboardTable();
