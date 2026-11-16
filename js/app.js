@@ -285,7 +285,8 @@ async function fetchCloudLeaderboard(silent = false) {
 
       if (data.weeklyBanks && typeof data.weeklyBanks === 'object' && Object.keys(data.weeklyBanks).length > 0) {
         const builtinBanks = (typeof MODE2_WEEKLY_BANKS !== 'undefined' && MODE2_WEEKLY_BANKS) ? MODE2_WEEKLY_BANKS : (window.MODE2_WEEKLY_BANKS || {});
-        const mergedCloudBanks = Object.assign({}, builtinBanks, data.weeklyBanks);
+        const liveWordBank = (typeof window !== 'undefined' && window.P4WordBank && window.P4WordBank.isLoaded && window.MODE2_WEEKLY_BANKS) ? window.MODE2_WEEKLY_BANKS : {};
+        const mergedCloudBanks = Object.assign({}, builtinBanks, data.weeklyBanks, liveWordBank);
         Object.keys(builtinBanks).forEach(k => {
           const cloudBank = data.weeklyBanks[k];
           if (!cloudBank || !Array.isArray(cloudBank.words) || cloudBank.words.length === 0) {
