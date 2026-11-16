@@ -5,6 +5,8 @@ function updateDynamicHonorRollHeader(data) {
     var weekLabel = (stats && stats.week) ? stats.week : ((data && data.honorRollWeek) ? data.honorRollWeek : '');
     if (weekLabel) {
       var subEl = document.getElementById('subtitle-week-text');
+      var vSub = document.getElementById('vocab-subtitle');
+      if (vSub) vSub.textContent = '依據' + weekLabel + '打字作業大數據統計之高頻易錯字 Top 12，提供精準拆碼口訣與防錯指南！';
       if (subEl) subEl.textContent = '2026/2027學年 資訊科技科 · ' + weekLabel + '速成打字積分榮譽盛典';
     }
     var perfObj = (data && data.perfect_students) ? data.perfect_students : (DATA && DATA.perfect_students);
@@ -262,7 +264,22 @@ async function fetchCloudLeaderboard(silent = false) {
       } else if (Array.isArray(data.top40) && data.top40.length > 0) {
         DATA.top40 = data.top40;
       }
-      if (data.class_top10) DATA.class_top10 = data.class_top10;
+      if (Array.isArray(DATA.top40)) {
+        DATA.top40 = DATA.top40.map(s => Object.assign({}, s, { cls: s.cls || s.class || '', num: s.num !== undefined ? s.num : s.seat }));
+      }
+      if (data.class_top10) {
+        Object.keys(data.class_top10).forEach(ck => {
+          if (Array.isArray(data.class_top10[ck])) {
+            data.class_top10[ck] = data.class_top10[ck].map(s => Object.assign({}, s, { cls: s.cls || s.class || ck, num: s.num !== undefined ? s.num : s.seat }));
+          }
+        });
+        DATA.class_top10 = data.class_top10;
+      }
+      if (Array.isArray(data.top12_errors) && data.top12_errors.length > 0) {
+        DATA.top12_errors = data.top12_errors;
+        DATA.cangjie_words = data.top12_errors;
+        try { renderVocabTable(); } catch(e) {}
+      }
       if (data.perfect_students) DATA.perfect_students = data.perfect_students;
       updateDynamicHonorRollHeader(data);
 
@@ -744,7 +761,7 @@ const ThunderboltSFX = (function() {
 
       // 1. 各班入選前 40 名人數分佈統計
       const top40Counts = {};
-      DATA.top40.forEach(s => top40Counts[s.cls] = (top40Counts[s.cls] || 0) + 1);
+      DATA.top40.forEach(s => { const c = s.cls || s.class || ""; if (c) top40Counts[c] = (top40Counts[c] || 0) + 1; });
       let maxTop40 = 1;
       classes.forEach(c => {
         if ((top40Counts[c] || 0) > maxTop40) maxTop40 = top40Counts[c];
@@ -834,7 +851,7 @@ const ThunderboltSFX = (function() {
         const pm = restPool[idx % restPool.length];
         const isElite = (s.rank >= 4 && s.rank <= 10);
         return `
-          <div class="rank-card ${isElite ? 'rank-card-elite-flash' : ''}" data-student="${s.cls}-${s.num}-${s.name}">
+          <div class="rank-card ${isElite ? 'rank-card-elite-flash' : ''}" data-student="${s.cls || s.class}-${s.num !== undefined ? s.num : s.seat}-${s.name}">
             <div class="rank-left">
               <div class="rank-poke-avatar" style="background:${pm.color}; border-color:${pm.border};" title="${pm.name}">
                 <img class="rank-poke-img" src="${pm.img}" alt="${pm.name}" onerror="handleRankImgError(this, '${pm.icon || '⚡'}')">
@@ -844,7 +861,7 @@ const ThunderboltSFX = (function() {
                   #${s.rank} ${s.name} <span class="st-poke-tag">${pm.name}</span>
                   ${isElite ? '<span class="badge-elite-top10">✨ TOP 10 菁英</span>' : ''}
                 </div>
-                <div class="st-class">${s.cls} · ${s.num}號 · 夥伴：${pm.name} (${pm.tag})</div>
+                <div class="st-class">${s.cls || s.class} · ${s.num !== undefined ? s.num : s.seat}號 · 夥伴：${pm.name} (${pm.tag})</div>
               </div>
             </div>
             <div class="rank-right">
@@ -897,7 +914,7 @@ const ThunderboltSFX = (function() {
         }
 
         return `
-          <div class="${cardClass}" data-student="${currentClass}-${s.num}-${s.name}">
+          <div class="${cardClass}" data-student="${currentClass}-${s.num !== undefined ? s.num : s.seat}-${s.name}">
             <div class="rank-left">
               <div class="rank-poke-avatar" style="background:${pm.color}; border-color:${pm.border};" title="${pm.name}">
                 <img class="rank-poke-img" src="${pm.img}" alt="${pm.name}" onerror="handleRankImgError(this, '${pm.icon || '⚡'}')">
@@ -907,7 +924,7 @@ const ThunderboltSFX = (function() {
                   ${medal}#${s.rank} ${s.name} <span class="st-poke-tag">${pm.name}</span>
                   ${honorBadge}
                 </div>
-                <div class="st-class">${currentClass} · ${s.num}號 · 夥伴：${pm.name} (${pm.tag})</div>
+                <div class="st-class">${currentClass} · ${s.num !== undefined ? s.num : s.seat}號 · 夥伴：${pm.name} (${pm.tag})</div>
               </div>
             </div>
             <div class="rank-right">
@@ -956,7 +973,9 @@ const ThunderboltSFX = (function() {
     // Render Tab 5: Vocab Table
     function renderVocabTable() {
       const tbody = document.getElementById('vocab-tbody');
-      tbody.innerHTML = DATA.cangjie_words.map((w, idx) => `
+      if (!tbody) return;
+      const list = (Array.isArray(DATA.top12_errors) && DATA.top12_errors.length > 0) ? DATA.top12_errors : (Array.isArray(DATA.cangjie_words) ? DATA.cangjie_words : []);
+      tbody.innerHTML = list.map((w, idx) => `
         <tr>
           <td style="font-weight: 800; color: #1E3A8A;">第 ${idx + 1} 名</td>
           <td style="font-size: 22px; font-weight: 900; color: #DC2626;">${w.char}</td>
@@ -4474,7 +4493,9 @@ function initLoginDropdowns() {
         document.getElementById('game-prompt').textContent = '在下方野生原野區，捕捉正確的【首碼】與【尾碼】能量球！';
         document.getElementById('game-prompt').style.color = '#64748B';
 
-        const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
+        const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w12';
+      const badgeTag = document.getElementById('speed-active-badge-tag');
+      if (badgeTag) badgeTag.textContent = `⚡ ${currentSpeedWordCount || 10} 字賽 · 第 ${activeWk.replace('w', '')} 周`;
         const activeWords = getActiveWeekWords();
         const randIdx = Math.floor(Math.random() * activeWords.length);
         currentQuiz = activeWords[randIdx];
@@ -5733,10 +5754,24 @@ function initLoginDropdowns() {
         }
       } catch (e) {}
 
+      if (typeof window !== 'undefined' && window.DYNAMIC_ACTIVE_WEEK) {
+        return window.DYNAMIC_ACTIVE_WEEK;
+      }
       const now = new Date();
-      const schedules = (typeof SPEED_WEEK_SCHEDULES !== 'undefined' && Array.isArray(SPEED_WEEK_SCHEDULES)) 
+      let schedules = (typeof SPEED_WEEK_SCHEDULES !== 'undefined' && Array.isArray(SPEED_WEEK_SCHEDULES) && SPEED_WEEK_SCHEDULES.length > 0) 
         ? SPEED_WEEK_SCHEDULES 
-        : (typeof CONFIG !== 'undefined' && CONFIG.SPEED_WEEK_SCHEDULES ? CONFIG.SPEED_WEEK_SCHEDULES : []);
+        : (typeof CONFIG !== 'undefined' && Array.isArray(CONFIG.SPEED_WEEK_SCHEDULES) ? CONFIG.SPEED_WEEK_SCHEDULES : []);
+      if (!schedules || schedules.length === 0) {
+        schedules = [
+          { week: 'w10', start: '2026-11-02T08:00:00+08:00', end: '2026-11-08T23:30:00+08:00' },
+          { week: 'w11', start: '2026-11-09T08:00:00+08:00', end: '2026-11-15T23:30:00+08:00' }
+        ];
+        const baseM = new Date('2026-11-16T08:00:00+08:00').getTime();
+        for (let wk = 12; wk <= 40; wk++) {
+          const sMs = baseM + (wk - 12) * 7 * 86400000;
+          schedules.push({ week: 'w' + wk, start: new Date(sMs).toISOString(), end: new Date(sMs + 6 * 86400000 + 55800000).toISOString() });
+        }
+      }
 
       for (const s of schedules) {
         const sStart = s.start ? new Date(s.start) : null;
@@ -5808,7 +5843,7 @@ function initLoginDropdowns() {
 
       // 2. 動態建構手速大廳選單 #speed-ready-week-select
       if (select) {
-        const prevVal = select.value || currentSpeedWeek;
+        const prevVal = (window._userPickedSpeedWeek && select.value) ? select.value : "";
         select.innerHTML = '';
 
         sortedWeeks.forEach(wk => {
