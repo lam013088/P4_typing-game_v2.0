@@ -1,3 +1,41 @@
+
+function updateDynamicHonorRollHeader(data) {
+  try {
+    var stats = (data && data.honorRollStats) ? data.honorRollStats : null;
+    var weekLabel = (stats && stats.week) ? stats.week : ((data && data.honorRollWeek) ? data.honorRollWeek : '');
+    if (weekLabel) {
+      var subEl = document.getElementById('subtitle-week-text');
+      if (subEl) subEl.textContent = '2026/2027學年 資訊科技科 · ' + weekLabel + '速成打字積分榮譽盛典';
+    }
+    var perfObj = (data && data.perfect_students) ? data.perfect_students : (DATA && DATA.perfect_students);
+    var perfCount = (stats && stats.perfectCount) ? stats.perfectCount : 0;
+    if (!perfCount && perfObj) {
+      Object.keys(perfObj).forEach(function(k) {
+        if (Array.isArray(perfObj[k])) perfCount += perfObj[k].length;
+      });
+    }
+    if (perfCount > 0) {
+      var pPill = document.getElementById('stat-perfect-pill');
+      if (pPill) pPill.innerHTML = '🎉 滿分訓練家：<strong>' + perfCount + ' 位同學獲得 400 分！</strong>';
+      var tBtn = document.getElementById('tab-btn-perfect');
+      if (tBtn) tBtn.textContent = '🎉 400分滿分星光榜 (' + perfCount + '人)';
+      var pBanner = document.getElementById('perfect-banner-title');
+      if (pBanner) pBanner.textContent = '🌟 ' + perfCount + ' 位 400 分大滿貫寶可夢訓練家全員在此！';
+    }
+    if (stats && stats.avgScore) {
+      var aPill = document.getElementById('stat-avg-pill');
+      if (aPill) aPill.innerHTML = '⭐ 全級平均分：<strong>' + Number(stats.avgScore).toFixed(1) + ' 分</strong>';
+    }
+    var t40 = (DATA && Array.isArray(DATA.top40)) ? DATA.top40 : [];
+    var pioName = (stats && stats.speedPioneer) ? stats.speedPioneer : (t40[0] ? (t40[0].name || '') : '');
+    var pioTime = (stats && stats.speedPioneerTime) ? stats.speedPioneerTime : (t40[0] && t40[0].date ? (String(t40[0].date).slice(5, 16).replace('-', '/') + ' 率先交齊') : '');
+    if (pioName) {
+      var sPill = document.getElementById('stat-pioneer-pill');
+      if (sPill) sPill.innerHTML = '⚡ 速度神捕：<strong>' + pioName + '</strong>' + (pioTime ? ' (' + pioTime + ')' : '');
+    }
+  } catch (e) {}
+}
+
 var isTeacherMode = false;
 if (typeof window !== "undefined") window.isTeacherMode = false;
 if (typeof global !== "undefined") global.isTeacherMode = false;
@@ -226,15 +264,17 @@ async function fetchCloudLeaderboard(silent = false) {
       }
       if (data.class_top10) DATA.class_top10 = data.class_top10;
       if (data.perfect_students) DATA.perfect_students = data.perfect_students;
+      updateDynamicHonorRollHeader(data);
 
       if (data.weeklyBanks && typeof data.weeklyBanks === 'object' && Object.keys(data.weeklyBanks).length > 0) {
         const builtinBanks = (typeof MODE2_WEEKLY_BANKS !== 'undefined' && MODE2_WEEKLY_BANKS) ? MODE2_WEEKLY_BANKS : (window.MODE2_WEEKLY_BANKS || {});
-        const mergedCloudBanks = Object.assign({}, data.weeklyBanks, builtinBanks);
+        const mergedCloudBanks = Object.assign({}, builtinBanks, data.weeklyBanks);
         Object.keys(builtinBanks).forEach(k => {
-          if (k.startsWith('w8_') || k.startsWith('w10_')) {
+          const cloudBank = data.weeklyBanks[k];
+          if (!cloudBank || !Array.isArray(cloudBank.words) || cloudBank.words.length === 0) {
             mergedCloudBanks[k] = builtinBanks[k];
-          } else if (builtinBanks[k] && builtinBanks[k].title && mergedCloudBanks[k]) {
-            mergedCloudBanks[k].title = builtinBanks[k].title;
+          } else if (!cloudBank.title && builtinBanks[k] && builtinBanks[k].title) {
+            mergedCloudBanks[k] = Object.assign({}, cloudBank, { title: builtinBanks[k].title });
           }
         });
         window.MODE2_WEEKLY_BANKS = mergedCloudBanks;
