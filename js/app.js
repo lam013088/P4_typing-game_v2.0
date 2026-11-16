@@ -1748,13 +1748,21 @@ function initLoginDropdowns() {
             pool = pool.concat(cloud[key].words);
           }
         }
-        // 若當前週次題庫暫時未載入，嚴格保底從 MODE2_WEEKLY_BANKS 抽取當前開放周次 (w8)
-        if (pool.length === 0 && typeof MODE2_WEEKLY_BANKS !== 'undefined') {
-          for (let i = 1; i <= 4; i++) {
-            const k = `${qWk}_hw${i}`;
-            if (MODE2_WEEKLY_BANKS[k] && Array.isArray(MODE2_WEEKLY_BANKS[k].words)) {
-              pool = pool.concat(MODE2_WEEKLY_BANKS[k].words);
+        // 若當前週次題庫暫時未載入，依週次降序自動保底抽取最近一個可用週次（防止題庫為空導致波次空轉跳至 Wave 11）
+        if (pool.length === 0) {
+          const mergedAll = Object.assign({}, (typeof MODE2_WEEKLY_BANKS !== 'undefined' ? MODE2_WEEKLY_BANKS : {}), weekly, cloud);
+          const availWks = Array.from(new Set(Object.keys(mergedAll).map(k => {
+            const m = k.match(/^(w\d+)_hw\d+$/);
+            return m ? m[1] : null;
+          }).filter(Boolean))).sort((a, b) => (parseInt(b.slice(1), 10) || 0) - (parseInt(a.slice(1), 10) || 0));
+          for (const fbWk of availWks) {
+            for (let i = 1; i <= 4; i++) {
+              const k = `${fbWk}_hw${i}`;
+              if (mergedAll[k] && Array.isArray(mergedAll[k].words) && mergedAll[k].words.length > 0) {
+                pool = pool.concat(mergedAll[k].words);
+              }
             }
+            if (pool.length > 0) break;
           }
         }
       } else {
@@ -5829,7 +5837,7 @@ function initLoginDropdowns() {
       if (!isTestUnlocked) {
         sortedWeeks = sortedWeeks.filter(wk => {
           const nw = parseInt(wk.replace('w', ''), 10) || 0;
-          if (nw <= 40 && nw !== 9) return true;
+          if (nw === 9) return false;
           if (wk === activeWk) return true;
           const s = scheduleMap[wk];
           if (!s || !s.start) {
