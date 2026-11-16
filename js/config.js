@@ -12,8 +12,8 @@ window.CONFIG = window.CONFIG || {};
 // 🌐 官方正式 Google Apps Script 雲端 Webhook 後端部署網址 (已直接填寫生效)
 window.CONFIG.GAS_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzUl9bQUhe7qmeKB6AjBiGxEIJfyOZg6kqHe7uC2xQ7QXH0SH_8P9-HpsMYSPkuzrNFmQ/exec';
 
-// 🌐 雙後端微服務：字庫微服務專屬端點 (對應《2026_四年級每周打字字庫表》Apps Script 部署網址)
-window.CONFIG.WORD_BANK_URL = 'https://script.google.com/macros/s/AKfycbzwzqjmrXsKl-jzZnWDPeK-81XWwfYZ-hBd2nd3j0m3Hqpfw7SNd5Mchj-LTXSt7ppB/exec';
+// 🌐 雙後端微服務：字庫微服務專屬端點 (對應《2026每周打字字庫表 (ID: 1ESOrrSeYCTfqV1VG4RoBPgcoVaHTzfKu435EpP2X-6o)》Apps Script 部署網址)
+window.CONFIG.WORD_BANK_URL = 'https://script.google.com/macros/s/AKfycbydQR_lU2tNwhlDkhwpkD6cXZ43n6W2GxH6nwL0fVvUa8DdDaGXnq31xaHi-WJRZNMVsQ/exec';
 
 // 🔒 個人私隱安全模式 (GitHub 公開版預設開啟)
 window.CONFIG.GITHUB_PRIVACY_MODE = true;
@@ -70,4 +70,31 @@ window.SPEED_WEEK_SCHEDULES = [
   // 🏃‍♂️ 第 9 周適逢校運會不佈置打字功課，直接忽略第 9 周並提前啟用第 10 周字庫 (10/26 - 11/08)
   { week: 'w10', name: '第 10 周', weekName: '第10周', title: '🔥【第 10 周】速成手速挑戰賽 (10/26 - 11/08 校運會跨周開放)', dateRange: '26/10/2026 8:00 AM - 08/11/2026 11:30 PM', start: new Date('2026-10-20T08:00:00+08:00'), end: new Date('2026-11-08T23:59:59+08:00') }
 ];
+
+// 自動推導第 12 至 40 周排程 (確保離線/備援模式亦能依日期自動切換週次)
+(function() {
+  if (!Array.isArray(window.SPEED_WEEK_SCHEDULES)) return;
+  window.SPEED_WEEK_SCHEDULES.sort(function(a, b) {
+    var na = parseInt(String(a.week || '').replace('w', ''), 10) || 0;
+    var nb = parseInt(String(b.week || '').replace('w', ''), 10) || 0;
+    return na - nb;
+  });
+  var baseM = new Date('2026-11-16T08:00:00+08:00').getTime();
+  for (var wk = 12; wk <= 40; wk++) {
+    var wkKey = 'w' + wk;
+    if (!window.SPEED_WEEK_SCHEDULES.some(function(s) { return s.week === wkKey; })) {
+      var sDate = new Date(baseM + (wk - 12) * 7 * 86400000);
+      var eDate = new Date(sDate.getTime() + 6 * 86400000 + 15 * 3600000 + 30 * 60000);
+      window.SPEED_WEEK_SCHEDULES.push({
+        week: wkKey,
+        name: '第 ' + wk + ' 周',
+        weekName: '第' + wk + '周',
+        title: '【第 ' + wk + ' 周】打字挑戰賽',
+        start: sDate,
+        end: eDate
+      });
+    }
+  }
+})();
+
 var SPEED_WEEK_SCHEDULES = window.SPEED_WEEK_SCHEDULES;
