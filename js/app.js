@@ -5803,9 +5803,7 @@ function initLoginDropdowns() {
       const select = document.getElementById('speed-ready-week-select');
       const lbSelect = document.getElementById('speed-lb-week-select');
       const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
-      const allBanks = (typeof MODE2_WEEKLY_BANKS === 'object' && MODE2_WEEKLY_BANKS) 
-        ? MODE2_WEEKLY_BANKS 
-        : ((typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS) ? window.MODE2_WEEKLY_BANKS : {});
+      const allBanks = Object.assign({}, (typeof MODE2_WEEKLY_BANKS !== 'undefined' && MODE2_WEEKLY_BANKS ? MODE2_WEEKLY_BANKS : {}), (typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS ? window.MODE2_WEEKLY_BANKS : {}));
 
       // 1. 取得排程表與判定當前開放之週次
       const now = new Date();
@@ -5996,9 +5994,7 @@ function initLoginDropdowns() {
       if (speedTimerInterval) clearInterval(speedTimerInterval);
       if (speedHintTimer) clearTimeout(speedHintTimer);
 
-      const allBanks = (typeof MODE2_WEEKLY_BANKS === "object" && MODE2_WEEKLY_BANKS) 
-        ? MODE2_WEEKLY_BANKS 
-        : ((typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS) ? window.MODE2_WEEKLY_BANKS : {});
+      const allBanks = Object.assign({}, (typeof MODE2_WEEKLY_BANKS !== 'undefined' && MODE2_WEEKLY_BANKS ? MODE2_WEEKLY_BANKS : {}), (typeof window !== 'undefined' && window.MODE2_WEEKLY_BANKS ? window.MODE2_WEEKLY_BANKS : {}));
       const activeWk = (typeof getActiveSpeedWeek === 'function') ? getActiveSpeedWeek() : 'w11';
       const defaultKey = `${activeWk}_hw1`;
       const bank = allBanks[currentSpeedWeek] || allBanks[defaultKey] || allBanks["w8_hw1"] || allBanks["w7_hw1"] || Object.values(allBanks)[0] || { words: [] };
@@ -6043,7 +6039,7 @@ function initLoginDropdowns() {
       
       const badgeTag = document.getElementById('speed-active-badge-tag');
       if (badgeTag) {
-        const bankObj = MODE2_WEEKLY_BANKS[currentSpeedWeek] || Object.values(MODE2_WEEKLY_BANKS)[0];
+        const bankObj = bank || allBanks[currentSpeedWeek] || Object.values(allBanks)[0] || { title: currentSpeedWeek };
         badgeTag.textContent = `⚡ ${currentSpeedWordCount} 字賽 · ${bankObj.title}`;
       }
 
@@ -6850,3 +6846,112 @@ if (typeof global !== 'undefined') {
       // 🛡️ 已移除點擊「計分規則」橫幅 3 下觸發教師特權之機制，杜絕學生誤觸顯示【教師測試特權已啟動】
     }
 
+
+
+    // ★ 防作弊背景執行引擎（對齊六年級）：學生切換至其他分頁時，逃出恐怖屋不暫停，怪獸持續逼近！
+    let siegeBgHeartbeatInterval = null;
+    let siegeLastFrameTimestamp = performance.now();
+
+    function runSiegeBackgroundPhysics() {
+      if (!siegeActive || !siegeRunning || siegeIsPaused || siegeHp <= 0) {
+        if (siegeBgHeartbeatInterval) {
+          clearInterval(siegeBgHeartbeatInterval);
+          siegeBgHeartbeatInterval = null;
+        }
+        return;
+      }
+
+      const now = performance.now();
+      const dt = Math.min(2.0, Math.max(0.016, (now - siegeLastFrameTimestamp) / 1000));
+      siegeLastFrameTimestamp = now;
+
+      const canvas = document.getElementById('siege-canvas');
+      const cw = canvas ? canvas.width : 800;
+      const ch = canvas ? canvas.height : 420;
+      const cx = cw / 2;
+      const cy = ch / 2;
+
+      const speedFactor = dt * 60;
+      for (let i = siegeEnemies.length - 1; i >= 0; i--) {
+        const em = siegeEnemies[i];
+        const edx = cx - em.x;
+        const edy = cy - em.y;
+        const dist = Math.hypot(edx, edy);
+
+        if (dist > 1) {
+          const ux = edx / dist;
+          const uy = edy / dist;
+          em.x += ux * em.speed * speedFactor;
+          em.y += uy * em.speed * speedFactor;
+        }
+
+        const hitDist = em.isBoss ? (38 + (em.radius || 28) * 0.65) : 42;
+        if (dist <= hitDist) {
+          const dmg = em.isBoss ? 25 : 10;
+          if (typeof siegeBarrierShieldCount !== 'undefined' && siegeBarrierShieldCount > 0) {
+            siegeBarrierShieldCount--;
+          } else {
+            siegeHp = Math.max(0, siegeHp - dmg);
+          }
+          if (!em.isBoss) {
+            siegeEnemies.splice(i, 1);
+          } else {
+            const ang = (typeof getSecureRandom === 'function' ? getSecureRandom() : Math.random()) * Math.PI * 2;
+            em.x = cx + Math.cos(ang) * 280;
+            em.y = cy + Math.sin(ang) * 280;
+          }
+          if (typeof updateSiegeHUD === 'function') updateSiegeHUD();
+
+          if (siegeHp <= 0) {
+            if (typeof onSiegeGameOver === 'function') onSiegeGameOver();
+            if (siegeBgHeartbeatInterval) {
+              clearInterval(siegeBgHeartbeatInterval);
+              siegeBgHeartbeatInterval = null;
+            }
+            return;
+          }
+        }
+      }
+    }
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+          if (siegeActive && siegeRunning && !siegeIsPaused && siegeHp > 0) {
+            siegeLastFrameTimestamp = performance.now();
+            if (!siegeBgHeartbeatInterval) {
+              siegeBgHeartbeatInterval = setInterval(runSiegeBackgroundPhysics, 100);
+            }
+          }
+        } else {
+          if (siegeBgHeartbeatInterval) {
+            clearInterval(siegeBgHeartbeatInterval);
+            siegeBgHeartbeatInterval = null;
+          }
+          if (siegeActive && siegeRunning && !siegeIsPaused) {
+            runSiegeBackgroundPhysics();
+            if (typeof resumeSiegeLoop === 'function') resumeSiegeLoop();
+          }
+        }
+      });
+
+      window.addEventListener('blur', function() {
+        if (siegeActive && siegeRunning && !siegeIsPaused && siegeHp > 0) {
+          siegeLastFrameTimestamp = performance.now();
+          if (!siegeBgHeartbeatInterval) {
+            siegeBgHeartbeatInterval = setInterval(runSiegeBackgroundPhysics, 100);
+          }
+        }
+      });
+
+      window.addEventListener('focus', function() {
+        if (siegeBgHeartbeatInterval) {
+          clearInterval(siegeBgHeartbeatInterval);
+          siegeBgHeartbeatInterval = null;
+        }
+        if (siegeActive && siegeRunning && !siegeIsPaused) {
+          runSiegeBackgroundPhysics();
+          if (typeof resumeSiegeLoop === 'function') resumeSiegeLoop();
+        }
+      });
+    }
